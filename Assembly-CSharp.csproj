@@ -833,13 +833,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Polyperfect.Universal.csproj">
-      <Project>{51479F45-B6F2-3A27-4982-A67261F8C4A8}</Project>
-      <Name>Polyperfect.Universal</Name>
-    </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
       <Project>{37684F10-626D-8D4A-F165-9A70460845E8}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="Polyperfect.Universal.csproj">
+      <Project>{51479F45-B6F2-3A27-4982-A67261F8C4A8}</Project>
+      <Name>Polyperfect.Universal</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
       <Project>{BB7C4F49-494E-6D03-9971-744FF89E64CB}</Project>
