@@ -65,6 +65,9 @@
     <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
     <Compile Include="Assets\Packages\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Packages\StarterAssets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\scripts\BalloonColorRandomizer.cs" />
+    <Compile Include="Assets\scripts\joe&apos;s work-in-progress\pickup.cs" />
+    <Compile Include="Assets\scripts\joe&apos;s work-in-progress\playerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
