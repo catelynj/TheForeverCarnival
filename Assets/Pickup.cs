@@ -14,12 +14,21 @@ public class Pickup : MonoBehaviour
             // Example: player.GetComponent<PlayerController>().CollectItem();
             // Example: gameObject.SetActive(false);
             gameObject.SetActive(false);
+
         }
     }
 
     public void PickupItem()
     {
-        gameObject.SetActive(false);
+        if (!isPickedUp)
+        {
+            isPickedUp = true;
+            // Add logic to handle the pickup (e.g., increase the player's score, disable the object, play a sound, etc.)
+            // Example: player.GetComponent<PlayerController>().CollectItem();
+            // Example: gameObject.SetActive(false);
+            gameObject.SetActive(false);
+
+        }
     }
 
 }
