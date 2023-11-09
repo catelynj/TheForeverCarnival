@@ -873,6 +873,9 @@
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
@@ -895,13 +898,13 @@
       <Project>{51479F45-B6F2-3A27-4982-A67261F8C4A8}</Project>
       <Name>Polyperfect.Universal</Name>
     </ProjectReference>
-    <ProjectReference Include="sc.vegetationspawner.editor.csproj">
-      <Project>{3E162E82-5706-7FDF-9639-6DC46BD267FE}</Project>
-      <Name>sc.vegetationspawner.editor</Name>
-    </ProjectReference>
     <ProjectReference Include="sc.vegetationspawner.runtime.csproj">
       <Project>{0B59E0EB-ECFA-DD81-B0D7-BE8B5F828FBB}</Project>
       <Name>sc.vegetationspawner.runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="sc.vegetationspawner.editor.csproj">
+      <Project>{3E162E82-5706-7FDF-9639-6DC46BD267FE}</Project>
+      <Name>sc.vegetationspawner.editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

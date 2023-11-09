@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-<<<<<<< Updated upstream
     public GameObject dartInteractable;  // The prefab of the dart you want to add to the inventory.
-=======
-    public GameObject dartInteractable;
->>>>>>> Stashed changes
     private Transform inventorySlot; // The position where the dart will be displayed in the player's field of view.
 
     private void Start()

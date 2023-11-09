@@ -11,7 +11,6 @@ public class Pickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-<<<<<<< Updated upstream
             if (isDart)
             {
                 // Notify the player's inventory system that a dart is picked up.
@@ -23,16 +22,6 @@ public class Pickup : MonoBehaviour
                 // Optionally, destroy the dart object since it's picked up.
                 Destroy(gameObject);
             }
-            // Handle other types of pickups or interactions here.
-=======
-            isPickedUp = true;
-
-            // Add logic to handle the pickup (e.g., increase the player's score, disable the object, play a sound, etc.)
-            // Example: player.GetComponent<PlayerController>().CollectItem();
-            // Example: gameObject.SetActive(false);
-            gameObject.SetActive(false);
-
->>>>>>> Stashed changes
         }
     }
     public void PickupItem()
@@ -48,4 +37,3 @@ public class Pickup : MonoBehaviour
         }
     }
 }
-
