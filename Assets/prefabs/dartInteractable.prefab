@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1426282303717123622}
   - component: {fileID: 7514388960633956906}
   m_Layer: 0
-  m_Name: dart (1)
+  m_Name: dartInteractable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

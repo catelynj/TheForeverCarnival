@@ -56,15 +56,6 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Packages\VegetationSpawner\Runtime\PoissonDisc.cs" />
-    <Compile Include="Assets\Packages\VegetationSpawner\Runtime\VegetationExtensions.cs" />
-    <Compile Include="Assets\Packages\VegetationSpawner\Runtime\VegetationSpawner.Trees.cs" />
-    <Compile Include="Assets\Packages\VegetationSpawner\Runtime\VegetationSpawner.Collision.cs" />
-    <Compile Include="Assets\Packages\VegetationSpawner\Runtime\SpawnerBase.cs" />
-    <Compile Include="Assets\Packages\VegetationSpawner\Runtime\TerrainSampler.cs" />
-    <Compile Include="Assets\Packages\VegetationSpawner\Runtime\VegetationSpawner.cs" />
-    <Compile Include="Assets\Packages\VegetationSpawner\Runtime\Cell.cs" />
-    <Compile Include="Assets\Packages\VegetationSpawner\Runtime\VegetationSpawner.Grass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\VegetationSpawner\Runtime\sc.vegetationspawner.runtime.asmdef" />
