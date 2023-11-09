@@ -57,23 +57,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Packages\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Pickup.cs" />
     <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
     <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\Packages\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
     <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
+    <Compile Include="Assets\scripts\joe&apos;s work-in-progress\playerController.cs" />
     <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
     <Compile Include="Assets\Packages\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Packages\StarterAssets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\scripts\joe&apos;s work-in-progress\playerController.cs" />
     <Compile Include="Assets\scripts\BalloonColorRandomizer.cs" />
-    <Compile Include="Assets\Pickup.cs" />
+    <Compile Include="Assets\Packages\Grass And Flowers Pack 1\Example Scene\SimpleTextureDrawing.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
     <None Include="Assets\Packages\Texture_Me\Ground - Earth and Rocks - Free &apos;Texture B&apos; (Hand-Painted)\Textures\README.txt" />
     <None Include="Assets\Packages\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Blend.shader" />
     <None Include="Assets\Packages\StarterAssets\license.txt" />
+    <None Include="Assets\Packages\Grass And Flowers Pack 1\Example Scene\Skyboxes\_skybox info.txt" />
     <None Include="Assets\Packages\3D Haven\Free Fantasy Terrain Textures\Documentation\Version Log.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -794,6 +796,9 @@
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TerrainTools">
+      <HintPath>Library\ScriptAssemblies\Unity.TerrainTools.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
@@ -814,6 +819,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TerrainTools.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TerrainTools.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
@@ -836,12 +844,6 @@
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TerrainTools">
-      <HintPath>Library\ScriptAssemblies\Unity.TerrainTools.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TerrainTools.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TerrainTools.Editor.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
@@ -859,6 +861,14 @@
     <ProjectReference Include="Polyperfect.Universal.csproj">
       <Project>{51479F45-B6F2-3A27-4982-A67261F8C4A8}</Project>
       <Name>Polyperfect.Universal</Name>
+    </ProjectReference>
+    <ProjectReference Include="sc.vegetationspawner.editor.csproj">
+      <Project>{3E162E82-5706-7FDF-9639-6DC46BD267FE}</Project>
+      <Name>sc.vegetationspawner.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="sc.vegetationspawner.runtime.csproj">
+      <Project>{0B59E0EB-ECFA-DD81-B0D7-BE8B5F828FBB}</Project>
+      <Name>sc.vegetationspawner.runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
