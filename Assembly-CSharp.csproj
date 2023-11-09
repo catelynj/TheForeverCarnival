@@ -68,6 +68,7 @@
     <Compile Include="Assets\Packages\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Packages\StarterAssets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\scripts\BalloonColorRandomizer.cs" />
+    <Compile Include="Assets\Inventory.cs" />
     <Compile Include="Assets\Packages\Grass And Flowers Pack 1\Example Scene\SimpleTextureDrawing.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -862,13 +863,13 @@
       <Project>{51479F45-B6F2-3A27-4982-A67261F8C4A8}</Project>
       <Name>Polyperfect.Universal</Name>
     </ProjectReference>
-    <ProjectReference Include="sc.vegetationspawner.editor.csproj">
-      <Project>{3E162E82-5706-7FDF-9639-6DC46BD267FE}</Project>
-      <Name>sc.vegetationspawner.editor</Name>
-    </ProjectReference>
     <ProjectReference Include="sc.vegetationspawner.runtime.csproj">
       <Project>{0B59E0EB-ECFA-DD81-B0D7-BE8B5F828FBB}</Project>
       <Name>sc.vegetationspawner.runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="sc.vegetationspawner.editor.csproj">
+      <Project>{3E162E82-5706-7FDF-9639-6DC46BD267FE}</Project>
+      <Name>sc.vegetationspawner.editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
