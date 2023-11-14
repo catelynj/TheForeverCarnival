@@ -5,6 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public GameObject dartInteractable;  // The prefab of the dart you want to add to the inventory.
+    public GameObject player;
     private Transform inventorySlot; // The position where the dart will be displayed in the player's field of view.
 
     private void Start()
@@ -18,9 +19,44 @@ public class Inventory : MonoBehaviour
     public void AddDartToInventory()
     {
         // Instantiate the dart prefab at the inventory slot position.
-        GameObject dart = Instantiate(dartInteractable, inventorySlot.position, Quaternion.identity);
+        GameObject dart = Instantiate(dartInteractable, inventorySlot.transform.position, Quaternion.identity);
 
         // Make the dart a child of the inventory slot to ensure it moves with the player's view.
-        dart.transform.parent = inventorySlot;
+        dart.transform.parent = inventorySlot.transform;
+        dart.transform.rotation = player.transform.rotation;
+    }
+    public void ThrowDartFromInventory()
+    {
+        // Check if there's a dart in the inventory slot.
+        if (inventorySlot.childCount > 0)
+        {
+            // Get the dart GameObject.
+            GameObject dart = inventorySlot.GetChild(0).gameObject;
+
+            // Detach the dart from the inventory slot.
+            dart.transform.parent = null;
+
+            // Implement your throwing logic here.
+            // For example, add a rigidbody and apply force to simulate throwing.
+            Rigidbody dartRigidbody = dart.GetComponent<Rigidbody>();
+            if (dartRigidbody != null)
+            {
+                dartRigidbody.AddForce(transform.forward * 10f, ForceMode.Impulse);
+            }
+            else
+            {
+                dart.AddComponent<Rigidbody>();
+                dartRigidbody.AddForce(transform.forward * 10f, ForceMode.Impulse);
+            }
+        }
+    }
+
+    void Update()
+    {
+        // Left-click to throw dart.
+        if (Input.GetMouseButtonDown(0))
+        {
+            ThrowDartFromInventory();
+        }
     }
 }
