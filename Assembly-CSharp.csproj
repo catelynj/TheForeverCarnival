@@ -57,9 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Packages\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
-    <Compile Include="Assets\Pickup.cs" />
+    <Compile Include="Assets\scripts\Pickup.cs" />
     <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
+    <Compile Include="Assets\scripts\Inventory.cs" />
+    <Compile Include="Assets\Packages\Grass And Flowers Pack 1\Example Scene\SimpleTextureDrawing.cs" />
     <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\Packages\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
     <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
@@ -68,16 +70,74 @@
     <Compile Include="Assets\Packages\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Packages\StarterAssets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\scripts\BalloonColorRandomizer.cs" />
-    <Compile Include="Assets\Inventory.cs" />
-    <Compile Include="Assets\Packages\Grass And Flowers Pack 1\Example Scene\SimpleTextureDrawing.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\scripts\PlayButton.cs" />
+    <Compile Include="Assets\scripts\MuteAudio.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Packages\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+    <None Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Packages\Texture_Me\Ground - Earth and Rocks - Free &apos;Texture B&apos; (Hand-Painted)\Textures\README.txt" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Packages\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Blend.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Packages\StarterAssets\license.txt" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Packages\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Packages\Grass And Flowers Pack 1\Example Scene\Skyboxes\_skybox info.txt" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Packages\3D Haven\Free Fantasy Terrain Textures\Documentation\Version Log.txt" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -758,8 +818,8 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
@@ -776,9 +836,6 @@
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -787,6 +844,12 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
@@ -845,14 +908,15 @@
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
       <Project>{80349502-AC70-3A51-FB6B-CD415ADEB4B0}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="sc.vegetationspawner.runtime.csproj">
+      <Project>{0B59E0EB-ECFA-DD81-B0D7-BE8B5F828FBB}</Project>
+      <Name>sc.vegetationspawner.runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
       <Project>{BB7C4F49-494E-6D03-9971-744FF89E64CB}</Project>
@@ -865,10 +929,6 @@
     <ProjectReference Include="Polyperfect.Universal.csproj">
       <Project>{51479F45-B6F2-3A27-4982-A67261F8C4A8}</Project>
       <Name>Polyperfect.Universal</Name>
-    </ProjectReference>
-    <ProjectReference Include="sc.vegetationspawner.runtime.csproj">
-      <Project>{0B59E0EB-ECFA-DD81-B0D7-BE8B5F828FBB}</Project>
-      <Name>sc.vegetationspawner.runtime</Name>
     </ProjectReference>
     <ProjectReference Include="sc.vegetationspawner.editor.csproj">
       <Project>{3E162E82-5706-7FDF-9639-6DC46BD267FE}</Project>
