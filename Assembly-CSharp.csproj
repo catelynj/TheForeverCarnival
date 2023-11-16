@@ -106,12 +106,9 @@
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\scripts\BalloonColorRandomizer.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-<<<<<<< Updated upstream
-=======
     <Compile Include="Assets\Packages\TextMeshPro_Assets\CurvedTextMeshPro\Scripts\TextProOnAExp.cs" />
     <Compile Include="Assets\Packages\TextMeshPro_Assets\CurvedTextMeshPro\Scripts\TextProOnACurve.cs" />
     <Compile Include="Assets\Packages\TextMeshPro_Assets\CurvedTextMeshPro\Scripts\TextProOnACircle.cs" />
->>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro.cginc" />
