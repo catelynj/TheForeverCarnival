@@ -20,6 +20,7 @@ public class Inventory : MonoBehaviour
     {
         // Instantiate the dart prefab at the inventory slot position.
         GameObject dart = Instantiate(dartInteractable, inventorySlot.transform.position, Quaternion.identity);
+        dart.tag = "Dart";
 
         // Make the dart a child of the inventory slot to ensure it moves with the player's view.
         dart.transform.parent = inventorySlot.transform;
@@ -36,18 +37,24 @@ public class Inventory : MonoBehaviour
             // Detach the dart from the inventory slot.
             dart.transform.parent = null;
 
-            // Implement your throwing logic here.
-            // For example, add a rigidbody and apply force to simulate throwing.
+            // Dart throwing logic.
             Rigidbody dartRigidbody = dart.GetComponent<Rigidbody>();
             if (dartRigidbody != null)
             {
-                dartRigidbody.AddForce(transform.forward * 10f, ForceMode.Impulse);
+                // Enable gravity and apply force.
+                dartRigidbody.useGravity = true;
+                dartRigidbody.isKinematic = false;
+                dartRigidbody.AddForce(transform.forward * 15f, ForceMode.Impulse);
             }
             else
             {
-                dart.AddComponent<Rigidbody>();
-                dartRigidbody.AddForce(transform.forward * 10f, ForceMode.Impulse);
+                // If the Rigidbody component doesn't exist, add it and then apply force.
+                Rigidbody newRigidbody = dart.AddComponent<Rigidbody>();
+                newRigidbody.useGravity = true;
+                newRigidbody.isKinematic = false;
+                newRigidbody.AddForce(transform.forward * 15f, ForceMode.Impulse);
             }
+            Destroy(dart, 5f);
         }
     }
 

@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5056266239122459726}
   m_Layer: 0
   m_Name: dartInteractable
-  m_TagString: Untagged
+  m_TagString: Dart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f71c67450168b4cb8829b94e764825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDart: 0
   isPickedUp: 0
+  dart: {fileID: 2236677008300922226}
 --- !u!54 &5056266239122459726
 Rigidbody:
   m_ObjectHideFlags: 0
