@@ -5,7 +5,7 @@ using UnityEngine;
 public class BalloonPopper : MonoBehaviour
 {
     // Add any balloon-related variables here.
-
+    public GameObject balloon;
     void OnCollisionEnter(Collision collision)
     {
         // Check if the collided object has a "Dart" tag.
@@ -18,13 +18,7 @@ public class BalloonPopper : MonoBehaviour
 
     void PopBalloon()
     {
-        // Add balloon-popping logic here.
-        // For example, you can play a popping sound, instantiate a particle effect, and then destroy the balloon object.
-        Debug.Log("Balloon popped!");
-
-        // Add your balloon-popping effects and cleanup code here.
-        // For example, you might play a popping sound, instantiate a particle effect, and then destroy the balloon object.
-        // For simplicity, let's just destroy the balloon in this example.
-        Destroy(gameObject);
+        //Debug.Log("Balloon popped!");
+        Destroy(balloon);
     }
 }

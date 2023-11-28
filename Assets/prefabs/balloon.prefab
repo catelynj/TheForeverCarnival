@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6f9e52ef017454c8bd4f0dee74e0e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  balloon: {fileID: 8483939980912991330}
 --- !u!54 &9145967752665387918
 Rigidbody:
   m_ObjectHideFlags: 0
