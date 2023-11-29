@@ -8,11 +8,13 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        LockCursor();
+
     }
 
     private void Update()
     {
-        // Basic movement controls (you can modify this to suit your game)
+        // Basic movement controls
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -44,4 +46,15 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    private void LockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void UnlockCursor()
+    {
+        Cursor.lockState -= CursorLockMode.None;
+    }
+
 }
