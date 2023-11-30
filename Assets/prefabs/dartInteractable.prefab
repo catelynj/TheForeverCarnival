@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2319410836273239213}
   - component: {fileID: 6470936324015612467}
   - component: {fileID: 3227796319485771500}
+  - component: {fileID: 8255028274105633828}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8573dc3a7c7a2934db446199a3618b5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,6 +84,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8255028274105633828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749454660344764999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac9d445dae095e489ecffa0d8e0d5af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balloonMaterials:
+  - {fileID: 2100000, guid: b6aec1a9c6d376049a90814daf8a342e, type: 2}
+  - {fileID: 2100000, guid: 4895c600e0fec9843885cf75ccffb4f4, type: 2}
+  - {fileID: 2100000, guid: ea1b82a25e0f6b14b8cf9f716af8856c, type: 2}
 --- !u!1 &2236677008300922226
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,6 +113,7 @@ GameObject:
   - component: {fileID: 7514388960633956906}
   - component: {fileID: 5056266239122459726}
   - component: {fileID: 775165803592252619}
+  - component: {fileID: 8481098392077009328}
   m_Layer: 0
   m_Name: dartInteractable
   m_TagString: Dart
@@ -179,6 +197,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 3}
+--- !u!114 &8481098392077009328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2236677008300922226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac9d445dae095e489ecffa0d8e0d5af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balloonMaterials:
+  - {fileID: 2100000, guid: 4895c600e0fec9843885cf75ccffb4f4, type: 2}
+  - {fileID: 2100000, guid: 8573dc3a7c7a2934db446199a3618b5a, type: 2}
+  - {fileID: 2100000, guid: ea1b82a25e0f6b14b8cf9f716af8856c, type: 2}
 --- !u!1 &2409997185560700451
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +274,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: dad6c02235e16944690a5ce937e2121e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -323,7 +357,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3a30ed070d6e74d41b86e0afbc6d9756, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -356,6 +390,7 @@ GameObject:
   - component: {fileID: 3125690126091039118}
   - component: {fileID: 4506736881685222307}
   - component: {fileID: 8679363280571746866}
+  - component: {fileID: 4239325467790277297}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
@@ -406,7 +441,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8573dc3a7c7a2934db446199a3618b5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -428,3 +463,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4239325467790277297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7718430564936919091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac9d445dae095e489ecffa0d8e0d5af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balloonMaterials:
+  - {fileID: 2100000, guid: b6aec1a9c6d376049a90814daf8a342e, type: 2}
+  - {fileID: 2100000, guid: 4895c600e0fec9843885cf75ccffb4f4, type: 2}
+  - {fileID: 2100000, guid: ea1b82a25e0f6b14b8cf9f716af8856c, type: 2}

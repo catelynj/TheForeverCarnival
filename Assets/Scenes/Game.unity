@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.08050851, g: 0.10047909, b: 0.3004646, a: 1}
+  m_IndirectSpecularColor: {r: 0.0805465, g: 0.10052332, b: 0.30052117, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8905,6 +8905,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: dart (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3227796319485771500, guid: d8fe8714934d794468a431df33a3b95f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8573dc3a7c7a2934db446199a3618b5a, type: 2}
+    - target: {fileID: 7304283822793723886, guid: d8fe8714934d794468a431df33a3b95f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a30ed070d6e74d41b86e0afbc6d9756, type: 2}
     - target: {fileID: 7514388960633956906, guid: d8fe8714934d794468a431df33a3b95f, type: 3}
       propertyPath: isDart
       value: 1
@@ -8913,6 +8921,14 @@ PrefabInstance:
       propertyPath: isPickedUp
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8086414925874061052, guid: d8fe8714934d794468a431df33a3b95f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dad6c02235e16944690a5ce937e2121e, type: 2}
+    - target: {fileID: 8679363280571746866, guid: d8fe8714934d794468a431df33a3b95f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8573dc3a7c7a2934db446199a3618b5a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8fe8714934d794468a431df33a3b95f, type: 3}
 --- !u!1 &1729901195186955307 stripped
