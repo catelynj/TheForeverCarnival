@@ -2,15 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro.Examples;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager instance = null;
+
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+    }
 
     private bool settingsOpen = false;
     private bool inventoryOpen = false;
     [SerializeField] private GameObject hudCanvas = null;
     [SerializeField] private GameObject settingsCanvas = null;
     [SerializeField] private GameObject inventoryCanvas = null;
+    [SerializeField] private Score score;
+
 
     private void Start()
     {
@@ -92,6 +102,11 @@ public class UIManager : MonoBehaviour
 
 
         inventoryOpen = isInventory;
+    }
+
+    public void UpdateScore()
+    {
+        score.AddScore();
     }
     public void Quit()
     {
