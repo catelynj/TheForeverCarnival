@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6803805094439575656}
   - component: {fileID: 4481664925698421549}
   - component: {fileID: -1622174727718684004}
+  - component: {fileID: -6959236238234255145}
   m_Layer: 7
   m_Name: Ball_Pickup
   m_TagString: Untagged
@@ -111,3 +112,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 7a284947cf622b74293ec81e8cdc8bd6, type: 2}
+--- !u!114 &-6959236238234255145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579762937590474931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac9d445dae095e489ecffa0d8e0d5af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balloonMaterials:
+  - {fileID: 2100000, guid: 3b1abf3b60bccac44965265381ce212c, type: 2}
+  - {fileID: 2100000, guid: a769575b4131ec64a9219996d0328a75, type: 2}
+  - {fileID: 2100000, guid: fab1d009de1fd404ea0446c01eb9ad79, type: 2}
+  - {fileID: 2100000, guid: f5f1fbef76999084c86871c845124678, type: 2}

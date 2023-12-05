@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1961855421038677508}
   - component: {fileID: 2068085032616749034}
-  - component: {fileID: 7435448077926034406}
   - component: {fileID: 5283578923142188418}
   - component: {fileID: 412516299188813063}
-  - component: {fileID: 8848049748611121276}
   - component: {fileID: 8008471149715862362}
+  - component: {fileID: 8848049748611121276}
   m_Layer: 7
   m_Name: Dart_Pickup
   m_TagString: Dart
@@ -55,23 +54,6 @@ CapsuleCollider:
   m_Height: 7
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7435448077926034406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185073084141343934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61f71c67450168b4cb8829b94e764825, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupRange: 0
-  pickupLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  cam: {fileID: 0}
 --- !u!54 &5283578923142188418
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -101,6 +83,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 3}
+--- !u!114 &8008471149715862362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185073084141343934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3c62582d9454f4d8cc83650467eb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: e5cc486ff5aa6ad4ea75d96ed314b207, type: 2}
 --- !u!114 &8848049748611121276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,19 +112,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 4895c600e0fec9843885cf75ccffb4f4, type: 2}
   - {fileID: 2100000, guid: 8573dc3a7c7a2934db446199a3618b5a, type: 2}
   - {fileID: 2100000, guid: ea1b82a25e0f6b14b8cf9f716af8856c, type: 2}
---- !u!114 &8008471149715862362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185073084141343934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b3c62582d9454f4d8cc83650467eb60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: e5cc486ff5aa6ad4ea75d96ed314b207, type: 2}
 --- !u!1 &1675114679750368139
 GameObject:
   m_ObjectHideFlags: 0

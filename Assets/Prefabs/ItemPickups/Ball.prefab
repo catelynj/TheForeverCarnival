@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7730912972305858832}
   - component: {fileID: 9075163142612362534}
   - component: {fileID: 2137132733458298467}
-  - component: {fileID: 5397120821167062994}
+  - component: {fileID: -659182461219628150}
   m_Layer: 7
   m_Name: Ball
   m_TagString: Untagged
@@ -98,7 +98,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5397120821167062994
+--- !u!114 &-659182461219628150
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8703927436920532477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b3c62582d9454f4d8cc83650467eb60, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ac9d445dae095e489ecffa0d8e0d5af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 7a284947cf622b74293ec81e8cdc8bd6, type: 2}
+  balloonMaterials:
+  - {fileID: 2100000, guid: 3b1abf3b60bccac44965265381ce212c, type: 2}
+  - {fileID: 2100000, guid: a769575b4131ec64a9219996d0328a75, type: 2}
+  - {fileID: 2100000, guid: fab1d009de1fd404ea0446c01eb9ad79, type: 2}
+  - {fileID: 2100000, guid: f5f1fbef76999084c86871c845124678, type: 2}

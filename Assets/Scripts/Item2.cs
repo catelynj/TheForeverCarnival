@@ -8,8 +8,10 @@ using UnityEngine;
 public class Item2 : Item
 {
     public GameObject prefab;
-    public int count;
-  
+    public int maxCount;
+    public ItemType itemType;
 }
+
+public enum ItemType {Dart, Ball}
 
 

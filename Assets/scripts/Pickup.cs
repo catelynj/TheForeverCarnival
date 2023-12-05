@@ -5,21 +5,34 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    public float pickupRange;
-    public LayerMask pickupLayer;
+    [SerializeField] private float pickupRange;
+    [SerializeField] private LayerMask pickupLayer;
 
-    public Camera cam;
+    private Camera cam;
     private Inventory inventory;
 
     private void Start()
     {
         cam = Camera.main;
         inventory = GetComponent<Inventory>();
+
     }
     private void Update()
     {
-     
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            Ray ray = cam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, pickupRange, pickupLayer))
+            {
+                Item2 newItem = hit.transform.GetComponent<ItemObject>().item as Item2;
+                inventory.AddItem(newItem);
+                Destroy(hit.transform.gameObject);
+            }
+
+        }
     }
 
- 
+
 }

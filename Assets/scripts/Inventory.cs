@@ -5,34 +5,37 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public Item[] inventory;
+    [SerializeField] private Item2[] inventory;
 
- 
+    private UIManager hud;
 
     private void Start()
     {
+        hud = GetComponent<UIManager>();
         InitVariables();
                
     }
-
-    private void Update()
-    {
-    }
-    public void AddItem(Item newItem)
+    public void AddItem(Item2 newItem)
     {
         if (inventory[(int)newItem.itemType] != null)
         {
             RemoveItem((int)newItem.itemType);
         }
         inventory[(int)newItem.itemType] = newItem;
-    }
 
+        //Update Inventory UI
+        hud.UpdateInventoryUI(newItem);
+    }
+    public Item2 GetItem(int index)
+    {
+        return inventory[index];
+    }
     private void RemoveItem(int index)
     {
         inventory[index] = null;
     }
     private void InitVariables()
     {
-        inventory = new Item[3];
+        inventory = new Item2[2];
     }
 }

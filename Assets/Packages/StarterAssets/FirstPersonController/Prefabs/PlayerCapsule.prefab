@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 5420857361349278248}
   - component: {fileID: 8616685848737228376}
   - component: {fileID: 4084214939284366630}
-  - component: {fileID: 4148070629175662048}
+  - component: {fileID: 6496574075173095902}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -364,9 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
-  test: {fileID: 0}
-  test2: {fileID: 0}
---- !u!114 &4148070629175662048
+--- !u!114 &6496574075173095902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -382,7 +380,6 @@ MonoBehaviour:
   pickupLayer:
     serializedVersion: 2
     m_Bits: 128
-  cam: {fileID: 9005220658632979108}
 --- !u!1001 &29671348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -517,11 +514,6 @@ PrefabInstance:
 --- !u!4 &9005220658632979107 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
-  m_PrefabInstance: {fileID: 1439305025}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &9005220658632979108 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
   m_PrefabInstance: {fileID: 1439305025}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &9005220658632979110 stripped
