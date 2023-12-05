@@ -1,16 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class BalloonPopper : MonoBehaviour
-
 {
-    
     public GameObject balloon;
     
-  
     void OnCollisionEnter(Collision collision)
     {
         // Check if the collided object has a "Dart" tag.
@@ -18,8 +14,6 @@ public class BalloonPopper : MonoBehaviour
         {
             // Call a method to handle balloon popping.
             PopBalloon();
-            
-           
             
         }
     }
