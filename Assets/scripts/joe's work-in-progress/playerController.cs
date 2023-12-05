@@ -39,10 +39,10 @@ public class PlayerController : MonoBehaviour
         {
             // Check if the hit object has a "Pickup" script attached
             Pickup pickup = hit.collider.GetComponent<Pickup>();
-            if (pickup != null && !pickup.isPickedUp)
+           //////////////////l && !pickup.isPickedUp)
             {
                 // Call the Pickup function in the Pickup script
-                pickup.PickupItem();
+               //ickup.PickupItem();//
             }
         }
     }

@@ -1,32 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    public bool isPickedUp = false;
-    public GameObject dart;
+    public float pickupRange;
+    public LayerMask pickupLayer;
 
-    private void OnTriggerEnter(Collider other)
+    public Camera cam;
+    private Inventory inventory;
+
+    private void Start()
     {
-        if (CompareTag("Dart") && !isPickedUp)
-        {
-            // Notify the player's inventory system that a dart is picked up.
-            Inventory inventory = other.GetComponent<Inventory>();
-            if (inventory != null)
-            {
-                inventory.AddDartToInventory();
-            }
-            // Destroy the dart object since it's picked up.
-            //Destroy(dart);
-            
-        }
+        cam = Camera.main;
+        inventory = GetComponent<Inventory>();
     }
-    public void PickupItem()
+    private void Update()
     {
-        if (!isPickedUp)
-        {
-            isPickedUp = true;
-        }
+     
     }
+
+ 
 }
