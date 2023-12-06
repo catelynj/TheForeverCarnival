@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 9075163142612362534}
   - component: {fileID: 2137132733458298467}
   - component: {fileID: -659182461219628150}
-  - component: {fileID: 214321566808504032}
   - component: {fileID: 2725943877073712175}
+  - component: {fileID: 2097184182934852518}
   m_Layer: 7
   m_Name: Ball
   m_TagString: Untagged
@@ -117,20 +117,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: a769575b4131ec64a9219996d0328a75, type: 2}
   - {fileID: 2100000, guid: fab1d009de1fd404ea0446c01eb9ad79, type: 2}
   - {fileID: 2100000, guid: f5f1fbef76999084c86871c845124678, type: 2}
---- !u!114 &214321566808504032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8703927436920532477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e072d53f4a589a246a9828ba0ab0137b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 6579762937590474931, guid: 550268deac014e043baad9e45275fef9, type: 3}
-  cam: {fileID: 0}
 --- !u!54 &2725943877073712175
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -147,3 +133,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2097184182934852518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8703927436920532477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735f7d0daaaf2f4498899cb2bfb7aaa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  reticle: {fileID: 0}
+  throwForce: 20
+  cloneOffset: 2
+  rightOffset: 0.5
+  downOffset: 0.2
+  eyeLevelHeight: 1.5

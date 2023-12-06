@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 1961855421038677508}
   - component: {fileID: 2068085032616749034}
   - component: {fileID: 5283578923142188418}
-  - component: {fileID: 412516299188813063}
-  - component: {fileID: 8008471149715862362}
   - component: {fileID: 8848049748611121276}
-  m_Layer: 7
+  - component: {fileID: 5776855806752738012}
+  m_Layer: 0
   m_Name: Dart_Pickup
   m_TagString: Dart
   m_Icon: {fileID: 0}
@@ -70,32 +69,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &412516299188813063
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185073084141343934}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 3}
---- !u!114 &8008471149715862362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185073084141343934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b3c62582d9454f4d8cc83650467eb60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: e5cc486ff5aa6ad4ea75d96ed314b207, type: 2}
 --- !u!114 &8848049748611121276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +85,25 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 4895c600e0fec9843885cf75ccffb4f4, type: 2}
   - {fileID: 2100000, guid: 8573dc3a7c7a2934db446199a3618b5a, type: 2}
   - {fileID: 2100000, guid: ea1b82a25e0f6b14b8cf9f716af8856c, type: 2}
+--- !u!114 &5776855806752738012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185073084141343934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e072d53f4a589a246a9828ba0ab0137b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  reticle: {fileID: 0}
+  throwForce: 20
+  cloneOffset: 1.5
+  rightOffset: 0.5
+  downOffset: 0.2
+  eyeLevelHeight: 1.5
 --- !u!1 &1675114679750368139
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +116,7 @@ GameObject:
   - component: {fileID: 6247933175818822655}
   - component: {fileID: 2572421755923824416}
   - component: {fileID: 9076930462442524136}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +215,7 @@ GameObject:
   - component: {fileID: 4650500888154420190}
   - component: {fileID: 6254160619091022250}
   - component: {fileID: 9169552984985804592}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +299,7 @@ GameObject:
   - component: {fileID: 3599318398647898735}
   - component: {fileID: 8578010081694321662}
   - component: {fileID: 3867853615497984893}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +398,7 @@ GameObject:
   - component: {fileID: 5937453688238385622}
   - component: {fileID: 3852011827641861695}
   - component: {fileID: 7648936516580855330}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

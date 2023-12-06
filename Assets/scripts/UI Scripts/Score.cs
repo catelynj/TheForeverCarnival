@@ -7,7 +7,9 @@ public class Score : MonoBehaviour
 {
     public int scoreBalloon;
     public int currentScore;
+    public int trophyScore;
     [SerializeField] private Text scoreText;
+    [SerializeField] private Text trophyText;
 
     private void Start()
     {
@@ -16,7 +18,7 @@ public class Score : MonoBehaviour
     private void InitVariables()
     {
         currentScore = 0;
-
+        trophyScore = 0;
 
     }
    
@@ -24,5 +26,13 @@ public class Score : MonoBehaviour
     {
         currentScore += scoreBalloon;
         scoreText.text = currentScore.ToString();
+
+        if(currentScore == 200)
+        {
+            trophyScore += 1;
+            trophyText.text = trophyScore.ToString();
+        }
     }
+
+
 }

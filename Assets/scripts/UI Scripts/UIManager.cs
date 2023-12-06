@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject settingsCanvas = null;
     [SerializeField] private GameObject inventoryCanvas = null;
     [SerializeField] private Score score;
-    [SerializeField] private InventoryUI inventoryUI;
+    
 
 
     private void Start()
@@ -62,11 +62,6 @@ public class UIManager : MonoBehaviour
         hudCanvas.SetActive(isPlaying);
         settingsCanvas.SetActive(!isPlaying);
         inventoryCanvas.SetActive(!isPlaying);
-    }
-
-    public void UpdateInventoryUI(Item2 newItem)
-    {
-        inventoryUI.UpdateInfo(newItem.icon, newItem.maxCount);
     }
 
     public void SetActiveSettings(bool isPaused)
