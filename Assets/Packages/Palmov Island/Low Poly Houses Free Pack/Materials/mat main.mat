@@ -77,7 +77,7 @@ Material:
     - _Occlusion: 7.5
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ShadowStrength: 1
+    - _ShadowStrength: 0.8
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SquashAmount: 1

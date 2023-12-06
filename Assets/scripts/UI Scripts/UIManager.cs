@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance = null;
-
+    
     private void Awake()
     {
         if (instance == null)
@@ -23,10 +23,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject inventoryCanvas = null;
     [SerializeField] private Score score;
     [SerializeField] private Image trophyImage;
+    public Text messageText;
     public Sprite prize;
-    public Sprite prize2;
-    public Sprite prize3;
-   
+    public static Sprite prize2;
+    public static Sprite prize3;
+
 
     private void Start()
     {
@@ -116,18 +117,17 @@ public class UIManager : MonoBehaviour
     {
         score.AddScore();
     }
+
     public void Quit()
     {
         Application.Quit();
     }
     public void UpdateTrophyInventory(int trophies)
     {
-
         if (trophyImage != null)
         {
-            // Example: Change the sprite based on the number of trophies
             if (trophies == 1)
-            {
+            { 
                 trophyImage.sprite = prize;
             }
             else if (trophies == 2)
@@ -142,4 +142,20 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void DisplayMessage(string message)
+    {
+        if (messageText != null)
+        {
+            messageText.text = message;
+            messageText.gameObject.SetActive(true);
+        }
+    }
+    public void HideMessage()
+    {
+        if (messageText != null)
+        {
+            messageText.text = "";
+            messageText.gameObject.SetActive(false);
+        }
+    }
 }

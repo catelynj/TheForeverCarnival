@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balloon: {fileID: 8483939980912991330}
+  audioSource: {fileID: 0}
 --- !u!54 &9145967752665387918
 Rigidbody:
   m_ObjectHideFlags: 0
