@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\Item Scripts\ThrowDart.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\UIManager.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\ThrowBall.cs" />
     <Compile Include="Assets\Packages\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
@@ -110,7 +111,6 @@
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\BalloonColorRandomizer.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-    <Compile Include="Assets\Scripts\Item Scripts\ThrowBall.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\TextMesh Pro\Shaders\TMPro.cginc" />

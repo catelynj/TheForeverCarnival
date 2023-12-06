@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro.Examples;
@@ -25,14 +26,14 @@ public class UIManager : MonoBehaviour
     public Sprite prize;
     public Sprite prize2;
     public Sprite prize3;
-
-
+   
 
     private void Start()
     {
         SetActiveHud(true);
         Cursor.visible = false;
-        LockCursor();
+        Cursor.lockState = CursorLockMode.Locked;
+       
     }
 
     private void Update()
@@ -41,7 +42,7 @@ public class UIManager : MonoBehaviour
         //press Escape to bring up settings, press again to close settings
         if (Input.GetKeyDown(KeyCode.Escape) && !settingsOpen)
         {
-            SetActiveSettings(true);      
+            SetActiveSettings(true);
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && settingsOpen)
         {
@@ -76,17 +77,17 @@ public class UIManager : MonoBehaviour
 
         if (isPaused)
         {
-           Time.timeScale = 0;
-           Cursor.visible = true;
-           UnlockCursor();
+            Time.timeScale = 0;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         else
         {
-            LockCursor();
+            Cursor.lockState= CursorLockMode.Locked;
             Cursor.visible = false;
             Time.timeScale = 1;
         }
-            
+
         settingsOpen = isPaused;
     }
 
@@ -97,13 +98,13 @@ public class UIManager : MonoBehaviour
         settingsCanvas.SetActive(!isInventory);
         if (isInventory)
         {
-            UnlockCursor();
+            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-           
+
         }
         else
         {
-            LockCursor();
+            Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
 
@@ -119,7 +120,6 @@ public class UIManager : MonoBehaviour
     {
         Application.Quit();
     }
-
     public void UpdateTrophyInventory(int trophies)
     {
 
@@ -142,13 +142,4 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void LockCursor()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    private void UnlockCursor()
-    {
-        Cursor.lockState -= CursorLockMode.None;
-    }
 }
