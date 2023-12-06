@@ -21,7 +21,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject settingsCanvas = null;
     [SerializeField] private GameObject inventoryCanvas = null;
     [SerializeField] private Score score;
-    
+    [SerializeField] private Image trophyImage;
+    public Sprite prize;
+    public Sprite prize2;
+    public Sprite prize3;
+
 
 
     private void Start()
@@ -95,6 +99,7 @@ public class UIManager : MonoBehaviour
         {
             UnlockCursor();
             Cursor.visible = true;
+           
         }
         else
         {
@@ -115,7 +120,28 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
-   
+    public void UpdateTrophyInventory(int trophies)
+    {
+
+        if (trophyImage != null)
+        {
+            // Example: Change the sprite based on the number of trophies
+            if (trophies == 1)
+            {
+                trophyImage.sprite = prize;
+            }
+            else if (trophies == 2)
+            {
+                trophyImage.sprite = prize2;
+            }
+            else if (trophies == 3)
+            {
+                trophyImage.sprite = prize3;
+            }
+
+        }
+    }
+
     private void LockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;
