@@ -34,7 +34,7 @@ public class Score : MonoBehaviour
         currentScore += scoreBalloon;
         scoreText.text = currentScore.ToString();
 
-        if(currentScore == 10) //can adjust for testing, just make sure to put back to 200
+        if(currentScore == 200) //can adjust for testing, just make sure to put back to 200
         {
             trophyScore += 1;
             trophyText.text = trophyScore.ToString();
