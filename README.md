@@ -1,4 +1,4 @@
-# CarnivalRepo
+# The Forever Carnival 
 
 This is the second project from Farm Forever Games, a student-ran group at the Pennsylvania College of Technology learning the ins and outs of game design and programming.
 
