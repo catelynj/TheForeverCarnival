@@ -85,6 +85,7 @@
     <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\blooner.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Packages\TextMeshPro_Assets\CurvedTextMeshPro\Scripts\TextProOnAExp.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\ThrowDart.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\Packages\StarterAssets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\bloonerRespawn.cs" />
     <Compile Include="Assets\Packages\TextMeshPro_Assets\CurvedTextMeshPro\Scripts\TextProOnACurve.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\BalloonPopper.cs" />
