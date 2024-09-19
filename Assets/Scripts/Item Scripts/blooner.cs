@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class blooner : MonoBehaviour
-{
+{ }/*
     public int balloons;
     public GameObject balloon;
 
@@ -33,3 +33,4 @@ public class blooner : MonoBehaviour
     }
 
 }
+*/
