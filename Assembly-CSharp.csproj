@@ -95,6 +95,7 @@
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\CupBoothCollision.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\EventManager.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 8982556795266145092}
   - component: {fileID: 4481664925698421549}
   - component: {fileID: -6959236238234255145}
+  - component: {fileID: 6532024315904424165}
   m_Layer: 7
   m_Name: Ball_Pickup
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,13 +29,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6579762937590474931}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.991, y: 1.223, z: -5.044}
-  m_LocalScale: {x: 0.13379, y: 0.13379, z: 0.13379}
+  m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 0.29999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5247595199562040414
 MeshFilter:
@@ -93,10 +94,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6579762937590474931}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -110,9 +122,17 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6579762937590474931}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-6959236238234255145
@@ -132,3 +152,20 @@ MonoBehaviour:
   - {fileID: 2100000, guid: a769575b4131ec64a9219996d0328a75, type: 2}
   - {fileID: 2100000, guid: fab1d009de1fd404ea0446c01eb9ad79, type: 2}
   - {fileID: 2100000, guid: f5f1fbef76999084c86871c845124678, type: 2}
+--- !u!114 &6532024315904424165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579762937590474931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735f7d0daaaf2f4498899cb2bfb7aaa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  reticle: {fileID: 0}
+  throwForce: 10
+  cloneOffset: 2
+  eyeLevelHeight: 1.5
