@@ -3076,6 +3076,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.7823765, y: 3.43, z: 2.3066483}
   m_Center: {x: 0, y: 1.67, z: 0}
+--- !u!1 &1056773332 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4448362582100542747, guid: 528b241404b11154ba2406102a1cfabd, type: 3}
+  m_PrefabInstance: {fileID: 6168778012173486912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1056773339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056773332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735f7d0daaaf2f4498899cb2bfb7aaa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  reticle: {fileID: 0}
+  throwForce: 10
+  cloneOffset: 2
+  eyeLevelHeight: 1.5
 --- !u!1 &1076082447
 GameObject:
   m_ObjectHideFlags: 0
@@ -4435,7 +4457,7 @@ Transform:
   m_GameObject: {fileID: 1420221923}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1441938, y: 0.9710007, z: 74.53851}
+  m_LocalPosition: {x: -0.8, y: 7, z: 33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5326,6 +5348,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1420221924}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1820934903 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7085834411743904293, guid: 528b241404b11154ba2406102a1cfabd, type: 3}
+  m_PrefabInstance: {fileID: 6168778012173486912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1820934910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820934903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735f7d0daaaf2f4498899cb2bfb7aaa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  reticle: {fileID: 0}
+  throwForce: 10
+  cloneOffset: 2
+  eyeLevelHeight: 1.5
 --- !u!1 &1826438758
 GameObject:
   m_ObjectHideFlags: 0
@@ -7098,7 +7142,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7085834411743904293, guid: 528b241404b11154ba2406102a1cfabd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1820934910}
+    - targetCorrespondingSourceObject: {fileID: 4448362582100542747, guid: 528b241404b11154ba2406102a1cfabd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1056773339}
   m_SourcePrefab: {fileID: 100100000, guid: 528b241404b11154ba2406102a1cfabd, type: 3}
 --- !u!1 &6276005533229590491
 GameObject:
