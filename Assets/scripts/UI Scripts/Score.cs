@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour
@@ -8,46 +9,47 @@ public class Score : MonoBehaviour
     public int scoreBalloon;
     public int currentScore;
     public int trophyScore;
-    private AudioSource audioSource;
+    public AudioSource scoreSound;
     private UIManager inventory;
+    private bool scoreCall = false;
 
     [SerializeField] private Text scoreText;
     [SerializeField] private Text trophyText;
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
         inventory = UIManager.instance;
-        
         InitVariables();
     }
     private void InitVariables()
     {
         currentScore = 0;
         trophyScore = 0;
-      
-
     }
    
-    public void AddScore()
+    public void AddScore(int score)
     {
-        currentScore += scoreBalloon;
+        currentScore += score;
         scoreText.text = currentScore.ToString();
 
-        if(currentScore == 200) //can adjust for testing, just make sure to put back to 200
+        //not using this anymore, need to add logic for prize shop
+        //when currentScore = prize amount -> press E to spend points + add prize to inventory
+        if (currentScore == 200) 
         {
             trophyScore += 1;
             trophyText.text = trophyScore.ToString();
-            Debug.Log("Play Sound.");
-            if(audioSource != null )
-            {
-                audioSource.Play();
-            }
-
             inventory.UpdateTrophyInventory(1);
 
         }
+        scoreCall = true;
     }
 
-
+    private void PlayScoreSound()
+    {
+        if (scoreCall)
+        {
+            scoreSound.Play();
+            scoreCall = false;
+        }
+    }
 }
