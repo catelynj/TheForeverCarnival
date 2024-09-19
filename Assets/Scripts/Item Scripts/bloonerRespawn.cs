@@ -13,11 +13,14 @@ public class bloonerRespawn : MonoBehaviour
     public GameObject balloon;
     bool canButton = true;
     public GameObject spawnArea;
+    IEnumerator balloonRespawner;
+    public float waitTime;
 
     private void Start()
     {
-        balloonSpawner(); // Call the spawning function when the game begins
-        //blooner other = spawnArea.GetComponent<blooner>();
+        balloonRespawner = BalloonSpawner();
+        StartCoroutine(balloonRespawner);
+        // Call the spawning function when the game begins
     }
 
     // Update is called once per frame
@@ -40,14 +43,17 @@ public class bloonerRespawn : MonoBehaviour
         {
             if (hit.collider.CompareTag("dartButton"))
             {
-                balloonSpawner();
-                //blooner blnr = new blooner();
-                //blnr.balloonSpawner(); //Need to find a way to implement this
+                Debug.Log("Button pressed!");
+                canButton = false;
+                StartCoroutine(balloonRespawner);
+                canButton = true;
+                Debug.Log("Button ready!");
             }
         }
     }
 
-    void balloonSpawner()
+    // BUG: Coroutine is only being called once and then skipped over. Not sure why.
+    IEnumerator BalloonSpawner()
     {
         Collider spawn = spawnArea.GetComponent<BoxCollider>();
         Rigidbody rigi = balloon.GetComponent<Rigidbody>();
@@ -60,7 +66,11 @@ public class bloonerRespawn : MonoBehaviour
             // When spawning more than one balloon, they can spawn inside of each other and eject out into space
             rigi.constraints = RigidbodyConstraints.FreezePosition; // 
             rigi.constraints = RigidbodyConstraints.FreezeRotation; // 
+            
         }
+        Debug.Log("Waiting..." + waitTime);
+        yield return new WaitForSeconds(waitTime);
+        Debug.Log("Ready!" + waitTime);
     }
 
 }
