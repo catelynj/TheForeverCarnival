@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\cxj15\\documents\\github\\theforevercarnival\\assets\\scripts\\item scripts\\bloonerrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\bloonerrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\cxj15\\documents\\github\\theforevercarnival\\assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\blooner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\blooner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\throwdart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\throwdart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\cxj15\\documents\\github\\theforevercarnival\\assets\\scripts\\ui scripts\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,48 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "bloonerRespawn.cs",
-              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\bloonerRespawn.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\bloonerRespawn.cs",
-              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\bloonerRespawn.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\bloonerRespawn.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAABSAAAA",
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI Scripts\\UIManager.cs",
+              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI Scripts\\UIManager.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAcwHYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T14:27:04.227Z",
+              "WhenOpened": "2024-09-19T13:54:46.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ThrowDart.cs",
-              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\ThrowDart.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\ThrowDart.cs",
-              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\ThrowDart.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\ThrowDart.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAgwCcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T14:10:26.667Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "blooner.cs",
-              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\blooner.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\blooner.cs",
-              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\blooner.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\blooner.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAMAAAA",
+              "Title": "Score.cs",
+              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\Score.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI Scripts\\Score.cs",
+              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\Score.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI Scripts\\Score.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCgAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T14:25:29.523Z"
+              "WhenOpened": "2024-09-19T13:31:35.87Z",
+              "EditorCaption": ""
             }
           ]
         }

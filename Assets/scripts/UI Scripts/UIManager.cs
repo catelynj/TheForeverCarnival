@@ -4,16 +4,20 @@ using System.Collections.Generic;
 using TMPro.Examples;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance = null;
+ 
     
     private void Awake()
     {
         if (instance == null)
             instance = this;
+
+      
     }
 
     private bool settingsOpen = false;
@@ -27,7 +31,6 @@ public class UIManager : MonoBehaviour
     public Sprite prize;
     public static Sprite prize2;
     public static Sprite prize3;
-
 
     private void Start()
     {
@@ -115,7 +118,8 @@ public class UIManager : MonoBehaviour
 
     public void UpdateScore()
     {
-        score.AddScore();
+       //adjust logic for multiple games affecting score
+
     }
 
     public void Quit()
