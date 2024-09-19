@@ -3909,6 +3909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DartBoard
       objectReference: {fileID: 0}
+    - target: {fileID: 1969723902618094276, guid: 55e7ba7198af95e46ac9fdedb789edd9, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 9005220659341278717}
     - target: {fileID: 9054878212624925539, guid: 55e7ba7198af95e46ac9fdedb789edd9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 76.52
@@ -7485,6 +7489,11 @@ MeshRenderer:
 --- !u!20 &9005220659341278713 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 9005220658632979108, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 1842892637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9005220659341278717 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9005220658632979107, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_PrefabInstance: {fileID: 1842892637}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &9036438692777163421
