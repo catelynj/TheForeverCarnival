@@ -335,6 +335,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f45e41d07a8d1d40a45ca86ea5d61d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  balloons: 0
+  balloon: {fileID: 8483939980912991330, guid: db4fcf1b0e5a3cf4abc03c9e6aad89c9, type: 3}
+  spawnArea: {fileID: 7987470909899946175}
+  waitTime: 0
 --- !u!1 &7987470909899946175
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +349,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9087148470944823843}
   - component: {fileID: 5803948446895018290}
-  - component: {fileID: 77340452220670424}
   m_Layer: 0
   m_Name: balloonSpawnArea
   m_TagString: Untagged
@@ -389,20 +392,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8, y: 3, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &77340452220670424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7987470909899946175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70eb5289496c9e2459ed7302b50285e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balloons: 1
-  balloon: {fileID: 8483939980912991330, guid: db4fcf1b0e5a3cf4abc03c9e6aad89c9, type: 3}
 --- !u!1001 &267634032492762
 PrefabInstance:
   m_ObjectHideFlags: 0
