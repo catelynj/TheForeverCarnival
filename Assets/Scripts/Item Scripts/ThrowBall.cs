@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ThrowBall : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class ThrowBall : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.CompareTag("Ball"))
+            if (hit.collider.CompareTag("Ball") && canPickup == true)
             {
                 // Instantiate a clone only if there isn't one already
                 if (clone == null)
@@ -63,6 +64,8 @@ public class ThrowBall : MonoBehaviour
                     beingCarried = true;
                     
                     canPickup = false;  // Set to false to prevent rapid pickups
+                    // Freeze Player
+                    InputSystem.DisableDevice(Keyboard.current);
                 }
             }
         }
@@ -119,5 +122,7 @@ public class ThrowBall : MonoBehaviour
         // Destroy the object after the delay
         Destroy(obj);
         canPickup = true;  // Allow picking up a new object after the current one is destroyed
+        // Unfreeze Player
+        InputSystem.EnableDevice(Keyboard.current);
     }
 }
