@@ -4,26 +4,11 @@
   "Documents": [
     {
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\cxj15\\documents\\github\\theforevercarnival\\assets\\scripts\\item scripts\\throwball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\throwball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\cxj15\\documents\\github\\theforevercarnival\\assets\\scripts\\item scripts\\cupboothcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\cupboothcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\bloonerrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\bloonerrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
->>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\ui scripts\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\cxj15\\documents\\github\\theforevercarnival\\assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
 =======
       "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\bloonerrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,44 +36,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CupBoothCollision.cs",
-              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\CupBoothCollision.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\CupBoothCollision.cs",
-              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\CupBoothCollision.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\CupBoothCollision.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T14:42:27.178Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ThrowBall.cs",
-              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\ThrowBall.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\ThrowBall.cs",
-              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\ThrowBall.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\ThrowBall.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAAAEoAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T14:38:09.525Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "bloonerRespawn.cs",
-              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\bloonerRespawn.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\bloonerRespawn.cs",
-              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\bloonerRespawn.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\bloonerRespawn.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAQwDMAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T14:31:26.453Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "UIManager.cs",
               "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI Scripts\\UIManager.cs",
@@ -96,7 +43,6 @@
               "RelativeToolTip": "Assets\\Scripts\\UI Scripts\\UIManager.cs",
               "ViewState": "AQIAAF4AAAAAAAAAAAAcwHgAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< Updated upstream
 <<<<<<< Updated upstream
               "WhenOpened": "2024-09-19T13:54:46.473Z",
               "EditorCaption": ""
@@ -108,13 +54,6 @@
               "$type": "Document",
               "DocumentIndex": 0,
 <<<<<<< Updated upstream
-=======
-              "WhenOpened": "2024-09-19T13:54:46.473Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
->>>>>>> Stashed changes
               "Title": "Score.cs",
               "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\Score.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI Scripts\\Score.cs",
@@ -122,7 +61,6 @@
               "RelativeToolTip": "Assets\\Scripts\\UI Scripts\\Score.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAgwA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< Updated upstream
               "WhenOpened": "2024-09-19T13:31:35.87Z",
               "EditorCaption": ""
 =======
@@ -147,9 +85,6 @@
               "ViewState": "AQIAAB8AAAAAAAAAAAA1wCcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T14:10:26.667Z"
->>>>>>> Stashed changes
-=======
-              "WhenOpened": "2024-09-19T13:31:35.87Z"
 >>>>>>> Stashed changes
             }
           ]

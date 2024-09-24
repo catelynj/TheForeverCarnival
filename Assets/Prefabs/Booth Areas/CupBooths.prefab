@@ -483,37 +483,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8537226463138483141, guid: d85ebc72f62e4c84fb8c88e74a43eeca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4836644891174120261}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6446409810661618197, guid: d85ebc72f62e4c84fb8c88e74a43eeca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5817529166233733553}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d85ebc72f62e4c84fb8c88e74a43eeca, type: 3}
---- !u!1 &5464075401547808547 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6446409810661618197, guid: d85ebc72f62e4c84fb8c88e74a43eeca, type: 3}
-  m_PrefabInstance: {fileID: 1342763396170304822}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &5817529166233733553
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5464075401547808547}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.019999998, y: 0.019999992, z: 0.0018087975}
-  m_Center: {x: -0.000000029729696, y: -5.4214067e-10, z: -0.009095611}
 --- !u!4 &7266599838728308467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8537226463138483141, guid: d85ebc72f62e4c84fb8c88e74a43eeca, type: 3}
@@ -2093,6 +2064,18 @@ PrefabInstance:
     - target: {fileID: 6579762937590474931, guid: 550268deac014e043baad9e45275fef9, type: 3}
       propertyPath: m_Name
       value: Ball_Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798562224999514579, guid: 550268deac014e043baad9e45275fef9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.44596663
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798562224999514579, guid: 550268deac014e043baad9e45275fef9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.44596663
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798562224999514579, guid: 550268deac014e043baad9e45275fef9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.44596663
       objectReference: {fileID: 0}
     - target: {fileID: 8798562224999514579, guid: 550268deac014e043baad9e45275fef9, type: 3}
       propertyPath: m_LocalPosition.x
