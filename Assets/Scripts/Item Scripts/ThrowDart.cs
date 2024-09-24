@@ -37,37 +37,14 @@ public class ThrowDart : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Dart") && clone == null)
         {
-            if (hit.collider.CompareTag("Dart") && canPickup == true)
+            // Instantiate a clone only if there isn't one already
+            clone = Instantiate(hit.collider.gameObject);
+
+            // Disable the clone's collider while being carried to prevent interference
+            Collider cloneCollider = clone.GetComponent<Collider>();
+            if (cloneCollider != null)
             {
-                // Instantiate a clone only if there isn't one already
-                if (clone == null)
-                {
-                    clone = Instantiate(hit.collider.gameObject);
-
-                    // Disable the clone's collider while being carried to prevent interference
-                    Collider cloneCollider = clone.GetComponent<Collider>();
-                    if (cloneCollider != null)
-                    {
-                        cloneCollider.enabled = false;
-                    }
-
-                    // Make sure the clone has a Rigidbody
-                    Rigidbody rb = clone.GetComponent<Rigidbody>();
-                    if (rb == null)
-                    {
-                        rb = clone.AddComponent<Rigidbody>();
-                    }
-
-                    // Enable gravity for the Rigidbody
-                    rb.useGravity = true;
-
-                    beingCarried = true;
-                   
-                    canPickup = false;  // Set to false to prevent rapid pickups
-
-                    // Freeze Player
-                    InputSystem.DisableDevice(Keyboard.current);
-                }
+                cloneCollider.enabled = false;
             }
 
             // Make sure the clone has a Rigidbody
@@ -76,6 +53,16 @@ public class ThrowDart : MonoBehaviour
             {
                 rb = clone.AddComponent<Rigidbody>();
             }
+
+            // Enable gravity for the Rigidbody
+            rb.useGravity = true;
+
+            beingCarried = true;
+
+            canPickup = false;  // Set to false to prevent rapid pickups
+
+            // Freeze Player
+            InputSystem.DisableDevice(Keyboard.current);
 
             // Enable gravity for the Rigidbody
             rb.useGravity = true;
