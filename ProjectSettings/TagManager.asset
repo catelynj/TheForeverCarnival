@@ -9,6 +9,7 @@ TagManager:
   - Balloon
   - Ball
   - dartButton
+  - Cup
   layers:
   - Default
   - TransparentFX
