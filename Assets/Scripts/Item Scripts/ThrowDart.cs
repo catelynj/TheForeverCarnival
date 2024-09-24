@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ThrowDart : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class ThrowDart : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.CompareTag("Dart"))
+            if (hit.collider.CompareTag("Dart") && canPickup == true)
             {
                 // Instantiate a clone only if there isn't one already
                 if (clone == null)
@@ -63,6 +64,9 @@ public class ThrowDart : MonoBehaviour
                     beingCarried = true;
                    
                     canPickup = false;  // Set to false to prevent rapid pickups
+
+                    // Freeze Player
+                    InputSystem.DisableDevice(Keyboard.current);
                 }
             }
         }
@@ -119,6 +123,8 @@ public class ThrowDart : MonoBehaviour
         // Destroy the object after the delay
         Destroy(obj);
         canPickup = true;  // Allow picking up a new object after the current one is destroyed
+        // Unfreeze Player
+        InputSystem.EnableDevice(Keyboard.current);
     }
 }
 
