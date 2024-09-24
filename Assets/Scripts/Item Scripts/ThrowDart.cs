@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class ThrowDart : MonoBehaviour
 {
+    public AudioSource pickupSound;
     public Transform cam;
     public RectTransform reticle;
     public float throwForce = 10f;
@@ -21,6 +22,7 @@ public class ThrowDart : MonoBehaviour
             if (canPickup)
             {
                 Pickup();
+                pickupSound.Play();
             }
         }
 
@@ -40,52 +42,31 @@ public class ThrowDart : MonoBehaviour
             // Instantiate a clone only if there isn't one already
             clone = Instantiate(hit.collider.gameObject);
 
-            // Disable the clone's collider while being carried to prevent interference
-            Collider cloneCollider = clone.GetComponent<Collider>();
-            if (cloneCollider != null)
-            {
-                cloneCollider.enabled = false;
-            }
-
-            // Make sure the clone has a Rigidbody
             Rigidbody rb = clone.GetComponent<Rigidbody>();
             if (rb == null)
             {
                 rb = clone.AddComponent<Rigidbody>();
             }
 
-            // Enable gravity for the Rigidbody
             rb.useGravity = true;
-
             beingCarried = true;
-
-            canPickup = false;  // Set to false to prevent rapid pickups
+            canPickup = false;  // doesn't work btw
 
             // Freeze Player
             InputSystem.DisableDevice(Keyboard.current);
 
-            // Enable gravity for the Rigidbody
             rb.useGravity = true;
-
             beingCarried = true;
-
-            canPickup = false;  // Set to false to prevent rapid pickups
         }
     }
 
 
     private void Throw()
     {
-        // Get the Camera component from the playerCam Camera
         Camera playerCamera = cam.GetComponent<Camera>();
-
-        // Use ViewportToWorldPoint to get a position in world space based on the center of the screen
         Vector3 throwPosition = playerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, playerCamera.nearClipPlane + cloneOffset));
-
-        // Set the position of the clone
         clone.transform.position = throwPosition;
 
-        // Use the center of the screen as the target position
         Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         Vector3 throwDirection = ray.direction;
 
@@ -94,24 +75,13 @@ public class ThrowDart : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            // Enable the clone's collider when thrown
-            Collider cloneCollider = clone.GetComponent<Collider>();
-            if (cloneCollider != null)
-            {
-                cloneCollider.enabled = true;
-            }
-
-            // Detach the clone from the player's camera
             clone.transform.parent = null;
-
-            // Apply a constant force rather than using AddForce
             Rigidbody rb = clone.GetComponent<Rigidbody>();
             if (rb != null)
             {
                 rb.velocity = throwDirection * throwForce;
             }
 
-            // Start a coroutine to despawn the clone after a delay
             StartCoroutine(DestroyAfterDelay(clone, 0.5f));
             beingCarried = false;
         }

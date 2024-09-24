@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class ThrowBall : MonoBehaviour
 {
+    public AudioSource pickupSound;
     public Transform cam;
     public RectTransform reticle;
     public float throwForce = 10f;
@@ -21,6 +22,7 @@ public class ThrowBall : MonoBehaviour
             if (canPickup)
             {
                 Pickup();
+                pickupSound.Play();
             }
         }
 
@@ -50,7 +52,7 @@ public class ThrowBall : MonoBehaviour
 
                     rb.useGravity = true;
                     beingCarried = true;
-                    canPickup = false;
+                    canPickup = false; //doesnt work btw
 
                     //freeze player movement in mini-game
                     InputSystem.DisableDevice(Keyboard.current);
