@@ -28,6 +28,6 @@ public class GameManager : MonoBehaviour
 
     public void IncrementScore(int score)
     {
-        Debug.Log("Points!!!!");
+        //Debug.Log("Points!!!!");
     }
 }
