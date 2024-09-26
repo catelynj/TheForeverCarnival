@@ -1,3 +1,4 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,8 +15,17 @@ public class ThrowDart : MonoBehaviour
     private GameObject clone;
     bool beingCarried = false;
     private bool canPickup = true;
+    GameObject player;
 
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        // sync physics for teleport
+        player.transform.SetPositionAndRotation(player.transform.position, player.transform.rotation);
+        Physics.SyncTransforms();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -56,6 +66,11 @@ public class ThrowDart : MonoBehaviour
 
             // Freeze Player
             InputSystem.DisableDevice(Keyboard.current);
+
+            //teleport player
+            player.GetComponent<FirstPersonController>().enabled = false;
+            player.transform.position = new Vector3(hit.transform.position.x + 1f, 0, hit.transform.position.z + 3.5f);
+            player.GetComponent<FirstPersonController>().enabled = true;
 
             rb.useGravity = true;
             beingCarried = true;
