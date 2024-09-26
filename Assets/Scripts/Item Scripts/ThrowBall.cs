@@ -49,10 +49,8 @@ public class ThrowBall : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Ball") && clone == null)
         {
-            if (hit.collider.CompareTag("Ball") && canPickup == true)
-            {
                 //freeze player movement in mini-game
                 InputSystem.DisableDevice(Keyboard.current);
                 
@@ -61,22 +59,18 @@ public class ThrowBall : MonoBehaviour
                 player.transform.position = new Vector3(hit.transform.position.x + 1f, 0, hit.transform.position.z + 1f);
                 player.GetComponent<FirstPersonController>().enabled = true;
 
-                if (clone == null)
+                clone = Instantiate(hit.collider.gameObject);
+                Rigidbody rb = clone.GetComponent<Rigidbody>();
+                if (rb == null)
                 {
-                    clone = Instantiate(hit.collider.gameObject);
-                    Rigidbody rb = clone.GetComponent<Rigidbody>();
-                    if (rb == null)
-                    {
-                        rb = clone.AddComponent<Rigidbody>();
-                    }
-
-                    rb.useGravity = true;
-                    beingCarried = true;
-                    canPickup = false; //doesnt work btw
-                    rb.constraints = RigidbodyConstraints.None;
-                    
+                    rb = clone.AddComponent<Rigidbody>();
                 }
-            }
+
+                rb.useGravity = true;
+                beingCarried = true;
+                canPickup = false; //doesnt work btw
+                rb.constraints = RigidbodyConstraints.None;
+                    
         }
     }
 
