@@ -15,7 +15,7 @@ public class ThrowDart : MonoBehaviour
     bool beingCarried = false;
     private bool canPickup = true;
     GameObject player;
-
+    bool keyboardActive = true;
 
     private void Start()
     {
@@ -49,6 +49,18 @@ public class ThrowDart : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Dart") && clone == null)
         {
+            if (keyboardActive == true)
+            {
+                //freeze player movement in mini-game
+                InputSystem.DisableDevice(Keyboard.current);
+                keyboardActive = false;
+
+                // teleport player
+                player.GetComponent<FirstPersonController>().enabled = false;
+                player.transform.position = new Vector3(hit.transform.position.x + 1f, 0, hit.transform.position.z + 3.5f);
+                player.GetComponent<FirstPersonController>().enabled = true;
+            }
+
             // Instantiate a clone only if there isn't one already
             clone = Instantiate(hit.collider.gameObject);
 
@@ -63,13 +75,7 @@ public class ThrowDart : MonoBehaviour
             canPickup = false;  // doesn't work btw
             rb.constraints = RigidbodyConstraints.None;
 
-            // Freeze Player
-            InputSystem.DisableDevice(Keyboard.current);
 
-            //teleport player
-            player.GetComponent<FirstPersonController>().enabled = false;
-            player.transform.position = new Vector3(hit.transform.position.x + 1f, 0, hit.transform.position.z + 3.5f);
-            player.GetComponent<FirstPersonController>().enabled = true;
 
             rb.useGravity = true;
             beingCarried = true;
@@ -112,6 +118,7 @@ public class ThrowDart : MonoBehaviour
         canPickup = true;  // Allow picking up a new object after the current one is destroyed
         // Unfreeze Player
         InputSystem.EnableDevice(Keyboard.current);
+        keyboardActive = true;
     }
 }
 

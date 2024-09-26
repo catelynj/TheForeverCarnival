@@ -17,6 +17,7 @@ public class ThrowBall : MonoBehaviour
     bool beingCarried = false;
     private bool canPickup = true;
     GameObject player;
+    bool keyboardActive = true;
 
     private void Start()
     {
@@ -49,27 +50,31 @@ public class ThrowBall : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Ball") && clone == null)
-        {
+        if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Ball") && clone == null){
+            if(keyboardActive == true)
+            {
                 //freeze player movement in mini-game
                 InputSystem.DisableDevice(Keyboard.current);
-                
+                keyboardActive = false;
+
                 //teleport player
                 player.GetComponent<FirstPersonController>().enabled = false;
                 player.transform.position = new Vector3(hit.transform.position.x + 1f, 0, hit.transform.position.z + 1f);
                 player.GetComponent<FirstPersonController>().enabled = true;
+            }
+            
 
-                clone = Instantiate(hit.collider.gameObject);
-                Rigidbody rb = clone.GetComponent<Rigidbody>();
-                if (rb == null)
-                {
-                    rb = clone.AddComponent<Rigidbody>();
-                }
+            clone = Instantiate(hit.collider.gameObject);
+            Rigidbody rb = clone.GetComponent<Rigidbody>();
+            if (rb == null)
+            {
+                rb = clone.AddComponent<Rigidbody>();
+            }
 
-                rb.useGravity = true;
-                beingCarried = true;
-                canPickup = false; //doesnt work btw
-                rb.constraints = RigidbodyConstraints.None;
+            rb.useGravity = true;
+            beingCarried = true;
+            canPickup = false; //doesnt work btw
+            rb.constraints = RigidbodyConstraints.None;
                     
         }
     }
@@ -105,5 +110,6 @@ public class ThrowBall : MonoBehaviour
 
         //Unfreeze player movement
         InputSystem.EnableDevice(Keyboard.current);
+        keyboardActive = true;
     }
 }
