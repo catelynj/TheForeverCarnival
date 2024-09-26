@@ -15,6 +15,7 @@ public class ThrowDart : MonoBehaviour
     bool beingCarried = false;
     private bool canPickup = true;
 
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -51,6 +52,7 @@ public class ThrowDart : MonoBehaviour
             rb.useGravity = true;
             beingCarried = true;
             canPickup = false;  // doesn't work btw
+            rb.constraints = RigidbodyConstraints.None;
 
             // Freeze Player
             InputSystem.DisableDevice(Keyboard.current);

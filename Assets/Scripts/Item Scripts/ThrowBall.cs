@@ -53,6 +53,7 @@ public class ThrowBall : MonoBehaviour
                     rb.useGravity = true;
                     beingCarried = true;
                     canPickup = false; //doesnt work btw
+                    rb.constraints = RigidbodyConstraints.None;
 
                     //freeze player movement in mini-game
                     InputSystem.DisableDevice(Keyboard.current);

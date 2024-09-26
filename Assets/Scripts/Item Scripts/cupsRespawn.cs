@@ -29,7 +29,7 @@ public class cupsRespawn : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("dartButton"))
+        if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("cupButton"))
         {
             Debug.Log("Button pressed!");
             StartCoroutine(CupsSpawner());
@@ -42,7 +42,6 @@ public class cupsRespawn : MonoBehaviour
         Collider spawn = spawnArea.GetComponent<BoxCollider>();
         Rigidbody rigi = cups.GetComponent<Rigidbody>();
 
-        //TODO: CREATE THE CUPS PREFAB & IMPLEMENT SPAWN LOCATION ON THE X,Y,Z OF AN EMPTY GAMEOBJECT
         Vector3 spawnLocation = new Vector3(spawnArea.transform.position.x, spawnArea.transform.position.y, spawnArea.transform.position.z);
         Instantiate(cups, spawnLocation, Quaternion.identity);
 
