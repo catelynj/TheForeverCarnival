@@ -8,6 +8,7 @@ public class BalloonPopper : MonoBehaviour
     public GameObject balloon;
     public AudioClip popSound;  
     private AudioSource audioSource;
+    public int balloonScore = 100;
 
     void Start()
     {
@@ -34,7 +35,7 @@ public class BalloonPopper : MonoBehaviour
         }
       */
         audioSource.PlayOneShot(popSound);
-        UIManager.instance.UpdateScore();
+        GameManager.Instance.IncrementScore(balloonScore);
         Destroy(balloon);
     }
 }

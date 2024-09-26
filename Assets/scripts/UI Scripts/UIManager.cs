@@ -10,7 +10,6 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance = null;
- 
     
     private void Awake()
     {
@@ -25,19 +24,16 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject hudCanvas = null;
     [SerializeField] private GameObject settingsCanvas = null;
     [SerializeField] private GameObject inventoryCanvas = null;
-    [SerializeField] private Score score;
-    [SerializeField] private Image trophyImage;
     public Text messageText;
-    public Sprite prize;
-    public static Sprite prize2;
-    public static Sprite prize3;
+    public bool updateScoreCall = false;
+    public Text scoreText;
 
     private void Start()
     {
         SetActiveHud(true);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-       
+        updateScoreCall = false;
     }
 
     private void Update()
@@ -118,32 +114,18 @@ public class UIManager : MonoBehaviour
 
     public void UpdateScore()
     {
-       //adjust logic for multiple games affecting score
-
+        //adjust logic for multiple games affecting score
+        if (updateScoreCall)
+        {
+            scoreText.text = GameManager.Instance.globalScore.ToString();
+        }
+        updateScoreCall = false;
+       
     }
 
     public void Quit()
     {
         Application.Quit();
-    }
-    public void UpdateTrophyInventory(int trophies)
-    {
-        if (trophyImage != null)
-        {
-            if (trophies == 1)
-            { 
-                trophyImage.sprite = prize;
-            }
-            else if (trophies == 2)
-            {
-                trophyImage.sprite = prize2;
-            }
-            else if (trophies == 3)
-            {
-                trophyImage.sprite = prize3;
-            }
-
-        }
     }
 
     public void DisplayMessage(string message)

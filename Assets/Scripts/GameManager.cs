@@ -5,6 +5,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance = null;
+    
+    public int globalScore;
+    public AudioSource pickupSource;
+    public AudioSource cupSource;
+    public AudioSource scoreSource;
+    public AudioSource backgroundMusic;
 
     public static GameManager Instance
     {
@@ -17,17 +23,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        globalScore = 0;
     }
 
     public void IncrementScore(int score)
     {
-        //Debug.Log("Points!!!!");
+        globalScore += score;
+        UIManager.instance.updateScoreCall = true;
+        UIManager.instance.UpdateScore();
     }
 }
