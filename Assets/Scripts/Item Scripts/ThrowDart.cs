@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 
 public class ThrowDart : MonoBehaviour
 {
-    public AudioSource pickupSound;
     public Transform cam;
     public RectTransform reticle;
     public float throwForce = 10f;
@@ -33,7 +32,7 @@ public class ThrowDart : MonoBehaviour
             if (canPickup)
             {
                 Pickup();
-                pickupSound.Play();
+                GameManager.Instance.pickupSource.Play();
             }
         }
 

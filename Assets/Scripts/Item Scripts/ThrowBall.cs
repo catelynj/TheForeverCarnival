@@ -33,7 +33,6 @@ public class ThrowBall : MonoBehaviour
             if (canPickup)
             {
                 Pickup();
-                pickupSound.Play();
             }
         }
 
