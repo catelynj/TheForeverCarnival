@@ -6,15 +6,14 @@ using UnityEngine.UI;
 public class BalloonPopper : MonoBehaviour
 {
     public GameObject balloon;
-    public AudioClip popSound;  
-    private AudioSource audioSource;
+    public AudioClip popSound;
+    private AudioSource popSource;
     public int balloonScore = 100;
 
-    void Start()
+    private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        popSource = GetComponent<AudioSource>();
     }
-
     void OnCollisionEnter(Collision collision)
     {
         // Check if the collided object has a "Dart" tag.
@@ -22,20 +21,18 @@ public class BalloonPopper : MonoBehaviour
         {
             // Call a method to handle balloon popping.
             PopBalloon();
+            
+
         }
     }
 
     void PopBalloon()
     {
-        //Debug.Log("Balloon popped!");
-
-      /*  if (audioSource != null && popSound != null)
+        if (popSource != null && popSound != null)
         {
-            audioSource.PlayOneShot(popSound);
+            popSource.PlayOneShot(popSound);
         }
-      */
-        audioSource.PlayOneShot(popSound);
         GameManager.Instance.IncrementScore(balloonScore);
-        Destroy(balloon);
+        Destroy(balloon, popSound.length - 0.78f);
     }
 }

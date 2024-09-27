@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class ThrowDart : MonoBehaviour
 {
     public AudioClip pickupSound;
-    private AudioSource audioSource;
+    private AudioSource pickupSource;
     public Transform cam;
     public RectTransform reticle;
     public float throwForce = 10f;
@@ -22,8 +22,8 @@ public class ThrowDart : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        audioSource = GetComponent<AudioSource>();
-
+        pickupSource = GetComponent<AudioSource>();
+        
         // sync physics for teleport
         player.transform.SetPositionAndRotation(player.transform.position, player.transform.rotation);
         Physics.SyncTransforms();
@@ -59,7 +59,7 @@ public class ThrowDart : MonoBehaviour
 
                 // teleport player
                 player.GetComponent<FirstPersonController>().enabled = false;
-                player.transform.position = new Vector3(hit.transform.position.x + 1f, 0, hit.transform.position.z + 3.5f);
+                player.transform.position = new Vector3(hit.transform.position.x -2f, 0, hit.transform.position.z);
                 player.GetComponent<FirstPersonController>().enabled = true;
             }
 
@@ -81,9 +81,9 @@ public class ThrowDart : MonoBehaviour
             beingCarried = true;
 
             //pickup sound
-            if (pickupSound != null && audioSource != null)
+            if (pickupSound != null && pickupSource != null)
             {
-                audioSource.PlayOneShot(pickupSound);
+                pickupSource.PlayOneShot(pickupSound);
             }
         }
     }

@@ -27,6 +27,8 @@ public class UIManager : MonoBehaviour
     public Text messageText;
     public bool updateScoreCall = false;
     public Text scoreText;
+    public AudioClip pointSound;
+    private AudioSource pointSource;
 
     private void Start()
     {
@@ -34,6 +36,7 @@ public class UIManager : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         updateScoreCall = false;
+        pointSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -114,10 +117,12 @@ public class UIManager : MonoBehaviour
 
     public void UpdateScore()
     {
-        //adjust logic for multiple games affecting score
+        
         if (updateScoreCall)
         {
             scoreText.text = GameManager.Instance.globalScore.ToString();
+            //Debug.Log("Point");
+            pointSource.PlayOneShot(pointSound);
         }
         updateScoreCall = false;
        

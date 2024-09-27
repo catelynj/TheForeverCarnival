@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     private static GameManager instance = null;
     
     public int globalScore;
+   
+    private AudioSource backgroundSource;
+    public AudioClip backgroundSound;
 
     public static GameManager Instance
     {
@@ -26,6 +29,13 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         globalScore = 0;
+        //pointSource = GetComponent<AudioSource>();
+        backgroundSource = GetComponent<AudioSource>();
+
+        if (backgroundSource != null && backgroundSound != null)
+        {
+            backgroundSource.Play();
+        }
     }
 
     public void IncrementScore(int score)

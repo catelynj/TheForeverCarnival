@@ -58,7 +58,7 @@ public class ThrowBall : MonoBehaviour
 
                 //teleport player
                 player.GetComponent<FirstPersonController>().enabled = false;
-                player.transform.position = new Vector3(hit.transform.position.x + 1f, 0, hit.transform.position.z + 1f);
+                player.transform.position = new Vector3(hit.transform.position.x + 1f, 0, hit.transform.position.z);
                 player.GetComponent<FirstPersonController>().enabled = true;
             }
 

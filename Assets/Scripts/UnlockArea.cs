@@ -19,9 +19,14 @@ public class UnlockArea : MonoBehaviour
         RaycastHit hit;
         if (Input.GetKeyUp(KeyCode.E) && Physics.Raycast(ray, out hit) && hit.collider.CompareTag("unlockButton"))
         {
-            if(GameManager.Instance.globalScore == 3000)
+            if(GameManager.Instance.globalScore >= 3000)
             {
                 Debug.Log("Unlock Next Area");
+                GameManager.Instance.globalScore -= 3000;
+                UIManager.instance.updateScoreCall = true;
+                UIManager.instance.UpdateScore();
+                //when new areas are added:
+                //Destroy(gameObject);
                 
             }
             else
