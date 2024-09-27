@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class ThrowDart : MonoBehaviour
 {
+    public AudioClip pickupSound;
+    private AudioSource audioSource;
     public Transform cam;
     public RectTransform reticle;
     public float throwForce = 10f;
@@ -20,6 +22,7 @@ public class ThrowDart : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        audioSource = GetComponent<AudioSource>();
 
         // sync physics for teleport
         player.transform.SetPositionAndRotation(player.transform.position, player.transform.rotation);
@@ -32,7 +35,6 @@ public class ThrowDart : MonoBehaviour
             if (canPickup)
             {
                 Pickup();
-                GameManager.Instance.pickupSource.Play();
             }
         }
 
@@ -63,7 +65,7 @@ public class ThrowDart : MonoBehaviour
 
             // Instantiate a clone only if there isn't one already
             clone = Instantiate(hit.collider.gameObject);
-
+           // audioSource.PlayOneShot(pickupSound);
             Rigidbody rb = clone.GetComponent<Rigidbody>();
             if (rb == null)
             {
@@ -75,10 +77,14 @@ public class ThrowDart : MonoBehaviour
             canPickup = false;  // doesn't work btw
             rb.constraints = RigidbodyConstraints.None;
 
-
-
             rb.useGravity = true;
             beingCarried = true;
+
+            //pickup sound
+            if (pickupSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(pickupSound);
+            }
         }
     }
 

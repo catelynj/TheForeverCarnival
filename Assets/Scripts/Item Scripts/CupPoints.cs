@@ -11,8 +11,10 @@ public class CupPoints : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Cup"))
         {
-            GameManager.Instance.cupSource.Play();
+            //GameManager.Instance.cupSource.Play();
             GameManager.Instance.IncrementScore(cupScore);
+
+            Destroy(other.gameObject, 0.5f);
         }
     }
 

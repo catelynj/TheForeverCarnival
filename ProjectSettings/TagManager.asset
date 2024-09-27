@@ -11,6 +11,7 @@ TagManager:
   - dartButton
   - Cup
   - cupButton
+  - unlockButton
   layers:
   - Default
   - TransparentFX

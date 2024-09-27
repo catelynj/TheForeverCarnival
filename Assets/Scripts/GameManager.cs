@@ -8,10 +8,6 @@ public class GameManager : MonoBehaviour
     private static GameManager instance = null;
     
     public int globalScore;
-    public AudioSource pickupSource;
-    public AudioSource cupSource;
-    public AudioSource scoreSource;
-    public AudioSource backgroundMusic;
 
     public static GameManager Instance
     {

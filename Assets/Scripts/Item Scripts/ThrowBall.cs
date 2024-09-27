@@ -1,13 +1,12 @@
 using StarterAssets;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class ThrowBall : MonoBehaviour
 {
-    public AudioSource pickupSound;
+    public AudioClip pickupSound;
+    private AudioSource audioSource;
     public Transform cam;
     public RectTransform reticle;
     public float throwForce = 10f;
@@ -22,6 +21,7 @@ public class ThrowBall : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        audioSource = GetComponent<AudioSource>();
 
         // sync physics for teleport
         player.transform.SetPositionAndRotation(player.transform.position, player.transform.rotation);
@@ -41,8 +41,6 @@ public class ThrowBall : MonoBehaviour
         {
             Throw();
         }
-
-        
     }
 
     private void Pickup()
@@ -50,8 +48,9 @@ public class ThrowBall : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Ball") && clone == null){
-            if(keyboardActive == true)
+        if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Ball") && clone == null)
+        {
+            if (keyboardActive == true)
             {
                 //freeze player movement in mini-game
                 InputSystem.DisableDevice(Keyboard.current);
@@ -62,9 +61,10 @@ public class ThrowBall : MonoBehaviour
                 player.transform.position = new Vector3(hit.transform.position.x + 1f, 0, hit.transform.position.z + 1f);
                 player.GetComponent<FirstPersonController>().enabled = true;
             }
-            
 
+            //ball clone instantiation
             clone = Instantiate(hit.collider.gameObject);
+
             Rigidbody rb = clone.GetComponent<Rigidbody>();
             if (rb == null)
             {
@@ -73,12 +73,18 @@ public class ThrowBall : MonoBehaviour
 
             rb.useGravity = true;
             beingCarried = true;
-            canPickup = false; //doesnt work btw
             rb.constraints = RigidbodyConstraints.None;
-                    
-        }
-    }
 
+            //pickup sound
+            if (pickupSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(pickupSound);
+                canPickup = false;
+            }
+        }
+
+        
+    }
 
     private void Throw()
     {
@@ -97,8 +103,9 @@ public class ThrowBall : MonoBehaviour
             {
                 rb.velocity = throwDirection * throwForce;
             }
-            StartCoroutine(DestroyAfterDelay(clone, 0.5f)); 
+            StartCoroutine(DestroyAfterDelay(clone, 0.5f));
             beingCarried = false;
+            canPickup = true;
         }
     }
 
@@ -106,7 +113,6 @@ public class ThrowBall : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         Destroy(obj);
-        canPickup = true;
 
         //Unfreeze player movement
         InputSystem.EnableDevice(Keyboard.current);
