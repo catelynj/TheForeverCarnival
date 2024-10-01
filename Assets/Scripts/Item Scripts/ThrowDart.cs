@@ -1,6 +1,7 @@
 using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -30,28 +31,31 @@ public class ThrowDart : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && canPickup)
         {
-            if (canPickup)
-            {
-                Pickup();
-            }
+            Pickup();
         }
 
         if (beingCarried)
         {
-            Throw();
+            if (Input.GetMouseButtonDown(0))
+            {
+                Throw();
+            }
         }
     }
 
     private void Pickup()
     {
+
+        if (beingCarried) return; // This should stop us from picking up multiple darts
+
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Dart") && clone == null)
         {
-            if (keyboardActive == true)
+            if (keyboardActive)
             {
                 //freeze player movement in mini-game
                 InputSystem.DisableDevice(Keyboard.current);
@@ -121,6 +125,7 @@ public class ThrowDart : MonoBehaviour
 
         // Destroy the object after the delay
         Destroy(obj);
+        clone = null;
         canPickup = true;  // Allow picking up a new object after the current one is destroyed
         // Unfreeze Player
         InputSystem.EnableDevice(Keyboard.current);
