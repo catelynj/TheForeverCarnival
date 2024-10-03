@@ -45,6 +45,13 @@ public class ThrowBall : MonoBehaviour
 
     private void Pickup()
     {
+
+        /*GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Ball");
+        int ballclonse = 0;
+        foreach (GameObject ball in gameObjects) { ballclonse++; Debug.Log(ballclonse); }
+        if (beingCarried || ballclonse >= 2) return; // This should stop us from picking up multiple darts
+        gameObjects = null;*/
+
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
 

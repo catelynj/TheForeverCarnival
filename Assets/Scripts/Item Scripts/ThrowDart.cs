@@ -1,6 +1,7 @@
 using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -36,19 +37,19 @@ public class ThrowDart : MonoBehaviour
             Pickup();
         }
 
-        if (beingCarried)
+        if (beingCarried &&  Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Throw();
-            }
+            Throw();
         }
     }
 
     private void Pickup()
     {
-
-        if (beingCarried) return; // This should stop us from picking up multiple darts
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Dart");
+        int dartclonse = 0;
+        foreach(GameObject dart in gameObjects) { dartclonse++; /*Debug.Log(dartclonse);*/ }
+        if (beingCarried || dartclonse >= 2) return; // This should stop us from picking up multiple darts
+        gameObjects = null;
 
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
@@ -113,10 +114,10 @@ public class ThrowDart : MonoBehaviour
             {
                 rb.velocity = throwDirection * throwForce;
             }
-
             StartCoroutine(DestroyAfterDelay(clone, 0.5f));
             beingCarried = false;
         }
+
     }
 
     private IEnumerator DestroyAfterDelay(GameObject obj, float delay)
