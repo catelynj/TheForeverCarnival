@@ -13,6 +13,7 @@ TagManager:
   - cupButton
   - unlockButton
   - basketball
+  - ballDoor
   layers:
   - Default
   - TransparentFX
