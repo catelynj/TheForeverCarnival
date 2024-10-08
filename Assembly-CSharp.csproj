@@ -72,6 +72,7 @@
     <Compile Include="Assets\Packages\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\Packages\HandTorch\Scripts\RotateObject.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\bballGameRestart.cs" />
     <Compile Include="Assets\Packages\Grass And Flowers Pack 1\Example Scene\SimpleTextureDrawing.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\MuteAudio.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
