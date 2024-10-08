@@ -12,6 +12,7 @@ TagManager:
   - Cup
   - cupButton
   - unlockButton
+  - basketball
   layers:
   - Default
   - TransparentFX

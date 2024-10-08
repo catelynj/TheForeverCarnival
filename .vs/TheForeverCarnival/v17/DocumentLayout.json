@@ -3,11 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\kmb81\\Documents\\GitHub\\TheForeverCarnival\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\kmb81\\documents\\github\\theforevercarnival\\assets\\scripts\\item scripts\\throwdart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\throwdart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\kmb81\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\throwball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\jbh21\\documents\\github\\theforevercarnival\\assets\\scripts\\item scripts\\bballgamerestart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\bballgamerestart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\jbh21\\documents\\github\\theforevercarnival\\assets\\scripts\\item scripts\\cupsrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\cupsrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\throwdart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\throwdart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\throwball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\throwball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,11 +39,15 @@
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\unlockarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\kmb81\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\kmb81\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -46,11 +66,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
+=======
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "bballGameRestart.cs",
+              "DocumentMoniker": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\bballGameRestart.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\bballGameRestart.cs",
+              "ToolTip": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\bballGameRestart.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\bballGameRestart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T14:25:18.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+>>>>>>> Stashed changes
               "Title": "cupsRespawn.cs",
               "DocumentMoniker": "C:\\Users\\kmb81\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\cupsRespawn.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\cupsRespawn.cs",
@@ -74,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "MuteAudio.cs",
               "DocumentMoniker": "C:\\Users\\kmb81\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\MuteAudio.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI Scripts\\MuteAudio.cs",
@@ -86,6 +127,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 2,
               "Title": "BalloonPopper.cs",
               "DocumentMoniker": "C:\\Users\\kmb81\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\BalloonPopper.cs",
@@ -111,6 +153,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
+=======
+              "DocumentIndex": 7,
+>>>>>>> Stashed changes
               "Title": "CupPoints.cs",
               "DocumentMoniker": "C:\\Users\\kmb81\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\CupPoints.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\CupPoints.cs",
@@ -122,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\kmb81\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
@@ -146,7 +191,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 0,
+=======
+              "DocumentIndex": 2,
+>>>>>>> Stashed changes
               "Title": "ThrowDart.cs",
               "DocumentMoniker": "C:\\Users\\kmb81\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\ThrowDart.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\ThrowDart.cs",
@@ -154,8 +203,12 @@
               "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\ThrowDart.cs",
               "ViewState": "AQIAACsAAAAAAAAAAAAqwEAAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2024-09-17T14:10:26.667Z",
               "EditorCaption": ""
+=======
+              "WhenOpened": "2024-09-17T14:10:26.667Z"
+>>>>>>> Stashed changes
             }
           ]
         }
