@@ -9,7 +9,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{63FB5EC6-E973-3799-EB14-13EBDFED601D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -139,7 +140,7 @@
     <None Include="Assets\Packages\TextMeshPro_Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Packages\TextMeshPro_Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\Packages\Texture_Me\Ground - Earth and Rocks - Free &apos;Texture B&apos; (Hand-Painted)\Textures\README.txt" />
+    <None Include="Assets\Packages\Texture_Me\Ground - Earth and Rocks - Free 'Texture B' (Hand-Painted)\Textures\README.txt" />
     <None Include="Assets\Packages\HandTorch\Credits.txt" />
     <None Include="Assets\Packages\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Packages\TextMeshPro_Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

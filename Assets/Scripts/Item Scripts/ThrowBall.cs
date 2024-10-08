@@ -55,7 +55,7 @@ public class ThrowBall : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Ball") && clone == null)
+        if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Ball") && GameObject.Find("Ball_Pickup(Clone)") == null)
         {
             if (keyboardActive == true)
             {
