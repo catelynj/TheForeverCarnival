@@ -8850,6 +8850,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 328813828}
     m_Modifications:
+    - target: {fileID: 790726801648179644, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 9005220659341278717}
     - target: {fileID: 6308143229266801435, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
       propertyPath: m_Name
       value: CardBooth
