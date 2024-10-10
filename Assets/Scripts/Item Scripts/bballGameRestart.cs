@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class bballGameRestart : MonoBehaviour
@@ -39,11 +40,12 @@ public class bballGameRestart : MonoBehaviour
 
     void startBasketballGame()
     {
-        canButton = false;
+
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("ballButton"))
         {
+            canButton = false;
             timerSeconds = inputSeconds; // Reset timer when player goes to play the game again
             Debug.Log(timerSeconds);
             OpenGate(); // Opens the gate to let the player grab basketballs
