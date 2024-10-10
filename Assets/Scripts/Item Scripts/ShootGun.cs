@@ -10,7 +10,7 @@ public class ShootGun : MonoBehaviour
     private AudioSource pickupSource;
     public Transform cam;
     public RectTransform reticle;
-    public float throwForce = 10f;
+    public float shootForce = 10f;
     public float cloneOffset = 2f;
     public float eyeLevelHeight = 1.5f;
     private GameObject clone;
@@ -112,7 +112,7 @@ public class ShootGun : MonoBehaviour
             Rigidbody rb = clone.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                rb.velocity = throwDirection * throwForce;
+                rb.velocity = throwDirection * shootForce;
             }
             StartCoroutine(DestroyAfterDelay(clone, 0.5f));
             beingCarried = false;
