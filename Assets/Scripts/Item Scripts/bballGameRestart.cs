@@ -16,7 +16,6 @@ public class bballGameRestart : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && canButton)
         {
-            timerSeconds = inputSeconds; // Reset timer when player goes to play the game again
             startBasketballGame();
         }
 
@@ -26,6 +25,7 @@ public class bballGameRestart : MonoBehaviour
             {
                 timerIsOn = false;
                 CloseGate();
+                canButton = true;
             }
             else
             {
@@ -39,10 +39,12 @@ public class bballGameRestart : MonoBehaviour
 
     void startBasketballGame()
     {
+        canButton = false;
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("ballButton"))
         {
+            timerSeconds = inputSeconds; // Reset timer when player goes to play the game again
             Debug.Log(timerSeconds);
             OpenGate(); // Opens the gate to let the player grab basketballs
             timerIsOn = true;
