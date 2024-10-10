@@ -31,7 +31,7 @@ public class cupsRespawn : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("cupButton"))
         {
-            Debug.Log("Button pressed!");
+            //Debug.Log("Button pressed!");
             StartCoroutine(CupsSpawner());
         }
     }
@@ -45,9 +45,9 @@ public class cupsRespawn : MonoBehaviour
         Vector3 spawnLocation = new Vector3(spawnArea.transform.position.x, spawnArea.transform.position.y, spawnArea.transform.position.z);
         Instantiate(cups, spawnLocation, Quaternion.identity);
 
-        Debug.Log("Waiting..." + waitTime);
+        //Debug.Log("Waiting..." + waitTime);
         yield return new WaitForSeconds(waitTime);
-        Debug.Log("Ready!" + waitTime);
+        //Debug.Log("Ready!" + waitTime);
         canButton = true;
     }
 
