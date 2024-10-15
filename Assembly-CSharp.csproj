@@ -119,6 +119,7 @@
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\BalloonPopper.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\cupsRespawn.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\bballPointCollider.cs" />
     <Compile Include="Assets\Packages\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Packages\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />

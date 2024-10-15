@@ -47,7 +47,7 @@ public class bballGameRestart : MonoBehaviour
         {
             canButton = false;
             timerSeconds = inputSeconds; // Reset timer when player goes to play the game again
-            Debug.Log(timerSeconds);
+            //Debug.Log(timerSeconds);
             OpenGate(); // Opens the gate to let the player grab basketballs
             timerIsOn = true;
         }

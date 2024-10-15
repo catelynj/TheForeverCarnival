@@ -60,9 +60,9 @@ public class bloonerRespawn : MonoBehaviour
 
             Instantiate(balloon, randomPosition, Quaternion.identity); // Spawn balloon at random position
         }
-        Debug.Log("Waiting..." + waitTime);
+        //Debug.Log("Waiting..." + waitTime);
         yield return new WaitForSeconds(waitTime);
-        Debug.Log("Ready!" + waitTime);
+        //Debug.Log("Ready!" + waitTime);
         canButton = true;
     }
 
