@@ -118,7 +118,7 @@ public class ShootGun : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GameObject bullet = ShootGun.SharedInstance.GetPooledObject();
-            if(bullet != null)
+            if (bullet != null)
             {
                 bullet.transform.position = player.transform.position;
                 bullet.transform.rotation = player.transform.rotation;
@@ -130,10 +130,8 @@ public class ShootGun : MonoBehaviour
                     rb.velocity = throwDirection * shootForce;
                 }
             }
-            clone.transform.parent = null;
             
-            
-            StartCoroutine(DestroyAfterDelay(clone, 0.5f));
+            StartCoroutine(DestroyAfterDelay(bullet, 0.5f));
             beingCarried = false;
         }
 
@@ -144,8 +142,7 @@ public class ShootGun : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         // Destroy the object after the delay
-        Destroy(obj);
-        clone = null;
+        obj.SetActive(false);
         canPickup = true;  // Allow picking up a new object after the current one is destroyed
         // Unfreeze Player
         InputSystem.EnableDevice(Keyboard.current);
