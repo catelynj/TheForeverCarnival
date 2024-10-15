@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Pool;
 
 public class ShootGun : MonoBehaviour
 {
@@ -19,6 +20,16 @@ public class ShootGun : MonoBehaviour
     GameObject player;
     bool keyboardActive = true;
 
+    public static ShootGun SharedInstance;
+    public List<GameObject> pooledObjects;
+    public GameObject objectToPool;
+    public int amountToPool;
+
+    private void Awake()
+    {
+        SharedInstance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +39,16 @@ public class ShootGun : MonoBehaviour
         // sync physics for teleport
         player.transform.SetPositionAndRotation(player.transform.position, player.transform.rotation);
         Physics.SyncTransforms();
+
+        // pool stuff
+        pooledObjects = new List<GameObject>();
+        GameObject tmp;
+        for(int i = 0; i < amountToPool; i++)
+        {
+            tmp = Instantiate(objectToPool);
+            tmp.SetActive(false);
+            pooledObjects.Add(tmp);
+        }
     }
 
     // Update is called once per frame
@@ -40,7 +61,7 @@ public class ShootGun : MonoBehaviour
 
         if (beingCarried && Input.GetMouseButtonDown(0))
         {
-            Throw();
+            Shoot();
         }
     }
 
@@ -72,18 +93,10 @@ public class ShootGun : MonoBehaviour
             // Instantiate a clone only if there isn't one already
             clone = Instantiate(hit.collider.gameObject);
             // audioSource.PlayOneShot(pickupSound);
-            Rigidbody rb = clone.GetComponent<Rigidbody>();
-            if (rb == null)
-            {
-                rb = clone.AddComponent<Rigidbody>();
-            }
 
-            rb.useGravity = true;
             beingCarried = true;
             canPickup = false;  // doesn't work btw
-            rb.constraints = RigidbodyConstraints.None;
 
-            rb.useGravity = true;
             beingCarried = true;
 
             //pickup sound
@@ -94,26 +107,32 @@ public class ShootGun : MonoBehaviour
         }
     }
 
-    private void Throw()
+    private void Shoot()
     {
         Camera playerCamera = cam.GetComponent<Camera>();
         Vector3 throwPosition = playerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, playerCamera.nearClipPlane + cloneOffset));
-        clone.transform.position = throwPosition;
 
         Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         Vector3 throwDirection = ray.direction;
 
-        // Set the rotation of the clone to face the throw direction
-        clone.transform.LookAt(clone.transform.position + throwDirection);
-
         if (Input.GetMouseButtonDown(0))
         {
-            clone.transform.parent = null;
-            Rigidbody rb = clone.GetComponent<Rigidbody>();
-            if (rb != null)
+            GameObject bullet = ShootGun.SharedInstance.GetPooledObject();
+            if(bullet != null)
             {
-                rb.velocity = throwDirection * shootForce;
+                bullet.transform.position = player.transform.position;
+                bullet.transform.rotation = player.transform.rotation;
+                bullet.SetActive(true);
+                bullet.transform.LookAt(bullet.transform.position + throwDirection);
+                Rigidbody rb = bullet.GetComponent<Rigidbody>();
+                if (rb != null)
+                {
+                    rb.velocity = throwDirection * shootForce;
+                }
             }
+            clone.transform.parent = null;
+            
+            
             StartCoroutine(DestroyAfterDelay(clone, 0.5f));
             beingCarried = false;
         }
@@ -131,5 +150,17 @@ public class ShootGun : MonoBehaviour
         // Unfreeze Player
         InputSystem.EnableDevice(Keyboard.current);
         keyboardActive = true;
+    }
+
+    public GameObject GetPooledObject()
+    {
+        for(int i = 0; i < amountToPool; i++)
+        {
+            if (!pooledObjects[i].activeInHierarchy)
+            {
+                return pooledObjects[i];
+            }
+        }
+        return null;
     }
 }
