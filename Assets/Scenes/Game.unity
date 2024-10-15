@@ -1688,6 +1688,7 @@ Transform:
   - {fileID: 1132404867}
   - {fileID: 235819143}
   - {fileID: 1478122030}
+  - {fileID: 1238540501}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &330213749
@@ -9769,27 +9770,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 328813828}
     m_Modifications:
     - target: {fileID: 790726801648179644, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 9005220659341278717}
+    - target: {fileID: 790726801648179644, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
+      propertyPath: shootForce
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6308143229266801435, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
       propertyPath: m_Name
       value: CardBooth
       objectReference: {fileID: 0}
     - target: {fileID: 6817794360571819521, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 137.05
+      value: 135.9058
       objectReference: {fileID: 0}
     - target: {fileID: 6817794360571819521, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.03
+      value: 0.0589993
       objectReference: {fileID: 0}
     - target: {fileID: 6817794360571819521, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.95
+      value: -105.48851
       objectReference: {fileID: 0}
     - target: {fileID: 6817794360571819521, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9824,6 +9829,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
+--- !u!4 &1238540501 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6817794360571819521, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
+  m_PrefabInstance: {fileID: 1238540500}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1261599105
 GameObject:
   m_ObjectHideFlags: 0
@@ -16129,4 +16139,3 @@ SceneRoots:
   - {fileID: 1959536683}
   - {fileID: 823230892}
   - {fileID: 1927355907}
-  - {fileID: 1238540500}
