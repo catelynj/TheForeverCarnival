@@ -11153,6 +11153,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8619842747737833000, guid: ae366a22f9d0c604e8d2be1fb30499ed, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 9005220659341278717}
+    - target: {fileID: 8619842747737833000, guid: ae366a22f9d0c604e8d2be1fb30499ed, type: 3}
+      propertyPath: reticle
+      value: 
+      objectReference: {fileID: 1159543093}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

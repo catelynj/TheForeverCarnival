@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2716981599975675037}
   - component: {fileID: 7633001748985295633}
   - component: {fileID: -4711548766602072222}
+  - component: {fileID: 8619842747737833000}
   m_Layer: 0
   m_Name: basketball
   m_TagString: basketball
@@ -82,6 +83,23 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.25
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8619842747737833000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166941763374736576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: facb9e9951f725d4a9980528d546127e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  reticle: {fileID: 0}
+  throwForce: 10
+  cloneOffset: 2
+  eyeLevelHeight: 1.5
 --- !u!1 &4753215256640417508
 GameObject:
   m_ObjectHideFlags: 0
