@@ -17,4 +17,14 @@ public class SaveState
     {
         return new Vector3(playerPosition[0], playerPosition[1], playerPosition[2]);
     }
+    /*Nothing here is working atm*/
+    public float[] getCurrentPos()
+    {
+        return null;//new float[] { pos.x, pos.y, pos.z };
+    }
+
+    //private GameObject player = GameObject.FindGameObjectWithTag("Player");
+    //private Vector3 pos = player.transform.position;
+    /**/
+
 }

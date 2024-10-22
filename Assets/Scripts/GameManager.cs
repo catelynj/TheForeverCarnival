@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private static GameManager instance = null;
     
     public int globalScore;
-    public float[] playerLocation;
+    public Vector3 playerLocation;
 
     private AudioSource backgroundSource;
     public AudioClip backgroundSound;
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
       /***********************************/
      /* Player save/load functionality  */ //In progress
     /***********************************/
-    /*
+    /**/
     public void Load()
     {
         if (File.Exists(Application.persistentDataPath + "/player.save"))
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
             fileStream.Close();
 
             globalScore = playerData.score;
-            playerLocation = playerData.playerPosition;
+            playerLocation = playerData.getPlayerLocation();
 
         }
 
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
     public void Save()
     {
         var saveClass = new SaveState(); // Create an instance of the savestate class to access getPlayerLocation()
-        SaveState playerData = new SaveState { score = globalScore, playerPosition = saveClass.getPlayerLocation() };
+        SaveState playerData = new SaveState { score = globalScore, playerPosition = saveClass.getCurrentPos() };
 
         Debug.Log(playerData);
 
@@ -81,6 +81,6 @@ public class GameManager : MonoBehaviour
         FileStream fileStream = File.Create(Application.persistentDataPath + "/player.save");
         bf.Serialize(fileStream, playerData);
         fileStream.Close();
-    }*/
+    }/**/
 
 }
