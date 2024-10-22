@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance = null;
     
     public int globalScore;
-   
+    public float[] playerLocation;
+
     private AudioSource backgroundSource;
     public AudioClip backgroundSound;
 
@@ -44,4 +48,39 @@ public class GameManager : MonoBehaviour
         UIManager.instance.updateScoreCall = true;
         UIManager.instance.UpdateScore();
     }
+
+    
+      /***********************************/
+     /* Player save/load functionality  */ //In progress
+    /***********************************/
+    /*
+    public void Load()
+    {
+        if (File.Exists(Application.persistentDataPath + "/player.save"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream fileStream = File.Open(Application.persistentDataPath + "/player.save", FileMode.Open);
+            SaveState playerData = (SaveState)bf.Deserialize(fileStream);
+            fileStream.Close();
+
+            globalScore = playerData.score;
+            playerLocation = playerData.playerPosition;
+
+        }
+
+    }
+
+    public void Save()
+    {
+        var saveClass = new SaveState(); // Create an instance of the savestate class to access getPlayerLocation()
+        SaveState playerData = new SaveState { score = globalScore, playerPosition = saveClass.getPlayerLocation() };
+
+        Debug.Log(playerData);
+
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream fileStream = File.Create(Application.persistentDataPath + "/player.save");
+        bf.Serialize(fileStream, playerData);
+        fileStream.Close();
+    }*/
+
 }
