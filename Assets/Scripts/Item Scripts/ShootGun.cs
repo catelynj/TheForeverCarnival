@@ -69,8 +69,8 @@ public class ShootGun : MonoBehaviour
     {
         GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Gun");
         int gunclones = 0;
-        foreach (GameObject gun in gameObjects) { gunclones++; /*Debug.Log(dartclonse);*/ }
-        if (beingCarried || gunclones >= 2) return; // This should stop us from picking up multiple darts
+        foreach (GameObject gun in gameObjects) { gunclones++; }
+        if (beingCarried || gunclones >= 2) return; // This should stop us from picking up multiple guns
         gameObjects = null;
 
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
@@ -88,10 +88,17 @@ public class ShootGun : MonoBehaviour
                 player.GetComponent<FirstPersonController>().enabled = false;
                 player.transform.position = new Vector3(hit.transform.position.x + 0.5f, 0, hit.transform.position.z+1);
                 player.GetComponent<FirstPersonController>().enabled = true;
+
             }
 
             // Instantiate a clone only if there isn't one already
             clone = Instantiate(hit.collider.gameObject);
+
+            // gun model
+            clone.transform.position = new Vector3(player.transform.position.x - 0.2f, player.transform.position.y + 1.6f, player.transform.position.z + 0.1f);
+            clone.transform.Rotate(180f, 0f, 90f);
+            clone.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+
             // audioSource.PlayOneShot(pickupSound);
 
             beingCarried = true;
