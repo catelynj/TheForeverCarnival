@@ -72,8 +72,8 @@ public class GameManager : MonoBehaviour
 
     public void Save()
     {
-        var saveClass = new SaveState(); // Create an instance of the savestate class to access getPlayerLocation()
-        SaveState playerData = new SaveState { score = globalScore, playerPosition = saveClass.getCurrentPos() };
+        var saveClass = new SaveState();
+        SaveState playerData = new SaveState { score = globalScore, playerPosition = PlayerPos() };
 
         Debug.Log(playerData);
 
@@ -81,6 +81,12 @@ public class GameManager : MonoBehaviour
         FileStream fileStream = File.Create(Application.persistentDataPath + "/player.save");
         bf.Serialize(fileStream, playerData);
         fileStream.Close();
-    }/**/
+    }
+
+    private Vector3 PlayerPos()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        return player.transform.position;
+    }
 
 }
