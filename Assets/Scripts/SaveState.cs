@@ -6,7 +6,7 @@ using UnityEngine;
 public class SaveState
 {
     public int score;
-    public Vector3/*float[]*/ playerPosition;
+    public Vector3 playerPosition;
     public SaveState(){    }
     public SaveState(int score, Vector3 location)
     {

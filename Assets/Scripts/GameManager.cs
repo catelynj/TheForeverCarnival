@@ -47,40 +47,44 @@ public class GameManager : MonoBehaviour
         globalScore += score;
         UIManager.instance.updateScoreCall = true;
         UIManager.instance.UpdateScore();
+
     }
 
-    
-      /***********************************/
-     /* Player save/load functionality  */ //In progress
+
+    /***********************************/
+    /* Player save/load functionality  */ //In progress
     /***********************************/
     /**/
     public void Load()
     {
-        if (File.Exists(Application.persistentDataPath + "/player.save"))
+        string filePath = Application.persistentDataPath + "/player.save";
+
+        if (File.Exists(filePath))
         {
-            BinaryFormatter bf = new BinaryFormatter();
-            FileStream fileStream = File.Open(Application.persistentDataPath + "/player.save", FileMode.Open);
-            SaveState playerData = (SaveState)bf.Deserialize(fileStream);
-            fileStream.Close();
+            string json = File.ReadAllText(filePath);
+            SaveState playerData = JsonUtility.FromJson<SaveState>(json);
 
             globalScore = playerData.score;
-            playerLocation = playerData.getPlayerLocation();
+            playerLocation = playerData.playerPosition;
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.transform.position = playerLocation;
 
+            UIManager.instance.updateScoreCall = true;
+            UIManager.instance.UpdateScore();
         }
 
     }
 
     public void Save()
     {
-        var saveClass = new SaveState();
-        SaveState playerData = new SaveState { score = globalScore, playerPosition = PlayerPos() };
+        Debug.Log(globalScore);
 
-        Debug.Log(playerData);
+        var playerData = new SaveState { score = globalScore, playerPosition = PlayerPos() };
+        Debug.Log(globalScore);
 
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream fileStream = File.Create(Application.persistentDataPath + "/player.save");
-        bf.Serialize(fileStream, playerData);
-        fileStream.Close();
+        //Uses JSON to save and load data
+        string json = JsonUtility.ToJson(playerData);
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/player.save", json);
     }
 
     private Vector3 PlayerPos()
