@@ -6,6 +6,8 @@ public class UnlockArea : MonoBehaviour
 {
 
     private float messageTimer = 3f;
+    private int unlockAmount = 3000;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -19,14 +21,14 @@ public class UnlockArea : MonoBehaviour
         RaycastHit hit;
         if (Input.GetKeyUp(KeyCode.E) && Physics.Raycast(ray, out hit) && hit.collider.CompareTag("unlockButton"))
         {
-            if(GameManager.Instance.globalScore >= 3000)
+            if(GameManager.Instance.globalScore >= unlockAmount)
             {
                 Debug.Log("Unlock Next Area");
-                GameManager.Instance.globalScore -= 3000;
+                GameManager.Instance.globalScore -= unlockAmount;
                 UIManager.instance.updateScoreCall = true;
                 UIManager.instance.UpdateScore();
                 //when new areas are added:
-                //Destroy(gameObject);
+                Destroy(gameObject);
                 
             }
             else
@@ -44,4 +46,5 @@ public class UnlockArea : MonoBehaviour
         yield return new WaitForSeconds(delay);
         UIManager.instance.HideMessage(); // Make sure you have this method in UIManager
     }
+
 }

@@ -7,7 +7,7 @@ public class BorderCollision : MonoBehaviour
     private bool isInsideCollider = false;
     private float interactionTimer = 0f;
     private float interactionDuration = 8f; // Adjust the duration as needed
-    private string[] messages = { "You cannot leave.", "Do you think this is a game?", "Turn around." };
+    private string[] messages = { "You cannot leave.", "Do you think this is a game?", "Turn around.", "Seriously..." };
     private int currentMessageIndex = 0;
 
     private void OnTriggerEnter(Collider other)

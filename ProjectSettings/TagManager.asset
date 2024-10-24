@@ -17,6 +17,7 @@ TagManager:
   - ballButton
   - Gun
   - cardButton
+  - Trophy
   layers:
   - Default
   - TransparentFX
