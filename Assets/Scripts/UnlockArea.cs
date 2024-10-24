@@ -25,15 +25,15 @@ public class UnlockArea : MonoBehaviour
             {
                 Debug.Log("Unlock Next Area");
                 GameManager.Instance.globalScore -= unlockAmount;
-                UIManager.instance.updateScoreCall = true;
-                UIManager.instance.UpdateScore();
+                UIManager.Instance.updateScoreCall = true;
+                UIManager.Instance.UpdateScore();
                 //when new areas are added:
                 Destroy(gameObject);
                 
             }
             else
             {
-                UIManager.instance.DisplayMessage("You need 3000 points to unlock this area.");
+                UIManager.Instance.DisplayMessage("You need 3000 points to unlock this area.");
                 StartCoroutine(HideMessageAfterDelay(messageTimer));
             }
            
@@ -44,7 +44,7 @@ public class UnlockArea : MonoBehaviour
     private IEnumerator HideMessageAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        UIManager.instance.HideMessage(); // Make sure you have this method in UIManager
+        UIManager.Instance.HideMessage(); // Make sure you have this method in UIManager
     }
 
 }

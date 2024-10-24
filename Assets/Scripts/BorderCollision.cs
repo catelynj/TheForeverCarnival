@@ -24,7 +24,7 @@ public class BorderCollision : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isInsideCollider = false;
-            UIManager.instance.HideMessage();
+            UIManager.Instance.HideMessage();
             interactionTimer = 0f;
             currentMessageIndex = 0; // Reset to the first message when exiting
         }
@@ -48,7 +48,7 @@ public class BorderCollision : MonoBehaviour
     {
         if (currentMessageIndex < messages.Length)
         {
-            UIManager.instance.DisplayMessage(messages[currentMessageIndex]);
+            UIManager.Instance.DisplayMessage(messages[currentMessageIndex]);
             currentMessageIndex++;
             interactionTimer = 0f; // Reset the timer for the next message
         }

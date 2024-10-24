@@ -16,11 +16,21 @@ public class GameManager : MonoBehaviour
     private AudioSource backgroundSource;
     public AudioClip backgroundSound;
 
+    public List<GameObject> Inventory = new List<GameObject>();
     public static GameManager Instance
     {
         get
         {
-            if (instance == null) instance = new GameObject("GameManager").AddComponent<GameManager>(); //create game manager object if required
+            if (instance == null)
+            {
+                instance = FindObjectOfType<GameManager>();
+                if (instance == null)
+                {
+                    GameObject gameManagerObject = new GameObject("GameManager");
+                    instance = gameManagerObject.AddComponent<GameManager>();
+                    DontDestroyOnLoad(gameManagerObject);
+                }
+            }
             return instance;
         }
     }
@@ -34,6 +44,7 @@ public class GameManager : MonoBehaviour
     {
         //globalScore = 0;
         //pointSource = GetComponent<AudioSource>();
+
         backgroundSource = GetComponent<AudioSource>();
 
         if (backgroundSource != null && backgroundSound != null)
@@ -46,11 +57,24 @@ public class GameManager : MonoBehaviour
     {
 
         globalScore += score;
-        UIManager.instance.updateScoreCall = true;
-        UIManager.instance.UpdateScore();
+        UIManager.Instance.updateScoreCall = true;
+        UIManager.Instance.UpdateScore();
 
         //Save();
 
+    }
+
+    public void AddToInventory(GameObject item)
+    {
+        if (!Inventory.Contains(item))
+        {
+            Inventory.Add(item);
+            UIManager.Instance.UpdateInventoryCanvas(Inventory.Count - 1); 
+        }
+        else
+        {
+            Debug.Log("Item already exists");
+        }
     }
 
 
@@ -71,14 +95,14 @@ public class GameManager : MonoBehaviour
             playerLocation = playerData.playerPosition;
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.transform.position = playerLocation;
-            UIManager.instance.scoreText.text = playerData.score.ToString();
+            UIManager.Instance.scoreText.text = playerData.score.ToString();
         }
 
     }
 
     public void Save()
     {
-        globalScore = int.Parse(UIManager.instance.scoreText.text);
+        globalScore = int.Parse(UIManager.Instance.scoreText.text);
         var playerData = new SaveState { score = globalScore, playerPosition = PlayerPos() };
 
         //Uses JSON to save and load data

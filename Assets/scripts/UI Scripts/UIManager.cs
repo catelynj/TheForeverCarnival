@@ -1,22 +1,29 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro.Examples;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager instance = null;
-    
+    public static UIManager Instance = null;
+
     private void Awake()
     {
-        if (instance == null)
-            instance = this;
-
-      
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private bool settingsOpen = false;
@@ -29,7 +36,12 @@ public class UIManager : MonoBehaviour
     public Text scoreText;
     public AudioClip pointSound;
     private AudioSource pointSource;
-
+    public Image[] inventoryImages;
+    public Sprite[] prizeSprites;
+    private int inventorySlot = 0;
+    public int currentInventoryCount = 0;
+    public GameObject[] prizePrefabs;
+    private GameObject currentPrizeModel;
     private void Start()
     {
         SetActiveHud(true);
@@ -37,12 +49,13 @@ public class UIManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         updateScoreCall = false;
         pointSource = GetComponent<AudioSource>();
+       
     }
 
     private void Update()
     {
 
-        //press Escape to bring up settings, press again to close settings
+        // press Escape to bring up settings, press again to close settings
         if (Input.GetKeyDown(KeyCode.Escape) && !settingsOpen)
         {
             SetActiveSettings(true);
@@ -53,7 +66,7 @@ public class UIManager : MonoBehaviour
             SetActiveHud(true);
         }
 
-        //press Tab to bring up inventory, press again to close inventory
+        // press Tab to bring up inventory, press again to close inventory
         if (Input.GetKeyDown(KeyCode.Tab) && !inventoryOpen)
         {
             SetActiveInventory(true);
@@ -62,6 +75,16 @@ public class UIManager : MonoBehaviour
         {
             SetActiveInventory(false);
             SetActiveHud(true);
+        }
+
+        // check for input to destroy the current prize model
+        if (currentPrizeModel != null && Input.GetKeyDown(KeyCode.Mouse0))
+        {
+           InputSystem.EnableDevice(Keyboard.current);
+           ClearScreen(false); //reactivate canvases
+           Destroy(currentPrizeModel);
+           currentPrizeModel = null;
+            
         }
     }
 
@@ -115,6 +138,22 @@ public class UIManager : MonoBehaviour
         inventoryOpen = isInventory;
     }
 
+    public void ClearScreen(bool clear)
+    {
+        if (clear)
+        {
+            hudCanvas.SetActive(false);
+            settingsCanvas.SetActive(false);
+            inventoryCanvas.SetActive(false);
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            SetActiveInventory(true);
+        }
+    }
+
     public void UpdateScore()
     {
         
@@ -126,6 +165,38 @@ public class UIManager : MonoBehaviour
         }
         GameManager.Instance.globalScore = int.Parse(scoreText.text);
         updateScoreCall = false;
+    }
+
+    public void UpdateInventoryCanvas(int prizeIndex)
+    {
+        if (inventorySlot < inventoryImages.Length && prizeIndex < prizeSprites.Length)
+        {
+            inventoryImages[inventorySlot].sprite = prizeSprites[prizeIndex];
+            inventoryImages[inventorySlot].enabled = true;
+            inventorySlot++;
+        }
+    }
+
+    public void OnInventoryClick(int index)
+    {
+        
+        if (index < prizePrefabs.Length )
+        {
+            GameObject prizePrefab = prizePrefabs[index];
+
+
+            Debug.Log("Current Inventory: " + string.Join(", ", GameManager.Instance.Inventory.Select(item => item.name)));
+
+            if (GameManager.Instance.Inventory.Count > 0)
+            {
+                Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 1)); // Adjust Z distance for visibility
+                spawnPosition.y -= 0.5f;
+                currentPrizeModel = Instantiate(prizePrefabs[index], spawnPosition, Quaternion.identity);
+                ClearScreen(true);
+                InputSystem.DisableDevice(Keyboard.current);
+            }
+           
+        }
     }
 
     public void Quit()
