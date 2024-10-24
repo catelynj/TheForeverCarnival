@@ -21,9 +21,9 @@ public class ShootGun : MonoBehaviour
     bool keyboardActive = true;
 
     public static ShootGun SharedInstance;
-    public List<GameObject> pooledObjects;
-    public GameObject objectToPool;
-    public int amountToPool;
+    public GameObject bullet;
+    GameObject bulletclone;
+    int bulletcounter;
 
     private void Awake()
     {
@@ -40,15 +40,6 @@ public class ShootGun : MonoBehaviour
         player.transform.SetPositionAndRotation(player.transform.position, player.transform.rotation);
         Physics.SyncTransforms();
 
-        // pool stuff
-        pooledObjects = new List<GameObject>();
-        GameObject tmp;
-        for(int i = 0; i < amountToPool; i++)
-        {
-            tmp = Instantiate(objectToPool);
-            tmp.SetActive(false);
-            pooledObjects.Add(tmp);
-        }
     }
 
     // Update is called once per frame
@@ -93,6 +84,7 @@ public class ShootGun : MonoBehaviour
 
             // Instantiate a clone only if there isn't one already
             clone = Instantiate(hit.collider.gameObject);
+            bulletcounter = 5;
 
             // gun model
             clone.transform.position = new Vector3(player.transform.position.x - 0.2f, player.transform.position.y + 1.6f, player.transform.position.z + 0.1f);
@@ -122,24 +114,25 @@ public class ShootGun : MonoBehaviour
         Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         Vector3 throwDirection = ray.direction;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && bulletcounter > 0)
         {
-            GameObject bullet = ShootGun.SharedInstance.GetPooledObject();
+
             if (bullet != null)
             {
-                bullet.transform.position = player.transform.position;
-                bullet.transform.rotation = player.transform.rotation;
-                bullet.SetActive(true);
-                bullet.transform.LookAt(bullet.transform.position + throwDirection);
-                Rigidbody rb = bullet.GetComponent<Rigidbody>();
+                
+                bulletclone = Instantiate(bullet);
+                bulletclone.transform.position = new Vector3(clone.transform.position.x, clone.transform.position.y, clone.transform.position.z - 1);
+                bulletclone.transform.rotation = clone.transform.rotation;
+                bulletclone.transform.LookAt(bullet.transform.position + throwDirection);
+                Rigidbody rb = bulletclone.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
                     rb.velocity = throwDirection * shootForce;
                 }
             }
             
-            StartCoroutine(DestroyAfterDelay(bullet, 0.5f));
-            beingCarried = false;
+            StartCoroutine(DestroyAfterDelay(bulletclone, 1f));
+            bulletcounter--;
         }
 
     }
@@ -149,22 +142,17 @@ public class ShootGun : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         // Destroy the object after the delay
-        obj.SetActive(false);
+        Destroy(obj);
         canPickup = true;  // Allow picking up a new object after the current one is destroyed
-        // Unfreeze Player
-        InputSystem.EnableDevice(Keyboard.current);
-        keyboardActive = true;
+        if(bulletcounter == 0)
+        {
+            // Unfreeze Player
+            InputSystem.EnableDevice(Keyboard.current);
+            keyboardActive = true;
+            Destroy(clone);
+            beingCarried = false;
+        }
+
     }
 
-    public GameObject GetPooledObject()
-    {
-        for(int i = 0; i < amountToPool; i++)
-        {
-            if (!pooledObjects[i].activeInHierarchy)
-            {
-                return pooledObjects[i];
-            }
-        }
-        return null;
-    }
 }

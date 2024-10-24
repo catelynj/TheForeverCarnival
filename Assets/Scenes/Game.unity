@@ -12196,13 +12196,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9005220659341278717}
     - target: {fileID: 790726801648179644, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 7418039422828275949, guid: 3e6aa539787862a4aacce6b417909c16, type: 3}
+    - target: {fileID: 790726801648179644, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
       propertyPath: shootForce
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 790726801648179644, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
       propertyPath: amountToPool
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 790726801648179644, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
+      propertyPath: objectToPool
+      value: 
+      objectReference: {fileID: 7418039422828275949, guid: 3e6aa539787862a4aacce6b417909c16, type: 3}
     - target: {fileID: 6308143229266801435, guid: c47d75c929c64fe4885f67a4eecd806b, type: 3}
       propertyPath: m_Name
       value: CardBooth
