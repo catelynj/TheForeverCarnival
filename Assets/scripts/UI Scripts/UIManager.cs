@@ -124,8 +124,8 @@ public class UIManager : MonoBehaviour
             //Debug.Log("Point");
             pointSource.PlayOneShot(pointSound);
         }
+        GameManager.Instance.globalScore = int.Parse(scoreText.text);
         updateScoreCall = false;
-       
     }
 
     public void Quit()

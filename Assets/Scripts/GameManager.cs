@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        globalScore = 0;
+        //globalScore = 0;
         //pointSource = GetComponent<AudioSource>();
         backgroundSource = GetComponent<AudioSource>();
 
@@ -44,9 +44,12 @@ public class GameManager : MonoBehaviour
 
     public void IncrementScore(int score)
     {
+
         globalScore += score;
         UIManager.instance.updateScoreCall = true;
         UIManager.instance.UpdateScore();
+
+        //Save();
 
     }
 
@@ -68,19 +71,15 @@ public class GameManager : MonoBehaviour
             playerLocation = playerData.playerPosition;
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.transform.position = playerLocation;
-
-            UIManager.instance.updateScoreCall = true;
-            UIManager.instance.UpdateScore();
+            UIManager.instance.scoreText.text = playerData.score.ToString();
         }
 
     }
 
     public void Save()
     {
-        Debug.Log(globalScore);
-
+        globalScore = int.Parse(UIManager.instance.scoreText.text);
         var playerData = new SaveState { score = globalScore, playerPosition = PlayerPos() };
-        Debug.Log(globalScore);
 
         //Uses JSON to save and load data
         string json = JsonUtility.ToJson(playerData);
