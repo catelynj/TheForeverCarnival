@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private AudioSource backgroundSource;
     public AudioClip backgroundSound;
 
+
     public static GameManager Instance
     {
         get

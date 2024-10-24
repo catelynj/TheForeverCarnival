@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\BorderCollision.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\TrophyController.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\PlayButton.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\CupPoints.cs" />
