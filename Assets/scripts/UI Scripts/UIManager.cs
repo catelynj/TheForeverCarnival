@@ -42,6 +42,7 @@ public class UIManager : MonoBehaviour
     public int currentInventoryCount = 0;
     public GameObject[] prizePrefabs;
     private GameObject currentPrizeModel;
+    private Animator currentPMAnim;
     private void Start()
     {
         SetActiveHud(true);
@@ -185,13 +186,19 @@ public class UIManager : MonoBehaviour
             GameObject prizePrefab = prizePrefabs[index];
 
 
-            Debug.Log("Current Inventory: " + string.Join(", ", GameManager.Instance.Inventory.Select(item => item.name)));
+            //Debug.Log("Current Inventory: " + string.Join(", ", GameManager.Instance.Inventory.Select(item => item.name)));
 
             if (GameManager.Instance.Inventory.Count > 0)
             {
                 Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 1)); // Adjust Z distance for visibility
                 spawnPosition.y -= 0.5f;
                 currentPrizeModel = Instantiate(prizePrefabs[index], spawnPosition, Quaternion.identity);
+
+                currentPrizeModel.transform.LookAt(spawnPosition);
+                currentPMAnim = currentPrizeModel.GetComponent<Animator>();
+                currentPMAnim.SetBool("IsInventory", true);
+                Debug.Log(currentPMAnim.name);
+
                 ClearScreen(true);
                 InputSystem.DisableDevice(Keyboard.current);
             }
