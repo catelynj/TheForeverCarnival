@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
             globalScore = playerData.score;
             playerLocation = playerData.playerPosition;
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            player.transform.position = playerLocation;
+            //player.transform.position = playerLocation;
             player.GetComponent<FirstPersonController>().enabled = false;
             player.transform.position = new Vector3(playerLocation.x, playerLocation.y, playerLocation.z);
             player.GetComponent<FirstPersonController>().enabled = true;
