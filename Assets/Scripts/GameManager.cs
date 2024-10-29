@@ -1,3 +1,4 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -5,6 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms.Impl;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,7 +14,7 @@ public class GameManager : MonoBehaviour
     
     public int globalScore;
     public Vector3 playerLocation;
-
+    private GameObject player;
     private AudioSource backgroundSource;
     public AudioClip backgroundSound;
 
@@ -44,7 +46,7 @@ public class GameManager : MonoBehaviour
     {
         //globalScore = 0;
         //pointSource = GetComponent<AudioSource>();
-
+        player = GameObject.FindGameObjectWithTag("Player");
         backgroundSource = GetComponent<AudioSource>();
 
         if (backgroundSource != null && backgroundSound != null)
@@ -86,6 +88,8 @@ public class GameManager : MonoBehaviour
     {
         string filePath = Application.persistentDataPath + "/player.save";
 
+        player.transform.SetPositionAndRotation(player.transform.position, player.transform.rotation);
+        Physics.SyncTransforms();
         if (File.Exists(filePath))
         {
             string json = File.ReadAllText(filePath);
@@ -95,6 +99,9 @@ public class GameManager : MonoBehaviour
             playerLocation = playerData.playerPosition;
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.transform.position = playerLocation;
+            player.GetComponent<FirstPersonController>().enabled = false;
+            player.transform.position = new Vector3(playerLocation.x, playerLocation.y, playerLocation.z);
+            player.GetComponent<FirstPersonController>().enabled = true;
             UIManager.Instance.scoreText.text = playerData.score.ToString();
         }
 
