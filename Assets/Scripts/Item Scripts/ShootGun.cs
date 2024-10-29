@@ -1,6 +1,7 @@
 using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Pool;
@@ -19,6 +20,7 @@ public class ShootGun : MonoBehaviour
     private bool canPickup = true;
     GameObject player;
     bool keyboardActive = true;
+    private bool gunCooldown = false;
 
     public static ShootGun SharedInstance;
     public GameObject bullet;
@@ -67,13 +69,14 @@ public class ShootGun : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Gun") && clone == null)
+        if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Gun") && clone == null && gunCooldown == false)
         {
             if (keyboardActive)
             {
                 //freeze player movement in mini-game
                 InputSystem.DisableDevice(Keyboard.current);
                 keyboardActive = false;
+                gunCooldown = true;
 
                 // teleport player
                 player.GetComponent<FirstPersonController>().enabled = false;
@@ -121,7 +124,7 @@ public class ShootGun : MonoBehaviour
             {
                 
                 bulletclone = Instantiate(bullet);
-                bulletclone.transform.position = new Vector3(clone.transform.position.x, clone.transform.position.y, clone.transform.position.z - 1);
+                bulletclone.transform.position = new Vector3(clone.transform.position.x + 0.2f, clone.transform.position.y + 0.2f, clone.transform.position.z);
                 bulletclone.transform.rotation = clone.transform.rotation;
                 bulletclone.transform.LookAt(bullet.transform.position + throwDirection);
                 Rigidbody rb = bulletclone.GetComponent<Rigidbody>();
@@ -131,8 +134,15 @@ public class ShootGun : MonoBehaviour
                 }
             }
             
+
             StartCoroutine(DestroyAfterDelay(bulletclone, 1f));
+
             bulletcounter--;
+
+            if(bulletcounter == 0)
+            {
+                StartCoroutine(Cooldown());
+            }
         }
 
     }
@@ -153,6 +163,13 @@ public class ShootGun : MonoBehaviour
             beingCarried = false;
         }
 
+    }
+
+    private IEnumerator Cooldown()
+    {
+        yield return new WaitForSeconds(5);
+
+        gunCooldown = false;
     }
 
 }

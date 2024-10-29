@@ -19,6 +19,7 @@ TagManager:
   - cardButton
   - Trophy
   - ScoreNumber
+  - Target
   layers:
   - Default
   - TransparentFX
