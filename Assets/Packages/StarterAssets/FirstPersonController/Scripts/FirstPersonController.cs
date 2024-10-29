@@ -12,7 +12,15 @@ namespace StarterAssets
 #endif
 	public class FirstPersonController : MonoBehaviour
 	{
-		[Header("Player")]
+
+
+
+
+        public static FirstPersonController Instance = null;
+
+
+
+        [Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
@@ -92,11 +100,25 @@ namespace StarterAssets
 
 		private void Awake()
 		{
+
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        
+
 			// get a reference to our main camera
 			if (_mainCamera == null)
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
+
+
 		}
 
 		private void Start()

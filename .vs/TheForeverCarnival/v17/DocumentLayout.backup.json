@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\caitelin jones\\desktop\\theforevercarnival\\assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\caitelin jones\\desktop\\theforevercarnival\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\caitelin jones\\desktop\\theforevercarnival\\assets\\scripts\\item scripts\\trophycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\assets\\scripts\\item scripts\\trophycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\trophycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\caitelin jones\\desktop\\theforevercarnival\\assets\\scripts\\bordercollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bordercollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\caitelin jones\\desktop\\theforevercarnival\\assets\\scripts\\unlockarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\unlockarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,41 +30,42 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAwwEIAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAA5wEIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T16:23:29.974Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "UnlockArea.cs",
+              "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\UnlockArea.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UnlockArea.cs",
+              "ToolTip": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\UnlockArea.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UnlockArea.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T22:51:27.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "TrophyController.cs",
               "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\TrophyController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\TrophyController.cs",
               "ToolTip": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\TrophyController.cs",
               "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\TrophyController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T16:03:53.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BorderCollision.cs",
-              "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\BorderCollision.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\BorderCollision.cs",
-              "ToolTip": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\BorderCollision.cs",
-              "RelativeToolTip": "Assets\\Scripts\\BorderCollision.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T15:40:12.42Z",
               "EditorCaption": ""
             },
             {
@@ -73,9 +74,9 @@
               "Title": "UIManager.cs",
               "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI Scripts\\UIManager.cs",
-              "ToolTip": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI Scripts\\UIManager.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAmwH8AAAAJAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs*",
+              "RelativeToolTip": "Assets\\Scripts\\UI Scripts\\UIManager.cs*",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAowMMAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T13:57:41.296Z",
               "EditorCaption": ""

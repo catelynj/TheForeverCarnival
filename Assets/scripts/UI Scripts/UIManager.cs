@@ -1,11 +1,7 @@
-using Cinemachine;
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using TMPro.Examples;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -28,9 +24,12 @@ public class UIManager : MonoBehaviour
 
     private bool settingsOpen = false;
     private bool inventoryOpen = false;
+
     [SerializeField] private GameObject hudCanvas = null;
     [SerializeField] private GameObject settingsCanvas = null;
     [SerializeField] private GameObject inventoryCanvas = null;
+    [SerializeField] private GameObject messageCanvas = null; 
+
     public Text messageText;
     public bool updateScoreCall = false;
     public Text scoreText;
@@ -42,50 +41,54 @@ public class UIManager : MonoBehaviour
     public int currentInventoryCount = 0;
     public GameObject[] prizePrefabs;
     private GameObject currentPrizeModel;
-    private Animator currentPMAnim;
+
     private void Start()
     {
         SetActiveHud(true);
-        Cursor.visible = false;
+        settingsOpen = false;
+        inventoryOpen = false;
+        Cursor.visible = false; 
         Cursor.lockState = CursorLockMode.Locked;
         updateScoreCall = false;
         pointSource = GetComponent<AudioSource>();
-       
     }
 
     private void Update()
     {
-
-        // press Escape to bring up settings, press again to close settings
-        if (Input.GetKeyDown(KeyCode.Escape) && !settingsOpen)
+        if (Input.GetKeyDown(KeyCode.Escape) && currentPrizeModel == null)
         {
-            SetActiveSettings(true);
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && settingsOpen)
-        {
-            SetActiveSettings(false);
-            SetActiveHud(true);
-        }
-
-        // press Tab to bring up inventory, press again to close inventory
-        if (Input.GetKeyDown(KeyCode.Tab) && !inventoryOpen)
-        {
-            SetActiveInventory(true);
-        }
-        else if (Input.GetKeyDown(KeyCode.Tab) && inventoryOpen)
-        {
-            SetActiveInventory(false);
-            SetActiveHud(true);
+            if (settingsOpen) //if settings already open, close
+            {
+                SetActiveSettings(false);
+                SetActiveHud(true);
+            }
+            else
+            {
+                SetActiveSettings(true);
+            }
         }
 
-        // check for input to destroy the current prize model
+        if (Input.GetKeyDown(KeyCode.Tab) && currentPrizeModel == null)
+        {
+            if (inventoryOpen) //if inventory already open, close
+            {
+                SetActiveInventory(false);
+                SetActiveHud(true);
+            }
+            else
+            {
+                SetActiveInventory(true);
+            }
+        }
+
+        // Check for input to destroy the current prize model
         if (currentPrizeModel != null && Input.GetKeyDown(KeyCode.Mouse0))
         {
-           InputSystem.EnableDevice(Keyboard.current);
-           ClearScreen(false); //reactivate canvases
-           Destroy(currentPrizeModel);
-           currentPrizeModel = null;
-            
+            InputSystem.EnableDevice(Keyboard.current);
+            ClearScreen(false); // Reactivate canvases
+            Destroy(currentPrizeModel);
+            currentPrizeModel = null;
+            HideMessage();
         }
     }
 
@@ -94,6 +97,8 @@ public class UIManager : MonoBehaviour
         hudCanvas.SetActive(isPlaying);
         settingsCanvas.SetActive(!isPlaying);
         inventoryCanvas.SetActive(!isPlaying);
+
+        FirstPersonController.Instance.enabled = isPlaying;
     }
 
     public void SetActiveSettings(bool isPaused)
@@ -101,21 +106,22 @@ public class UIManager : MonoBehaviour
         settingsCanvas.SetActive(isPaused);
         hudCanvas.SetActive(!isPaused);
         inventoryCanvas.SetActive(!isPaused);
+        settingsOpen = isPaused;
 
         if (isPaused)
         {
             Time.timeScale = 0;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            FirstPersonController.Instance.enabled = false;
         }
         else
         {
-            Cursor.lockState= CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             Time.timeScale = 1;
+            FirstPersonController.Instance.enabled = true;
         }
-
-        settingsOpen = isPaused;
     }
 
     public void SetActiveInventory(bool isInventory)
@@ -123,20 +129,20 @@ public class UIManager : MonoBehaviour
         inventoryCanvas.SetActive(isInventory);
         hudCanvas.SetActive(!isInventory);
         settingsCanvas.SetActive(!isInventory);
+        inventoryOpen = isInventory;
+
         if (isInventory)
         {
-            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-
+            Cursor.lockState = CursorLockMode.None;
+            FirstPersonController.Instance.enabled = false;
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            FirstPersonController.Instance.enabled = true;
         }
-
-
-        inventoryOpen = isInventory;
     }
 
     public void ClearScreen(bool clear)
@@ -157,11 +163,9 @@ public class UIManager : MonoBehaviour
 
     public void UpdateScore()
     {
-        
         if (updateScoreCall)
         {
             scoreText.text = GameManager.Instance.globalScore.ToString();
-            //Debug.Log("Point");
             pointSource.PlayOneShot(pointSound);
         }
         GameManager.Instance.globalScore = int.Parse(scoreText.text);
@@ -180,35 +184,33 @@ public class UIManager : MonoBehaviour
 
     public void OnInventoryClick(int index)
     {
-        
-        if (index < prizePrefabs.Length )
+        if (index < prizePrefabs.Length)
         {
             GameObject prizePrefab = prizePrefabs[index];
-
-
-            //Debug.Log("Current Inventory: " + string.Join(", ", GameManager.Instance.Inventory.Select(item => item.name)));
-
             if (GameManager.Instance.Inventory.Count > 0)
             {
-                Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 1)); // Adjust Z distance for visibility
-                spawnPosition.y -= 0.5f;
-                currentPrizeModel = Instantiate(prizePrefabs[index], spawnPosition, Quaternion.identity);
+                Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 1.3f));
+                spawnPosition.y -= 0.3f;
+                currentPrizeModel = Instantiate(prizePrefab, spawnPosition, Quaternion.Euler(0,0,0));
+                
 
-                currentPrizeModel.transform.LookAt(spawnPosition);
-                currentPMAnim = currentPrizeModel.GetComponent<Animator>();
-                currentPMAnim.SetBool("IsInventory", true);
-                Debug.Log(currentPMAnim.name);
+                TrophyController trophyController = currentPrizeModel.GetComponent<TrophyController>();
+                Animator trophyAnim = currentPrizeModel.GetComponent<Animator>();
 
-                ClearScreen(true);
-                InputSystem.DisableDevice(Keyboard.current);
+                if (trophyController != null && trophyAnim != null)
+                {
+                    trophyAnim.SetBool("IsInventory", true);
+                    trophyController.StartRotation();
+                    InputSystem.DisableDevice(Keyboard.current);
+                    DisplayMessage("Click to put trophy away");
+                    ClearScreen(true);
+                }
+                else
+                {
+                    Debug.LogError("TrophyController null");
+                }
             }
-           
         }
-    }
-
-    public void Quit()
-    {
-        Application.Quit();
     }
 
     public void DisplayMessage(string message)
@@ -219,6 +221,7 @@ public class UIManager : MonoBehaviour
             messageText.gameObject.SetActive(true);
         }
     }
+
     public void HideMessage()
     {
         if (messageText != null)
@@ -226,5 +229,10 @@ public class UIManager : MonoBehaviour
             messageText.text = "";
             messageText.gameObject.SetActive(false);
         }
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
