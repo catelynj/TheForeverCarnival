@@ -100,6 +100,7 @@ MonoBehaviour:
   throwForce: 10
   cloneOffset: 2
   eyeLevelHeight: 1.5
+  bounceSound: {fileID: 8300000, guid: 4c7c78a54d979054d8a718a015d56349, type: 3}
 --- !u!1 &4753215256640417508
 GameObject:
   m_ObjectHideFlags: 0
