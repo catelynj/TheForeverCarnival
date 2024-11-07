@@ -20,6 +20,9 @@ TagManager:
   - Trophy
   - ScoreNumber
   - Target
+  - clawButton
+  - clawArm
+  - clawParent
   layers:
   - Default
   - TransparentFX
