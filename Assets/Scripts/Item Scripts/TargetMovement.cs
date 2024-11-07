@@ -7,6 +7,7 @@ public class TargetMovement : MonoBehaviour
     // random movement variables
     public float speed;
     private Vector3 moveDirection;
+    private Vector3 startPosition;
 
     private float minX = -1;
     private float maxX = 1;
@@ -15,6 +16,8 @@ public class TargetMovement : MonoBehaviour
 
     private void Start()
     {
+        startPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
         moveDirection = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0);
 
         StartCoroutine(RandomMove());
@@ -34,6 +37,18 @@ public class TargetMovement : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         moveDirection = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0);
+
+        if(transform.position.x > -30f || transform.position.x < -242f)
+        {
+            Debug.Log("x" + transform.position.z);
+            transform.position = startPosition;
+        }
+
+        if(transform.position.y > 2.1f || transform.position.y < 0.8f)
+        {
+            Debug.Log("y" + transform.position.y);
+            transform.position = startPosition;
+        }
 
         StartCoroutine (RandomMove());
     }
