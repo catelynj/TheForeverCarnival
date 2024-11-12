@@ -6,6 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class GameManager : MonoBehaviour
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     private GameObject player;
     private AudioSource backgroundSource;
     public AudioClip backgroundSound;
+    public Text prizeCount;
 
     public List<GameObject> Inventory = new List<GameObject>();
     public static GameManager Instance
@@ -71,7 +73,8 @@ public class GameManager : MonoBehaviour
         if (!Inventory.Contains(item))
         {
             Inventory.Add(item);
-            UIManager.Instance.UpdateInventoryCanvas(Inventory.Count - 1); 
+            UIManager.Instance.UpdateInventoryCanvas(Inventory.Count - 1);
+            prizeCount.text += Inventory.Count;
         }
         else
         {

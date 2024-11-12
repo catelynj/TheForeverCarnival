@@ -40,6 +40,7 @@ public class TargetMovement : MonoBehaviour
 
         if(transform.position.x > -30f || transform.position.x < -242f)
         {
+<<<<<<< Updated upstream
             //Debug.Log("x" + transform.position.z);
             transform.position = startPosition;
         }

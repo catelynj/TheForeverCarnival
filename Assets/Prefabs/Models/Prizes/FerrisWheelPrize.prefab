@@ -307,7 +307,6 @@ GameObject:
   - component: {fileID: 1282689697478074203}
   - component: {fileID: 169369894336099219}
   - component: {fileID: 8827981361152492362}
-  - component: {fileID: 3791341178191704413}
   m_Layer: 0
   m_Name: FerrisWheelPrize
   m_TagString: Untagged
@@ -391,27 +390,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3791341178191704413
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866912448731322067}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 19.315468, y: 16.710012, z: 8.373696}
-  m_Center: {x: -0.0000009536743, y: 8.355004, z: 0}
 --- !u!1 &2650218637955404340
 GameObject:
   m_ObjectHideFlags: 0
