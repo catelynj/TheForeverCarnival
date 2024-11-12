@@ -1,37 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\",
+  "WorkspaceRootPath": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\clawgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\cxj15\\documents\\github\\theforevercarnival\\assets\\scripts\\item scripts\\targetmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\targetmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\cxj15\\documents\\github\\theforevercarnival\\assets\\scripts\\clawgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clawgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\assets\\packages\\starterassets\\firstpersoncontroller\\scripts\\firstpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\assets\\packages\\starterassets\\firstpersoncontroller\\scripts\\firstpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\packages\\starterassets\\firstpersoncontroller\\scripts\\firstpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\bballpickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\bballpickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\bballpickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\throwball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\throwball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\throwball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\unlockarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\unlockarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\unlockarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\throwdart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\throwdart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\throwdart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\trophycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\assets\\scripts\\item scripts\\trophycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\trophycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,15 +46,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "TargetMovement.cs",
+              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\TargetMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\TargetMovement.cs",
+              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\TargetMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\TargetMovement.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwCkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T15:50:24.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "FirstPersonController.cs",
-              "DocumentMoniker": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Packages\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
+              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Packages\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
               "RelativeDocumentMoniker": "Assets\\Packages\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
-              "ToolTip": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Packages\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
+              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Packages\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
               "RelativeToolTip": "Assets\\Packages\\StarterAssets\\FirstPersonController\\Scripts\\FirstPersonController.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAQwCIAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -58,11 +75,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "clawGame.cs",
-              "DocumentMoniker": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\clawGame.cs",
+              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\clawGame.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\clawGame.cs",
-              "ToolTip": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\clawGame.cs",
+              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\clawGame.cs",
               "RelativeToolTip": "Assets\\Scripts\\clawGame.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAQwCcAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -71,11 +88,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "bballPickup.cs",
-              "DocumentMoniker": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\bballPickup.cs",
+              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\bballPickup.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\bballPickup.cs",
-              "ToolTip": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\bballPickup.cs",
+              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\bballPickup.cs",
               "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\bballPickup.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -83,11 +100,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ThrowBall.cs",
-              "DocumentMoniker": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\ThrowBall.cs",
+              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\ThrowBall.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\ThrowBall.cs",
-              "ToolTip": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\ThrowBall.cs",
+              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\ThrowBall.cs",
               "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\ThrowBall.cs",
               "ViewState": "AQIAAC0AAAAAAAAAAAA5wEYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -95,11 +112,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ThrowDart.cs",
-              "DocumentMoniker": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\ThrowDart.cs",
+              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\ThrowDart.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\ThrowDart.cs",
-              "ToolTip": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\ThrowDart.cs",
+              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\ThrowDart.cs",
               "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\ThrowDart.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -107,11 +124,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "UnlockArea.cs",
-              "DocumentMoniker": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UnlockArea.cs",
+              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UnlockArea.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UnlockArea.cs",
-              "ToolTip": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UnlockArea.cs",
+              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UnlockArea.cs",
               "RelativeToolTip": "Assets\\Scripts\\UnlockArea.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -119,11 +136,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "TrophyController.cs",
-              "DocumentMoniker": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\TrophyController.cs",
+              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\TrophyController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\TrophyController.cs",
-              "ToolTip": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\TrophyController.cs",
+              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\TrophyController.cs",
               "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\TrophyController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -131,16 +148,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UIManager.cs",
-              "DocumentMoniker": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
+              "DocumentMoniker": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI Scripts\\UIManager.cs",
-              "ToolTip": "C:\\Users\\jbh21\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
+              "ToolTip": "C:\\Users\\cxj15\\Documents\\GitHub\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI Scripts\\UIManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:57:41.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T13:57:41.296Z"
             }
           ]
         }
