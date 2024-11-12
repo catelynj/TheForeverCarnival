@@ -23,6 +23,7 @@ TagManager:
   - clawButton
   - clawArm
   - clawParent
+  - test
   layers:
   - Default
   - TransparentFX

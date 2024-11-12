@@ -2,6 +2,7 @@ using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class clawGame : MonoBehaviour
@@ -9,7 +10,7 @@ public class clawGame : MonoBehaviour
     GameObject clawParent;
     bool isStarted = false;
 
-    private float speed = 10.0f;
+    private float speed = 5.0f;
     private float horizontalInput;
     private float verticalInput;
     private Vector3 movedirection;
@@ -41,6 +42,12 @@ public class clawGame : MonoBehaviour
             clawParent.transform.position += movedirection * speed * Time.deltaTime;
         }
 
+        if (Input.GetKeyDown(KeyCode.Space) & isStarted)
+        {
+            //Lower claw
+            StartCoroutine("LowerClaw");
+        }
+
     }
 
     void canClawGame()
@@ -58,10 +65,10 @@ public class clawGame : MonoBehaviour
         /*
          * We want to:
          * - Disable player movement - Done
-         * - Route W A S D to the claw's movement
+         * - Route W A S D to the claw's movement - Done
          * - Have the claw lower when space bar is pressed, then raise after a given amount (like 1f)
          * - on Input.GetKeyDown(KeyCode.E), claws release (not done) and the player exits the game (done)
-         * - Restore player movement
+         * - Restore player movement - Done
          */
 
         isStarted = true;
@@ -71,12 +78,26 @@ public class clawGame : MonoBehaviour
         FirstPersonController.SprintSpeed = 0f;
         FirstPersonController.JumpHeight = 0f;
 
-        // Route WASD to object with clawParent tag
-
-
-
         
         Debug.Log("Claw game began");
+    }
+
+    private IEnumerator LowerClaw()
+    {
+        GameObject clawParent = GameObject.FindGameObjectWithTag("clawParent");
+        GameObject target = GameObject.FindGameObjectWithTag("test");
+        float speed = 0.5f;
+        float startTime = Time.time;
+        Transform startPos = clawParent.transform;
+        Transform endPos =  target.transform;
+
+        float moveTime = Vector3.Distance(startPos.position, endPos.position);
+        float distCovered = (Time.time - startTime) * speed;
+        float fractionOfJourney = distCovered / moveTime;
+
+        transform.position = Vector3.Lerp(startPos.position, endPos.position, fractionOfJourney);
+
+        yield return null;
     }
 
     void exitClawGame()
