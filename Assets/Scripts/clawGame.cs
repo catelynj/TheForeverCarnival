@@ -7,10 +7,12 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class clawGame : MonoBehaviour
 {
-    GameObject clawParent;
+    public GameObject clawParent;
+    public GameObject target;
     bool isStarted = false;
 
-    private float speed = 5.0f;
+    private float downSpeed = 1.0f;
+    private float speed = 1.0f;
     private float horizontalInput;
     private float verticalInput;
     private Vector3 movedirection;
@@ -19,7 +21,8 @@ public class clawGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        clawParent = GameObject.FindGameObjectWithTag("clawParent");
+        //clawParent = GameObject.FindGameObjectWithTag("clawParent");
+        //Rigidbody clawBody = clawParent.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -39,7 +42,7 @@ public class clawGame : MonoBehaviour
             horizontalInput = Input.GetAxis("Horizontal");
             verticalInput = Input.GetAxis("Vertical");
             movedirection = new Vector3(horizontalInput, 0, verticalInput);
-            clawParent.transform.position += movedirection * speed * Time.deltaTime;
+            clawParent.transform.position += speed * Time.deltaTime * movedirection;
         }
 
         if (Input.GetKeyDown(KeyCode.Space) & isStarted)
@@ -84,19 +87,14 @@ public class clawGame : MonoBehaviour
 
     private IEnumerator LowerClaw()
     {
-        GameObject clawParent = GameObject.FindGameObjectWithTag("clawParent");
-        GameObject target = GameObject.FindGameObjectWithTag("test");
-        float speed = 0.5f;
         float startTime = Time.time;
-        Transform startPos = clawParent.transform;
-        Transform endPos =  target.transform;
+        Rigidbody clawBody = clawParent.GetComponent<Rigidbody>();
 
-        float moveTime = Vector3.Distance(startPos.position, endPos.position);
-        float distCovered = (Time.time - startTime) * speed;
-        float fractionOfJourney = distCovered / moveTime;
-
-        transform.position = Vector3.Lerp(startPos.position, endPos.position, fractionOfJourney);
-
+        do
+        {
+            clawBody.MovePosition(target.transform.position);
+        } while (Time.time < startTime + 1);
+        
         yield return null;
     }
 

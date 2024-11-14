@@ -1452,6 +1452,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1107406304231971054, guid: 1fdb83abe97881945a999271a05f4c52, type: 3}
   m_PrefabInstance: {fileID: 2070942230}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &146034365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 653083786677614657, guid: c7034aaf7b51dfc43badfa2bd7cbf9d7, type: 3}
+  m_PrefabInstance: {fileID: 1098636854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &158634559 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4389918008261443379, guid: c7034aaf7b51dfc43badfa2bd7cbf9d7, type: 3}
@@ -15508,6 +15513,14 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 1850
       objectReference: {fileID: 0}
+    - target: {fileID: 2718707146140647525, guid: b765381e7ed254642bf707fb87a411ed, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 146034365}
+    - target: {fileID: 2718707146140647525, guid: b765381e7ed254642bf707fb87a411ed, type: 3}
+      propertyPath: clawParent
+      value: 
+      objectReference: {fileID: 1741281096}
     - target: {fileID: 2991832985793349116, guid: b765381e7ed254642bf707fb87a411ed, type: 3}
       propertyPath: m_Mesh
       value: 
