@@ -180,6 +180,8 @@ public class UIManager : MonoBehaviour
             inventoryImages[inventorySlot].enabled = true;
             inventorySlot++;
         }
+
+        
     }
 
     public void OnInventoryClick(int index)
