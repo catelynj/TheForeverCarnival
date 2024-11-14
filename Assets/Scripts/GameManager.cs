@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         {
             Inventory.Add(item);
             UIManager.Instance.UpdateInventoryCanvas(Inventory.Count - 1);
-            prizeCount.text += Inventory.Count;
+            
         }
         else
         {
