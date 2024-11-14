@@ -9,6 +9,9 @@ public class clawGame : MonoBehaviour
 {
     public GameObject clawParent;
     public GameObject target;
+    public GameObject clawReturn;
+    public int timesMoved = 0;
+    public bool isArmLowered = false;
     bool isStarted = false;
 
     private float downSpeed = 1.0f;
@@ -48,7 +51,21 @@ public class clawGame : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) & isStarted)
         {
             //Lower claw
-            StartCoroutine("LowerClaw");
+            if (!isArmLowered)
+            {
+                isArmLowered = true;
+                //Vector3.Lerp(clawParent.transform.position, clawParent.transform.position + target.transform.position, 1f / downSpeed * Time.deltaTime);
+
+                StartCoroutine("LowerClaw");
+            }
+            else
+            {
+                isArmLowered = false;
+                //Vector3.Lerp(clawParent.transform.position, clawParent.transform.position + clawReturn.transform.position, 1f / downSpeed * Time.deltaTime);
+
+                StartCoroutine("RaiseClaw");
+            }
+
         }
 
     }
@@ -81,20 +98,26 @@ public class clawGame : MonoBehaviour
         FirstPersonController.SprintSpeed = 0f;
         FirstPersonController.JumpHeight = 0f;
 
-        
-        Debug.Log("Claw game began");
     }
 
     private IEnumerator LowerClaw()
     {
-        float startTime = Time.time;
+        
+        Rigidbody clawBody = clawParent.GetComponent<Rigidbody>(); 
+
+        clawBody.MovePosition(target.transform.position);
+        
+        Debug.Log("Claw lowered");
+        yield return null;
+    }
+
+    private IEnumerator RaiseClaw()
+    {
         Rigidbody clawBody = clawParent.GetComponent<Rigidbody>();
 
-        do
-        {
-            clawBody.MovePosition(target.transform.position);
-        } while (Time.time < startTime + 1);
-        
+        clawBody.MovePosition(clawReturn.transform.position);
+
+        Debug.Log("Claw raised");
         yield return null;
     }
 

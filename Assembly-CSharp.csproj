@@ -115,6 +115,7 @@
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\Packages\StarterAssets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\clawArm.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\bloonerRespawn.cs" />
     <Compile Include="Assets\Packages\HandTorch\Scripts\ToggleLight.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
