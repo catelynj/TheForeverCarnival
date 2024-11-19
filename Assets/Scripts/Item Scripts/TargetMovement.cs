@@ -38,14 +38,13 @@ public class TargetMovement : MonoBehaviour
 
         moveDirection = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0);
 
-        if(transform.position.x > -30f || transform.position.x < -242f)
+        if(transform.position.x > 88.5 || transform.position.x < 87)
         {
             transform.position = startPosition;
         }
 
-        if(transform.position.y > 2.1f || transform.position.y < 0.8f)
+        if(transform.position.y > 2 || transform.position.y < 1)
         {
-            Debug.Log("y" + transform.position.y);
             transform.position = startPosition;
         }
 
