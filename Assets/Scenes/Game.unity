@@ -11657,8 +11657,8 @@ MonoBehaviour:
   visibleTerrainsOnly: 0
   treeTypes:
   - enabled: 1
-    name: fir tree 2
-    seed: 6451
+    name: Tree Type0 03
+    seed: 8524
     probability: 10
     collisionCheck: 0
     rejectUnderwater: 0
@@ -11666,17 +11666,17 @@ MonoBehaviour:
     slopeRange: {x: 0, y: 60}
     curvatureRange: {x: 0, y: 1}
     layerMasks: []
-    instanceCount: 2135
+    instanceCount: 447
     prefabs:
     - index: 0
       probability: 100
-      prefab: {fileID: 919132149155446097, guid: 6642ab2fc2928834582f1af0cdfae792, type: 3}
+      prefab: {fileID: 142018, guid: d537224908c5f444f86c9e57e0c7234c, type: 3}
     distance: 5
     scaleRange: {x: 0.8, y: 1.2}
     sinkAmount: 0
   - enabled: 1
-    name: tree
-    seed: 4735
+    name: Tree Type0 02
+    seed: 7257
     probability: 10
     collisionCheck: 0
     rejectUnderwater: 0
@@ -11684,11 +11684,29 @@ MonoBehaviour:
     slopeRange: {x: 0, y: 60}
     curvatureRange: {x: 0, y: 1}
     layerMasks: []
-    instanceCount: 2211
+    instanceCount: 448
     prefabs:
     - index: 1
       probability: 100
-      prefab: {fileID: 919132149155446097, guid: 124ff3b18d6905a49b6a059db499be68, type: 3}
+      prefab: {fileID: 160606, guid: 5c3cbac9d5eae3844a928d36e6dbd1a6, type: 3}
+    distance: 5
+    scaleRange: {x: 0.8, y: 1.2}
+    sinkAmount: 0
+  - enabled: 1
+    name: Tree Type0 04
+    seed: 8182
+    probability: 10
+    collisionCheck: 0
+    rejectUnderwater: 0
+    heightRange: {x: 0, y: 1000}
+    slopeRange: {x: 0, y: 60}
+    curvatureRange: {x: 0, y: 1}
+    layerMasks: []
+    instanceCount: 386
+    prefabs:
+    - index: 2
+      probability: 100
+      prefab: {fileID: 138344, guid: 8a7cf5ac7b4145441a3dca86f869b09e, type: 3}
     distance: 5
     scaleRange: {x: 0.8, y: 1.2}
     sinkAmount: 0
@@ -18681,7 +18699,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5705838273928320797, guid: 528b241404b11154ba2406102a1cfabd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 706319536}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7299984653844184172, guid: 528b241404b11154ba2406102a1cfabd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 1889280199772338898, guid: 528b241404b11154ba2406102a1cfabd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 528b241404b11154ba2406102a1cfabd, type: 3}
 --- !u!1001 &6513545746763910204
 PrefabInstance:
