@@ -28,7 +28,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject hudCanvas = null;
     [SerializeField] private GameObject settingsCanvas = null;
     [SerializeField] private GameObject inventoryCanvas = null;
-    [SerializeField] private GameObject messageCanvas = null; 
+    [SerializeField] private GameObject messageCanvas = null;
+    [SerializeField] private GameObject interactCanvas = null;
 
     public Text messageText;
     public bool updateScoreCall = false;
@@ -41,16 +42,18 @@ public class UIManager : MonoBehaviour
     public int currentInventoryCount = 0;
     public GameObject[] prizePrefabs;
     private GameObject currentPrizeModel;
+    private float raycastDistance = 3f;
 
     private void Start()
     {
         SetActiveHud(true);
         settingsOpen = false;
         inventoryOpen = false;
-        Cursor.visible = false; 
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         updateScoreCall = false;
         pointSource = GetComponent<AudioSource>();
+        interactCanvas.SetActive(false);
     }
 
     private void Update()
@@ -89,6 +92,18 @@ public class UIManager : MonoBehaviour
             Destroy(currentPrizeModel);
             currentPrizeModel = null;
             HideMessage();
+        }
+
+        //Press E to Interact Message
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, raycastDistance))
+        {
+            if (hit.collider.CompareTag("Interact"))
+            {
+                interactCanvas.SetActive(true);
+            }
         }
     }
 
@@ -181,7 +196,7 @@ public class UIManager : MonoBehaviour
             inventorySlot++;
         }
 
-        
+
     }
 
     public void OnInventoryClick(int index)
@@ -193,8 +208,8 @@ public class UIManager : MonoBehaviour
             {
                 Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 1.3f));
                 spawnPosition.y -= 0.3f;
-                currentPrizeModel = Instantiate(prizePrefab, spawnPosition, Quaternion.Euler(0,0,0));
-                
+                currentPrizeModel = Instantiate(prizePrefab, spawnPosition, Quaternion.Euler(0, 0, 0));
+
 
                 TrophyController trophyController = currentPrizeModel.GetComponent<TrophyController>();
                 Animator trophyAnim = currentPrizeModel.GetComponent<Animator>();
