@@ -24,6 +24,7 @@ TagManager:
   - clawArm
   - clawParent
   - test
+  - Interact
   layers:
   - Default
   - TransparentFX
