@@ -6,8 +6,9 @@ public class UnlockArea : MonoBehaviour
 {
 
     private float messageTimer = 3f;
-    public int unlockAmount = 0;
+    private int unlockAmount = 3000;
   
+    // Start is called before the first frame update
     void Start()
     {
         
@@ -18,20 +19,21 @@ public class UnlockArea : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
-        if (Input.GetKeyUp(KeyCode.E) && Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Interact"))
+        if (Input.GetKeyUp(KeyCode.E) && Physics.Raycast(ray, out hit) && hit.collider.CompareTag("unlockButton"))
         {
             if(GameManager.Instance.globalScore >= unlockAmount)
             {
-                //Debug.Log("Unlock Next Area");
+                Debug.Log("Unlock Next Area");
                 GameManager.Instance.globalScore -= unlockAmount;
                 UIManager.Instance.updateScoreCall = true;
                 UIManager.Instance.UpdateScore();
+                //when new areas are added:
                 Destroy(gameObject);
                 
             }
             else
             {
-                UIManager.Instance.DisplayMessage("Insufficient Funds...Bozo");
+                UIManager.Instance.DisplayMessage("You need 3000 points to unlock this area.");
                 StartCoroutine(HideMessageAfterDelay(messageTimer));
             }
            
@@ -42,7 +44,7 @@ public class UnlockArea : MonoBehaviour
     private IEnumerator HideMessageAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        UIManager.Instance.HideMessage();
+        UIManager.Instance.HideMessage(); // Make sure you have this method in UIManager
     }
 
 }

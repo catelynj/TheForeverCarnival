@@ -28,8 +28,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject hudCanvas = null;
     [SerializeField] private GameObject settingsCanvas = null;
     [SerializeField] private GameObject inventoryCanvas = null;
-    [SerializeField] private GameObject messageCanvas = null;
-    [SerializeField] private GameObject interactCanvas = null;
+    [SerializeField] private GameObject messageCanvas = null; 
 
     public Text messageText;
     public bool updateScoreCall = false;
@@ -42,7 +41,6 @@ public class UIManager : MonoBehaviour
     public int currentInventoryCount = 0;
     public GameObject[] prizePrefabs;
     private GameObject currentPrizeModel;
-    private float raycastDistance = 3f;
 
     private void Start()
     {
@@ -53,7 +51,6 @@ public class UIManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         updateScoreCall = false;
         pointSource = GetComponent<AudioSource>();
-        interactCanvas.SetActive(false);
     }
 
     private void Update()
@@ -92,18 +89,6 @@ public class UIManager : MonoBehaviour
             Destroy(currentPrizeModel);
             currentPrizeModel = null;
             HideMessage();
-        }
-
-        //Press E to Interact Message
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if(Physics.Raycast(ray, out hit, raycastDistance))
-        {
-            if(hit.collider.CompareTag("Interact"))
-            {
-                interactCanvas.SetActive(true);
-            }
         }
     }
 
