@@ -42,7 +42,7 @@ public class UIManager : MonoBehaviour
     public int currentInventoryCount = 0;
     public GameObject[] prizePrefabs;
     private GameObject currentPrizeModel;
-    private float raycastDistance = 3f;
+    private float raycastDistance = 3.5f;
 
     private void Start()
     {
@@ -100,9 +100,15 @@ public class UIManager : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, raycastDistance))
         {
-            if (hit.collider.CompareTag("Interact"))
+            if(hit.collider.CompareTag("Interact") || hit.collider.CompareTag("Trophy") || hit.collider.CompareTag("basketball") || 
+                hit.collider.CompareTag("Button") || hit.collider.CompareTag("Gun") || hit.collider.CompareTag("Dart") || 
+                hit.collider.CompareTag("Ball")) //we can optimize this later but this is how it is right now -- maybe just change all minigame pickups to one tag
             {
                 interactCanvas.SetActive(true);
+            }
+            else
+            {
+                interactCanvas.SetActive(false);
             }
         }
     }
