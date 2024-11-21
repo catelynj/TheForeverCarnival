@@ -7,25 +7,21 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class clawGame : MonoBehaviour
 {
-    public GameObject clawParent;
-    public GameObject target;
-    public GameObject clawReturn;
-    public int timesMoved = 0;
+    public Transform clawParent;
     public bool isArmLowered = false;
-    bool isStarted = false;
 
-    private float downSpeed = 1.0f;
-    private float speed = 1.0f;
-    private float horizontalInput;
-    private float verticalInput;
+    private float downSpeed = 0.8f;
+    private float speed = 0.8f;
+    private float downDistance = 1.2f;
+    private float initialClawY;
+    private bool isStarted = false;
     private Vector3 movedirection;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        //clawParent = GameObject.FindGameObjectWithTag("clawParent");
-        //Rigidbody clawBody = clawParent.GetComponent<Rigidbody>();
+        initialClawY = clawParent.position.y;
     }
 
     // Update is called once per frame
@@ -42,10 +38,12 @@ public class clawGame : MonoBehaviour
 
         if (isStarted)
         {
-            horizontalInput = Input.GetAxis("Horizontal");
-            verticalInput = Input.GetAxis("Vertical");
-            movedirection = new Vector3(horizontalInput, 0, verticalInput);
-            clawParent.transform.position += speed * Time.deltaTime * movedirection;
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
+            Vector3 move = new Vector3(horizontalInput, 0, verticalInput) * speed * Time.deltaTime;
+            clawParent.Translate(move, Space.World);
+            //movedirection = new Vector3(horizontalInput, 0, verticalInput);
+            //clawParent.transform.position += speed * Time.deltaTime * movedirection;
         }
 
         if (Input.GetKeyDown(KeyCode.Space) & isStarted)
@@ -53,18 +51,17 @@ public class clawGame : MonoBehaviour
             //Lower claw
             if (!isArmLowered)
             {
-                isArmLowered = true;
                 //Vector3.Lerp(clawParent.transform.position, clawParent.transform.position + target.transform.position, 1f / downSpeed * Time.deltaTime);
 
-                StartCoroutine("LowerClaw");
+                StartCoroutine("DropClaw");
             }
-            else
-            {
-                isArmLowered = false;
-                //Vector3.Lerp(clawParent.transform.position, clawParent.transform.position + clawReturn.transform.position, 1f / downSpeed * Time.deltaTime);
+            //else
+            //{
+            //    isArmLowered = false;
+            //    //Vector3.Lerp(clawParent.transform.position, clawParent.transform.position + clawReturn.transform.position, 1f / downSpeed * Time.deltaTime);
 
-                StartCoroutine("RaiseClaw");
-            }
+            //    StartCoroutine("RaiseClaw");
+            //}
 
         }
 
@@ -100,26 +97,42 @@ public class clawGame : MonoBehaviour
 
     }
 
-    private IEnumerator LowerClaw()
+    System.Collections.IEnumerator DropClaw()
     {
-        
-        Rigidbody clawBody = clawParent.GetComponent<Rigidbody>(); 
+        isArmLowered = true;
 
-        clawBody.MovePosition(target.transform.position);
+        float targetY = initialClawY - downDistance;
+        while (clawParent.position.y > targetY)
+        {
+            clawParent.Translate(Vector3.down * downSpeed * Time.deltaTime);
+            yield return null;
+        }
+        yield return new WaitForSeconds(1f);
         
-        Debug.Log("Claw lowered");
-        yield return null;
+        while(clawParent.position.y < initialClawY)
+        {
+            clawParent.Translate(Vector3.up * downSpeed * Time.deltaTime);
+            yield return null;
+        }
+        isArmLowered = false;
     }
 
-    private IEnumerator RaiseClaw()
-    {
-        Rigidbody clawBody = clawParent.GetComponent<Rigidbody>();
+    //private IEnumerator LowerClaw()
+    //{
+        
+    //    Rigidbody clawBody = clawParent.GetComponent<Rigidbody>(); 
+        
+    //    Debug.Log("Claw lowered");
+    //    yield return null;
+    //}
 
-        clawBody.MovePosition(clawReturn.transform.position);
+    //private IEnumerator RaiseClaw()
+    //{
+    //    Rigidbody clawBody = clawParent.GetComponent<Rigidbody>();
 
-        Debug.Log("Claw raised");
-        yield return null;
-    }
+    //    Debug.Log("Claw raised");
+    //    yield return null;
+    //}
 
     void exitClawGame()
     {
