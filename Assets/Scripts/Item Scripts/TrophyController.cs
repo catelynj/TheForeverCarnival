@@ -22,13 +22,13 @@ public class TrophyController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Trophy"))
             {
-                Debug.Log("hit " + hit.collider.gameObject);
+                //Debug.Log("hit " + hit.collider.gameObject);
                 GameManager.Instance.globalScore -= prizePrice;
                 GameManager.Instance.AddToInventory(hit.collider.gameObject);
                 hit.collider.gameObject.SetActive(false);
+                UIManager.Instance.UpdateScore();
             }
         }
-
     }
 
     public void StartRotation()
