@@ -12,7 +12,7 @@ public class BalloonPopper : MonoBehaviour
 
     private void Start()
     {
-        popSource = GetComponent<AudioSource>();
+        popSource = GameObject.Find("Dart_Pickup").GetComponent<AudioSource>();
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -31,8 +31,9 @@ public class BalloonPopper : MonoBehaviour
         if (popSource != null && popSound != null)
         {
             popSource.PlayOneShot(popSound);
+            Debug.Log("Pop");
         }
         GameManager.Instance.IncrementScore(balloonScore);
-        Destroy(balloon, popSound.length - 0.78f);
+        Destroy(balloon);
     }
 }

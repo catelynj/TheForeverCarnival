@@ -5096,6 +5096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlockAmount: 0
   unlockBarrier: {fileID: 0}
+  gameBooth: {fileID: 0}
 --- !u!65 &8853543242271737993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6810,7 +6811,7 @@ GameObject:
   - component: {fileID: 6073846530088183620}
   m_Layer: 0
   m_Name: Sign
-  m_TagString: Untagged
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6849,6 +6850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlockAmount: 0
   unlockBarrier: {fileID: 0}
+  gameBooth: {fileID: 0}
 --- !u!65 &6073846530088183620
 BoxCollider:
   m_ObjectHideFlags: 0

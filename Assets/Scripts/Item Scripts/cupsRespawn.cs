@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class cupsRespawn : MonoBehaviour
@@ -7,13 +8,14 @@ public class cupsRespawn : MonoBehaviour
     public GameObject cups;
     bool canButton = true;
     public GameObject spawnArea;
+
     IEnumerator cupRespawner;
     public float waitTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(CupsSpawner());
+        
     }
 
     // Update is called once per frame
@@ -31,7 +33,7 @@ public class cupsRespawn : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("cupButton"))
         {
-            //Debug.Log("Button pressed!");
+            Debug.Log("Button pressed!");
             StartCoroutine(CupsSpawner());
         }
     }
