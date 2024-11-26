@@ -12,7 +12,7 @@ public class clawGame : MonoBehaviour
 
     private float downSpeed = 0.8f;
     private float speed = 0.8f;
-    private float downDistance = 1.2f;
+    private float downDistance = 1f;
     private float initialClawY;
     private bool isStarted = false;
     private Vector3 movedirection;
