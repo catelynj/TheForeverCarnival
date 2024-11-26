@@ -14,7 +14,7 @@ public class UnlockArea : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        gameBooth.SetActive(false);
     }
 
     // Update is called once per frame
@@ -24,20 +24,24 @@ public class UnlockArea : MonoBehaviour
         RaycastHit hit;
         if (Input.GetKeyUp(KeyCode.E) && Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Interact"))
         {
-            if (GameManager.Instance.globalScore >= unlockAmount)
+            if (hit.collider.gameObject == this.gameObject)
             {
-                GameManager.Instance.globalScore -= unlockAmount;
-                UIManager.Instance.updateScoreCall = true;
-                UIManager.Instance.UpdateScore();
-                Destroy(unlockBarrier);
-                gameBooth.SetActive(true);
-            }
-            else
-            {
-                UIManager.Instance.DisplayMessage("Insufficient Funds...Bozo");
-                StartCoroutine(HideMessageAfterDelay(messageTimer));
+                if (GameManager.Instance.globalScore >= unlockAmount)
+                {
+                    GameManager.Instance.globalScore -= unlockAmount;
+                    UIManager.Instance.updateScoreCall = true;
+                    UIManager.Instance.UpdateScore();
+                    Destroy(unlockBarrier);
+                    gameBooth.SetActive(true);
+                }
+                else
+                {
+                    UIManager.Instance.DisplayMessage("Insufficient Funds...Bozo");
+                    StartCoroutine(HideMessageAfterDelay(messageTimer));
+                }
             }
         }
+
     }
 
     private IEnumerator HideMessageAfterDelay(float delay)

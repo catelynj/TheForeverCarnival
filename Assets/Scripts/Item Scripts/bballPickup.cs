@@ -39,6 +39,7 @@ public class bballPickup : MonoBehaviour
         if (beingCarried)
         {
             Throw();
+            UIManager.Instance.interactCanvas.SetActive(false);
         }
     }
 
@@ -61,8 +62,12 @@ public class bballPickup : MonoBehaviour
         Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         Vector3 throwDirection = ray.direction;
         bball.transform.LookAt(bball.transform.position + throwDirection);
+
+
         if (Input.GetMouseButtonDown(0))
         {
+
+            UIManager.Instance.interactCanvas.SetActive(false);
             bball.transform.parent = null;
             Rigidbody rb = bball.GetComponent<Rigidbody>();
             if (rb != null)

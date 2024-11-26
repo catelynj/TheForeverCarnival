@@ -27,9 +27,9 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject hudCanvas = null;
     [SerializeField] private GameObject settingsCanvas = null;
-    [SerializeField] private GameObject inventoryCanvas = null;
+    [SerializeField] public GameObject inventoryCanvas = null;
     [SerializeField] private GameObject messageCanvas = null;
-    [SerializeField] private GameObject interactCanvas = null;
+    public GameObject interactCanvas = null;
 
     public Text messageText;
     public bool updateScoreCall = false;
@@ -100,9 +100,9 @@ public class UIManager : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, raycastDistance))
         {
-            if(hit.collider.CompareTag("Interact") || hit.collider.CompareTag("Trophy") || hit.collider.CompareTag("basketball") || 
-                hit.collider.CompareTag("dartButton") || hit.collider.CompareTag("cupButton") || hit.collider.CompareTag("Gun") || hit.collider.CompareTag("Dart") || 
-                hit.collider.CompareTag("Ball"))
+            if(hit.collider.CompareTag("Interact") || hit.collider.CompareTag("Trophy") || hit.collider.CompareTag("dartButton") 
+                || hit.collider.CompareTag("cupButton") || hit.collider.CompareTag("ballButton") || hit.collider.CompareTag("clawButton") || hit.collider.CompareTag("Gun") 
+                || hit.collider.CompareTag("Dart") || hit.collider.CompareTag("Ball") || hit.collider.CompareTag("basketball"))
             {
                 interactCanvas.SetActive(true);
             }

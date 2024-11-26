@@ -19,6 +19,7 @@ public class clawPointCollider : MonoBehaviour
         if (other.gameObject.CompareTag("Trophy"))
         {
             GameManager.Instance.IncrementScore(prizePoints);
+            UIManager.Instance.UpdateScore();
             Destroy(other.gameObject);
             //if (other.gameObject.Equals("picture"))
             //{
