@@ -14,6 +14,8 @@ public class clawGame : MonoBehaviour
     private float speed = 0.8f;
     private float downDistance = 1f;
     private float initialClawY;
+    private float initialClawX;
+    private float initialClawZ;
     private bool isStarted = false;
     private Vector3 movedirection;
 
@@ -22,11 +24,17 @@ public class clawGame : MonoBehaviour
     void Start()
     {
         initialClawY = clawParent.position.y;
+        initialClawX = clawParent.position.x;
+        initialClawZ = clawParent.position.z;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //if(clawParent.position.x > 24)
+        //{
+        //    clawParent.position.x = initialClawX; // need to stop the claw from moving out of bounds
+        //}
         if (Input.GetKeyDown(KeyCode.E) && !isStarted)
         {
             canClawGame();
