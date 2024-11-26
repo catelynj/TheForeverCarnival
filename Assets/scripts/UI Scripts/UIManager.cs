@@ -101,8 +101,8 @@ public class UIManager : MonoBehaviour
         if (Physics.Raycast(ray, out hit, raycastDistance))
         {
             if(hit.collider.CompareTag("Interact") || hit.collider.CompareTag("Trophy") || hit.collider.CompareTag("basketball") || 
-                hit.collider.CompareTag("Button") || hit.collider.CompareTag("Gun") || hit.collider.CompareTag("Dart") || 
-                hit.collider.CompareTag("Ball")) //we can optimize this later but this is how it is right now -- maybe just change all minigame pickups to one tag
+                hit.collider.CompareTag("dartButton") || hit.collider.CompareTag("cupButton") || hit.collider.CompareTag("Gun") || hit.collider.CompareTag("Dart") || 
+                hit.collider.CompareTag("Ball"))
             {
                 interactCanvas.SetActive(true);
             }

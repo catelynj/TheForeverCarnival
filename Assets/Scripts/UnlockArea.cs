@@ -9,6 +9,7 @@ public class UnlockArea : MonoBehaviour
     private float messageTimer = 3f;
     public int unlockAmount = 0;
     public GameObject unlockBarrier;
+    public GameObject gameBooth;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class UnlockArea : MonoBehaviour
                 UIManager.Instance.updateScoreCall = true;
                 UIManager.Instance.UpdateScore();
                 Destroy(unlockBarrier);
+                gameBooth.SetActive(true);
             }
             else
             {

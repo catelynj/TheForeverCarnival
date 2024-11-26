@@ -46,9 +46,9 @@ public class ThrowDart : MonoBehaviour
     private void Pickup()
     {
         GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Dart");
-        int dartclonse = 0;
-        foreach(GameObject dart in gameObjects) { dartclonse++; /*Debug.Log(dartclonse);*/ }
-        if (beingCarried || dartclonse >= 2) return; // This should stop us from picking up multiple darts
+        int dartClones = 0;
+        foreach(GameObject dart in gameObjects) { dartClones++;}
+        if (beingCarried || dartClones >= 2) return;
         gameObjects = null;
 
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
@@ -64,7 +64,7 @@ public class ThrowDart : MonoBehaviour
 
                 // teleport player
                 player.GetComponent<FirstPersonController>().enabled = false;
-                player.transform.position = new Vector3(hit.transform.position.x -2f, 0, hit.transform.position.z);
+                player.transform.position = new Vector3(hit.transform.position.x, 0, hit.transform.position.z + 1f);
                 player.GetComponent<FirstPersonController>().enabled = true;
             }
 
@@ -102,8 +102,6 @@ public class ThrowDart : MonoBehaviour
 
         Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         Vector3 throwDirection = ray.direction;
-
-        // Set the rotation of the clone to face the throw direction
         clone.transform.LookAt(clone.transform.position + throwDirection);
 
         if (Input.GetMouseButtonDown(0))
