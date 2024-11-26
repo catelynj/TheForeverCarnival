@@ -12214,13 +12214,13 @@ MonoBehaviour:
     name: Tree Type0 03
     seed: 8524
     probability: 10
-    collisionCheck: 0
+    collisionCheck: 1
     rejectUnderwater: 0
     heightRange: {x: 0, y: 1000}
     slopeRange: {x: 0, y: 60}
     curvatureRange: {x: 0, y: 1}
     layerMasks: []
-    instanceCount: 447
+    instanceCount: 431
     prefabs:
     - index: 0
       probability: 100
@@ -12232,13 +12232,13 @@ MonoBehaviour:
     name: Tree Type0 02
     seed: 7257
     probability: 10
-    collisionCheck: 0
+    collisionCheck: 1
     rejectUnderwater: 0
     heightRange: {x: 0, y: 1000}
     slopeRange: {x: 0, y: 60}
     curvatureRange: {x: 0, y: 1}
     layerMasks: []
-    instanceCount: 448
+    instanceCount: 431
     prefabs:
     - index: 1
       probability: 100
@@ -12250,13 +12250,13 @@ MonoBehaviour:
     name: Tree Type0 04
     seed: 8182
     probability: 10
-    collisionCheck: 0
+    collisionCheck: 1
     rejectUnderwater: 0
     heightRange: {x: 0, y: 1000}
     slopeRange: {x: 0, y: 60}
     curvatureRange: {x: 0, y: 1}
     layerMasks: []
-    instanceCount: 386
+    instanceCount: 375
     prefabs:
     - index: 2
       probability: 100
