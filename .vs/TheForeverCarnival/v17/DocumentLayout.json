@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\caitelin jones\\desktop\\theforevercarnival\\assets\\scripts\\ui scripts\\muteaudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\muteaudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\caitelin jones\\desktop\\theforevercarnival\\assets\\scripts\\ui scripts\\playbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\playbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\caitelin jones\\desktop\\theforevercarnival\\assets\\scripts\\clawgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clawgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\caitelin jones\\desktop\\theforevercarnival\\assets\\scripts\\item scripts\\throwball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\assets\\scripts\\item scripts\\throwball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\throwball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\assets\\scripts\\clawpointcollider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +38,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "MuteAudio.cs",
+              "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\MuteAudio.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI Scripts\\MuteAudio.cs",
+              "ToolTip": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\MuteAudio.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI Scripts\\MuteAudio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T00:19:54.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayButton.cs",
+              "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\PlayButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI Scripts\\PlayButton.cs",
+              "ToolTip": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\PlayButton.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI Scripts\\PlayButton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T00:17:36.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "clawGame.cs",
               "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\clawGame.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\clawGame.cs",
@@ -47,7 +81,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ThrowBall.cs",
               "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\ThrowBall.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\ThrowBall.cs",
@@ -55,12 +89,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\ThrowBall.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T18:14:37.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T18:14:37.02Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "clawPointCollider.cs",
               "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\clawPointCollider.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\clawPointCollider.cs",
@@ -72,19 +105,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "UIManager.cs",
               "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI Scripts\\UIManager.cs",
               "ToolTip": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI Scripts\\UIManager.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAwwGcAAACBAAAAAAAAAA==",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAkwBwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T17:32:19.36Z"
+              "WhenOpened": "2024-11-26T17:32:19.36Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "UnlockArea.cs",
               "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\UnlockArea.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UnlockArea.cs",
