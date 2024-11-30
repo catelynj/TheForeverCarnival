@@ -348,6 +348,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prizePrice: 1000
+  prize:
+    name: FrogPrize
+    sprite: {fileID: 21300000, guid: 238476fc6f3879246877b60d5b3c610f, type: 3}
+    prefab: {fileID: 9059138693871055489}
 --- !u!136 &809158872653737077
 CapsuleCollider:
   m_ObjectHideFlags: 0

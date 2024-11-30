@@ -1,6 +1,7 @@
 using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -30,20 +31,34 @@ public class UIManager : MonoBehaviour
     [SerializeField] public GameObject inventoryCanvas = null;
     [SerializeField] private GameObject messageCanvas = null;
     public GameObject interactCanvas = null;
+    private float raycastDistance = 3.5f;
 
     public Text messageText;
     public bool updateScoreCall = false;
     public Text scoreText;
+    public Text prizeCount;
+
     public AudioClip pointSound;
     private AudioSource pointSource;
-    public Image[] inventoryImages;
-    public Sprite[] prizeSprites;
-    private int inventorySlot = 0;
-    public int currentInventoryCount = 0;
-    public GameObject[] prizePrefabs;
-    private GameObject currentPrizeModel;
-    private float raycastDistance = 3.5f;
 
+    public Image[] inventoryImages;
+    public Sprite placeholderSprite;
+    public int currentInventoryCount = 0;
+    private GameObject currentPrizeModel;
+
+    [System.Serializable]
+    public class Prize
+    {
+        public string name;
+        public Sprite sprite;
+        public GameObject prefab;
+    }
+
+
+    public List<Prize> prizes = new List<Prize>();
+    public Dictionary<string, Prize> prizeDictionary = new Dictionary<string, Prize>();
+
+   
     private void Start()
     {
         SetActiveHud(true);
@@ -54,6 +69,18 @@ public class UIManager : MonoBehaviour
         updateScoreCall = false;
         pointSource = GetComponent<AudioSource>();
         interactCanvas.SetActive(false);
+
+        foreach (var prize in prizes)
+        {
+            if (!prizeDictionary.ContainsKey(prize.name))
+            {
+                prizeDictionary[prize.name] = prize;
+                //Debug.Log($"Prize added: {prize.name}");
+            }
+        }
+
+  
+
     }
 
     private void Update()
@@ -84,11 +111,11 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        // Check for input to destroy the current prize model
+        //Check for input to destroy the current prize model
         if (currentPrizeModel != null && Input.GetKeyDown(KeyCode.Mouse0))
         {
             InputSystem.EnableDevice(Keyboard.current);
-            ClearScreen(false); // Reactivate canvases
+            ClearScreen(false);
             Destroy(currentPrizeModel);
             currentPrizeModel = null;
             HideMessage();
@@ -193,29 +220,39 @@ public class UIManager : MonoBehaviour
         updateScoreCall = false;
     }
 
-    public void UpdateInventoryCanvas(int prizeIndex)
+    public void UpdateInventoryCanvas(string prizeName)
     {
-        if (inventorySlot < inventoryImages.Length && prizeIndex < prizeSprites.Length)
+        if (prizeDictionary.TryGetValue(prizeName, out Prize prize))
         {
-            inventoryImages[inventorySlot].sprite = prizeSprites[prizeIndex];
-            inventoryImages[inventorySlot].enabled = true;
-            inventorySlot++;
+            for (int i = 0; i < inventoryImages.Length; i++)
+            {
+                if (inventoryImages[i].sprite == placeholderSprite)
+                {
+                    //Update inventory with the prize sprite
+                    inventoryImages[i].sprite = prize.sprite;
+                    inventoryImages[i].enabled = true;
+                    currentInventoryCount++;
+                    prizeCount.text = currentInventoryCount.ToString();
+
+                    break;
+                }
+            }
         }
-
-
+        else
+        {
+            Debug.LogError($"Prize with name {prizeName} not found.");
+        }
     }
 
-    public void OnInventoryClick(int index)
+    public void OnInventoryClick(string prizeName)
     {
-        if (index < prizePrefabs.Length)
+        if (prizeDictionary.TryGetValue(prizeName, out Prize prize) && GameManager.Instance.inventory.Contains(prizeName))
         {
-            GameObject prizePrefab = prizePrefabs[index];
-            if (GameManager.Instance.Inventory.Count > 0)
+            if (GameManager.Instance.inventory.Count > 0)
             {
                 Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 1.3f));
                 spawnPosition.y -= 0.3f;
-                currentPrizeModel = Instantiate(prizePrefab, spawnPosition, Quaternion.Euler(0, 0, 0));
-
+                currentPrizeModel = Instantiate(prize.prefab, spawnPosition, Quaternion.identity);
 
                 TrophyController trophyController = currentPrizeModel.GetComponent<TrophyController>();
                 Animator trophyAnim = currentPrizeModel.GetComponent<Animator>();
@@ -233,6 +270,10 @@ public class UIManager : MonoBehaviour
                     Debug.LogError("TrophyController null");
                 }
             }
+        }
+        else
+        {
+            //Debug.LogError($"Prize with name {prizeName} not found.");
         }
     }
 

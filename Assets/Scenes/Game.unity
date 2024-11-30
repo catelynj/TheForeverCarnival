@@ -208,13 +208,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1066867482}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnInventoryClick
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: CatPrize
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &15658443
@@ -1873,13 +1873,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1066867482}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnInventoryClick
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 6
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: FrogPrize
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &117987083
@@ -6263,13 +6263,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1066867482}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnInventoryClick
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: PenguinPrize
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &532396721
@@ -11151,7 +11151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.4, y: 12.6}
+  m_AnchoredPosition: {x: -1.4, y: 15.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &834247318
@@ -11176,7 +11176,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5dd49b3eacc540408c98eee0de38e0f1, type: 3}
-    m_FontSize: 31
+    m_FontSize: 41
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 6
@@ -11187,7 +11187,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0
 --- !u!222 &834247319
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11594,13 +11594,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1066867482}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnInventoryClick
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 9
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: GummyPrize
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &840942683
@@ -14852,41 +14852,52 @@ MonoBehaviour:
   messageText: {fileID: 1274641496}
   updateScoreCall: 0
   scoreText: {fileID: 442598104}
+  prizeCount: {fileID: 834247318}
   pointSound: {fileID: 8300000, guid: 62608db5d876998439166b6ea0d1a6c4, type: 3}
   inventoryImages:
   - {fileID: 898613861}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  prizeSprites:
-  - {fileID: 21300000, guid: 238476fc6f3879246877b60d5b3c610f, type: 3}
-  - {fileID: 21300000, guid: 1e162fddf8a3d584ba50497b7d7320af, type: 3}
-  - {fileID: 21300000, guid: b4c3b4e44e313f8449b7328ac052ba4e, type: 3}
-  - {fileID: 21300000, guid: 5a1154a7815139744b0c81847b4e8cfc, type: 3}
-  - {fileID: 21300000, guid: a37f6c581ed8f2244b6df3b590ba2ee7, type: 3}
-  - {fileID: 21300000, guid: d45155b71f50b574fb5a0463211e9470, type: 3}
-  - {fileID: 21300000, guid: 80b0ed861f24ef04a93095264a724fe1, type: 3}
-  - {fileID: 21300000, guid: 77b6638aac4715e49aa72b124f9add2d, type: 3}
-  - {fileID: 21300000, guid: 5d5f5b3e87b4f2b49bedba05cc596a52, type: 3}
-  - {fileID: 21300000, guid: 1947f03a4c0199f44bb0cddb8cda4197, type: 3}
+  - {fileID: 1712901557}
+  - {fileID: 1120027126}
+  - {fileID: 1452671192}
+  - {fileID: 173535279}
+  - {fileID: 1066327364}
+  - {fileID: 304893458}
+  - {fileID: 491259564}
+  - {fileID: 750203075}
+  - {fileID: 1771113777}
+  placeholderSprite: {fileID: -42007405, guid: 8cc8424d6531b2040b77eca8ed2b2dda, type: 3}
   currentInventoryCount: 0
-  prizePrefabs:
-  - {fileID: 9059138693871055489, guid: bbd41bbdd08a2ed47a295873f89dcb81, type: 3}
-  - {fileID: 2985628522377317996, guid: 9316f4d7da05a0947a046547ba559a16, type: 3}
-  - {fileID: 4561744703478657361, guid: 090999b3da6fcbb42bc74128be00eb76, type: 3}
-  - {fileID: 2828016555426321692, guid: 7d1f053b7471a534287a06c83c69cd77, type: 3}
-  - {fileID: 2747572106200560808, guid: cd8710b157f78254f9946fb7933a6c8d, type: 3}
-  - {fileID: 7954711820329592799, guid: 1a552d6bd367f5f45a15a5c1ab814a23, type: 3}
-  - {fileID: 2289337214806704021, guid: 16cd37d123ce55d4682ab5123cbbc7c0, type: 3}
-  - {fileID: 3459143340403075322, guid: 1de44e39ecb0c274a93843e3d90602c6, type: 3}
-  - {fileID: 8550448176222589270, guid: 01db180be788f074594cfb50ad95b2b2, type: 3}
-  - {fileID: 1866912448731322067, guid: 24bd7b85201f3f84fad7e04f608b5459, type: 3}
+  prizes:
+  - name: RobotPrize
+    sprite: {fileID: 21300000, guid: 80b0ed861f24ef04a93095264a724fe1, type: 3}
+    prefab: {fileID: 2289337214806704021, guid: 16cd37d123ce55d4682ab5123cbbc7c0, type: 3}
+  - name: SandwichPrize
+    sprite: {fileID: 21300000, guid: 77b6638aac4715e49aa72b124f9add2d, type: 3}
+    prefab: {fileID: 3459143340403075322, guid: 1de44e39ecb0c274a93843e3d90602c6, type: 3}
+  - name: HedgehogPrize
+    sprite: {fileID: 21300000, guid: b4c3b4e44e313f8449b7328ac052ba4e, type: 3}
+    prefab: {fileID: 4561744703478657361, guid: 090999b3da6fcbb42bc74128be00eb76, type: 3}
+  - name: FrogPrize
+    sprite: {fileID: 21300000, guid: 238476fc6f3879246877b60d5b3c610f, type: 3}
+    prefab: {fileID: 9059138693871055489, guid: bbd41bbdd08a2ed47a295873f89dcb81, type: 3}
+  - name: RatPrize
+    sprite: {fileID: 21300000, guid: 5a1154a7815139744b0c81847b4e8cfc, type: 3}
+    prefab: {fileID: 2828016555426321692, guid: 7d1f053b7471a534287a06c83c69cd77, type: 3}
+  - name: SharkPrize
+    sprite: {fileID: 21300000, guid: 5d5f5b3e87b4f2b49bedba05cc596a52, type: 3}
+    prefab: {fileID: 8550448176222589270, guid: 01db180be788f074594cfb50ad95b2b2, type: 3}
+  - name: PenguinPrize
+    sprite: {fileID: 21300000, guid: d45155b71f50b574fb5a0463211e9470, type: 3}
+    prefab: {fileID: 7954711820329592799, guid: 1a552d6bd367f5f45a15a5c1ab814a23, type: 3}
+  - name: CatPrize
+    sprite: {fileID: 21300000, guid: a37f6c581ed8f2244b6df3b590ba2ee7, type: 3}
+    prefab: {fileID: 2747572106200560808, guid: cd8710b157f78254f9946fb7933a6c8d, type: 3}
+  - name: GummyPrize
+    sprite: {fileID: 21300000, guid: 1e162fddf8a3d584ba50497b7d7320af, type: 3}
+    prefab: {fileID: 2985628522377317996, guid: 9316f4d7da05a0947a046547ba559a16, type: 3}
+  - name: FerrisPrize
+    sprite: {fileID: 21300000, guid: 1947f03a4c0199f44bb0cddb8cda4197, type: 3}
+    prefab: {fileID: 1866912448731322067, guid: 24bd7b85201f3f84fad7e04f608b5459, type: 3}
 --- !u!114 &1066867483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14902,8 +14913,8 @@ MonoBehaviour:
   globalScore: 0
   playerLocation: {x: 0, y: 0, z: 0}
   backgroundSound: {fileID: 8300000, guid: ec176ba54d5b7ac408ab06be84cf0bc5, type: 3}
-  prizeCount: {fileID: 0}
-  Inventory: []
+  inventoryCapacity: 10
+  inventory: []
 --- !u!114 &1066867484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18868,13 +18879,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1066867482}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnInventoryClick
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 8
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: HedgehogPrize
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1314553878
@@ -20031,7 +20042,6 @@ GameObject:
   - component: {fileID: 1371368789}
   - component: {fileID: 1371368792}
   - component: {fileID: 1371368791}
-  - component: {fileID: 1371368790}
   m_Layer: 5
   m_Name: Trophy
   m_TagString: Untagged
@@ -20056,65 +20066,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 68.70001, y: 62.199997}
+  m_AnchoredPosition: {x: 89, y: 92}
   m_SizeDelta: {x: 82, y: 79}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1371368790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1371368788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1371368791}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1066867482}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: SetActiveInventory
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1371368791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20128,7 +20082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.9206698, b: 0.35635456, a: 1}
+  m_Color: {r: 0.8962264, g: 0.82404006, b: 0.13105197, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -20153,19 +20107,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371368788}
   m_CullTransparentMesh: 1
---- !u!114 &1372001817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2282577540825861550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86670a4f0ccf61c4b9fb7950ce361906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prizePrice: 1000
 --- !u!1 &1372099385
 GameObject:
   m_ObjectHideFlags: 0
@@ -20251,13 +20192,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1066867482}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnInventoryClick
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: RobotPrize
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1372099388
@@ -22055,24 +21996,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1475740239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3001594389501384603, guid: 163001c8020630548b00a8a1853e2efc, type: 3}
-  m_PrefabInstance: {fileID: 2282577540825861547}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1475740241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475740239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86670a4f0ccf61c4b9fb7950ce361906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prizePrice: 1000
 --- !u!43 &1477464374
 Mesh:
   m_ObjectHideFlags: 0
@@ -23495,19 +23418,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!114 &1600352987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6513545746763910206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86670a4f0ccf61c4b9fb7950ce361906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prizePrice: 2000
 --- !u!1001 &1609664767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23733,13 +23643,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1066867482}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnInventoryClick
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: FerrisPrize
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1647241982
@@ -26737,24 +26647,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930675918}
   m_CullTransparentMesh: 1
---- !u!1 &1934678070 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 671939489817339978, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
-  m_PrefabInstance: {fileID: 6513545746763910204}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1934678072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934678070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86670a4f0ccf61c4b9fb7950ce361906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prizePrice: 2000
 --- !u!1001 &1938643919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27186,34 +27078,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964305430}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1965927165 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8724376345946751587, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
-  m_PrefabInstance: {fileID: 6513545746763910204}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &1965927169
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965927165}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.7943573
-  m_Height: 6.8198037
-  m_Direction: 1
-  m_Center: {x: 0.07, y: -0.1851021, z: -0.00000025763222}
 --- !u!4 &1967634579 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5662062650044024905, guid: ab7f135b582758b4097038490eaa5cbf, type: 3}
@@ -27394,19 +27258,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6054547203240259570, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
   m_PrefabInstance: {fileID: 6513545746763910204}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2002707028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2002707026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86670a4f0ccf61c4b9fb7950ce361906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prizePrice: 2000
 --- !u!95 &2002707029
 Animator:
   serializedVersion: 5
@@ -27705,13 +27556,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1066867482}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnInventoryClick
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: RatPrize
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2007044536
@@ -28915,13 +28766,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1066867482}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnInventoryClick
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: SandwichPrize
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2063302063
@@ -29125,13 +28976,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1066867482}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnInventoryClick
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 7
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: SharkPrize
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2094109805
@@ -30023,10 +29874,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 518cf00a069640c43a2f94d92714b4c3, type: 2}
-    - target: {fileID: 1042509500573972086, guid: 163001c8020630548b00a8a1853e2efc, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2835020767414670657, guid: 163001c8020630548b00a8a1853e2efc, type: 3}
       propertyPath: m_Height
       value: 10.467848
@@ -30163,89 +30010,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3154537357521139237, guid: 163001c8020630548b00a8a1853e2efc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 8317479904030151205, guid: 163001c8020630548b00a8a1853e2efc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2282577540825861553}
-    - targetCorrespondingSourceObject: {fileID: 8317479904030151205, guid: 163001c8020630548b00a8a1853e2efc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2282577540825861559}
-    - targetCorrespondingSourceObject: {fileID: 5229861703774616560, guid: 163001c8020630548b00a8a1853e2efc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2282577540825861552}
-    - targetCorrespondingSourceObject: {fileID: 5229861703774616560, guid: 163001c8020630548b00a8a1853e2efc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1372001817}
-    - targetCorrespondingSourceObject: {fileID: 3001594389501384603, guid: 163001c8020630548b00a8a1853e2efc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1475740241}
   m_SourcePrefab: {fileID: 100100000, guid: 163001c8020630548b00a8a1853e2efc, type: 3}
---- !u!1 &2282577540825861550 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5229861703774616560, guid: 163001c8020630548b00a8a1853e2efc, type: 3}
-  m_PrefabInstance: {fileID: 2282577540825861547}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2282577540825861551 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8317479904030151205, guid: 163001c8020630548b00a8a1853e2efc, type: 3}
-  m_PrefabInstance: {fileID: 2282577540825861547}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &2282577540825861552
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2282577540825861550}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2232952877369940510, guid: 9e86707bc30cfa14b9733eeb83766924, type: 3}
---- !u!64 &2282577540825861553
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2282577540825861551}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5060444177187149915, guid: 60d6f83b9f21aec439cdd9091c311d33, type: 3}
---- !u!114 &2282577540825861559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2282577540825861551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86670a4f0ccf61c4b9fb7950ce361906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prizePrice: 1000
 --- !u!1001 &3638874480393831782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31806,10 +31571,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Trophy
       objectReference: {fileID: 0}
-    - target: {fileID: 1915284704466867946, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2821581332740261247, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
       propertyPath: m_Name
       value: PrizeWall1
@@ -31882,10 +31643,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Trophy
       objectReference: {fileID: 0}
-    - target: {fileID: 6192259129966787464, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 518cf00a069640c43a2f94d92714b4c3, type: 2}
     - target: {fileID: 6393870665253116959, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -31897,10 +31654,6 @@ PrefabInstance:
     - target: {fileID: 8239589215554918617, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
       propertyPath: m_LocalPosition.z
       value: -3.1088328
-      objectReference: {fileID: 0}
-    - target: {fileID: 8741044505140593662, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
-      propertyPath: prizePrice
-      value: 2000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -31916,101 +31669,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8780182232325711719, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 8724376345946751587, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1965927169}
-    - targetCorrespondingSourceObject: {fileID: 4318157274148507021, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6513545746763910208}
-    - targetCorrespondingSourceObject: {fileID: 4318157274148507021, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1600352987}
-    - targetCorrespondingSourceObject: {fileID: 5680596127728713900, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6513545746763910207}
-    - targetCorrespondingSourceObject: {fileID: 5680596127728713900, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6513545746763910210}
-    - targetCorrespondingSourceObject: {fileID: 671939489817339978, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1934678072}
     - targetCorrespondingSourceObject: {fileID: 6054547203240259570, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2002707029}
     - targetCorrespondingSourceObject: {fileID: 6054547203240259570, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2002707028}
-    - targetCorrespondingSourceObject: {fileID: 6054547203240259570, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2002707033}
   m_SourcePrefab: {fileID: 100100000, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
---- !u!1 &6513545746763910205 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5680596127728713900, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
-  m_PrefabInstance: {fileID: 6513545746763910204}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6513545746763910206 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4318157274148507021, guid: 1a2e755a9d709c54f815d27b459f3ff5, type: 3}
-  m_PrefabInstance: {fileID: 6513545746763910204}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &6513545746763910207
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6513545746763910205}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8668311687405422617, guid: c784be2bc1153b044b60ced8c22151ba, type: 3}
---- !u!64 &6513545746763910208
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6513545746763910206}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3553850294711748384, guid: 805f0f33d61a62940ad44684639d3647, type: 3}
---- !u!114 &6513545746763910210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6513545746763910205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86670a4f0ccf61c4b9fb7950ce361906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prizePrice: 2000
 --- !u!1001 &8192806197286841983
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,11 +5,26 @@ using UnityEngine;
 public class TrophyController : MonoBehaviour
 {
     public int prizePrice;
+
     private Animator anim;
+
+    public UIManager.Prize prize;
+    string prizeName;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        if (prize != null)
+        {
+            prizeName = prize.name;
+            Debug.Log("Prize name: " + prizeName);
+        }
+        else
+        {
+            Debug.LogError("Prize is not assigned!");
+        }
+        
+
     }
 
     void Update()
@@ -22,11 +37,18 @@ public class TrophyController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Trophy"))
             {
-                //Debug.Log("hit " + hit.collider.gameObject);
-                GameManager.Instance.globalScore -= prizePrice;
-                GameManager.Instance.AddToInventory(hit.collider.gameObject);
-                hit.collider.gameObject.SetActive(false);
-                UIManager.Instance.UpdateScore();
+                TrophyController trophy = hit.collider.GetComponent<TrophyController>();
+                if (trophy != null && GameManager.Instance.CanAddToInventory(trophy.prizeName))
+                {
+                    GameManager.Instance.globalScore -= prizePrice;
+                    GameManager.Instance.AddToInventory(trophy.prizeName);
+                    hit.collider.gameObject.SetActive(false);
+                    UIManager.Instance.UpdateScore();
+                }
+                else
+                {
+                    Debug.LogWarning("Failed to add trophy: either inventory is full or prize name is invalid.");
+                }
             }
         }
     }
@@ -34,7 +56,9 @@ public class TrophyController : MonoBehaviour
     public void StartRotation()
     {
         Debug.Log("Rotation Start");
-
+        if (anim != null)
+        {
+            anim.SetBool("IsRotating", true); // Trigger rotation animation
+        }
     }
-
 }

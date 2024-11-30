@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 2460308991316808918}
   - component: {fileID: 2968521866481766385}
   - component: {fileID: 873834678929057241}
+  - component: {fileID: 5114232700789786920}
   m_Layer: 0
   m_Name: GummyTrophy
   m_TagString: Trophy
@@ -152,7 +153,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86670a4f0ccf61c4b9fb7950ce361906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prizePrice: 0
+  prizePrice: 2000
+  prize:
+    name: GummyPrize
+    sprite: {fileID: 21300000, guid: 1e162fddf8a3d584ba50497b7d7320af, type: 3}
+    prefab: {fileID: 2985628522377317996}
 --- !u!95 &873834678929057241
 Animator:
   serializedVersion: 5
@@ -174,3 +179,26 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!136 &5114232700789786920
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2985628522377317996}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.7943573
+  m_Height: 6.8198037
+  m_Direction: 1
+  m_Center: {x: 0.07, y: -0.1851021, z: -0.00000025763222}

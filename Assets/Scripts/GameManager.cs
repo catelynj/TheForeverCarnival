@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
+using static UIManager;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class GameManager : MonoBehaviour
@@ -18,9 +19,9 @@ public class GameManager : MonoBehaviour
     private GameObject player;
     private AudioSource backgroundSource;
     public AudioClip backgroundSound;
-    public Text prizeCount;
+    public int inventoryCapacity = 10;
+    public List<string> inventory = new List<string>();
 
-    public List<GameObject> Inventory = new List<GameObject>();
     public static GameManager Instance
     {
         get
@@ -67,21 +68,25 @@ public class GameManager : MonoBehaviour
         //Save();
 
     }
-
-    public void AddToInventory(GameObject item)
+    public bool CanAddToInventory(string prizeName)
     {
-        if (!Inventory.Contains(item))
+        if (inventoryCapacity <= 0) return false;
+        return inventory.Count < inventoryCapacity && !inventory.Contains(prizeName);
+    }
+
+
+    public void AddToInventory(string prizeName)
+    {
+        if (UIManager.Instance.prizeDictionary.TryGetValue(prizeName, out Prize prize))
         {
-            Inventory.Add(item);
-            UIManager.Instance.UpdateInventoryCanvas(Inventory.Count - 1);
-            
+            inventory.Add(prizeName);
+            UIManager.Instance.UpdateInventoryCanvas(prizeName);
         }
         else
         {
-            Debug.Log("Item already exists");
+            Debug.LogError($"Prize with name {prizeName} not found.");
         }
     }
-
 
     /***********************************/
     /* Player save/load functionality  */ //In progress

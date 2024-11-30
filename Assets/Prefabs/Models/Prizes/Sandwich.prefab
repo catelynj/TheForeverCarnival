@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 791187324240236784}
   - component: {fileID: 1397004315847522618}
   - component: {fileID: 3360804695490598526}
+  - component: {fileID: 8209376427142351245}
+  - component: {fileID: 8400898428734553677}
   m_Layer: 0
   m_Name: Sandwich
   m_TagString: Untagged
@@ -94,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 3459143340403075322}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 518cf00a069640c43a2f94d92714b4c3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -105,3 +107,42 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!64 &8209376427142351245
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3459143340403075322}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2232952877369940510, guid: 9e86707bc30cfa14b9733eeb83766924, type: 3}
+--- !u!114 &8400898428734553677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3459143340403075322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86670a4f0ccf61c4b9fb7950ce361906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prizePrice: 1000
+  prize:
+    name: SandwichPrize
+    sprite: {fileID: 21300000, guid: 77b6638aac4715e49aa72b124f9add2d, type: 3}
+    prefab: {fileID: 3459143340403075322}

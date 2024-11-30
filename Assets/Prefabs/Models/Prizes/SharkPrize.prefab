@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1979711835617952692}
   - component: {fileID: 1585250608405119172}
   - component: {fileID: 7646137890297681565}
+  - component: {fileID: 5086741053137312836}
+  - component: {fileID: 5634014326558455556}
   m_Layer: 0
   m_Name: SharkPrize
   m_TagString: Untagged
@@ -94,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 8550448176222589270}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 518cf00a069640c43a2f94d92714b4c3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -105,3 +107,42 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5086741053137312836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8550448176222589270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86670a4f0ccf61c4b9fb7950ce361906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prizePrice: 2000
+  prize:
+    name: SharkPrize
+    sprite: {fileID: 21300000, guid: 5d5f5b3e87b4f2b49bedba05cc596a52, type: 3}
+    prefab: {fileID: 8550448176222589270}
+--- !u!64 &5634014326558455556
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8550448176222589270}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3553850294711748384, guid: 805f0f33d61a62940ad44684639d3647, type: 3}

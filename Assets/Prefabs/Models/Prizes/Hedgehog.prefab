@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7523232157081620589}
   - component: {fileID: 4051092686296702362}
   - component: {fileID: -7657303529640872450}
+  - component: {fileID: 4234717658693207336}
+  - component: {fileID: 6129808349307174876}
   m_Layer: 0
   m_Name: Hedgehog
   m_TagString: Untagged
@@ -94,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 4561744703478657361}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 518cf00a069640c43a2f94d92714b4c3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -105,3 +107,42 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!64 &4234717658693207336
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4561744703478657361}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5060444177187149915, guid: 60d6f83b9f21aec439cdd9091c311d33, type: 3}
+--- !u!114 &6129808349307174876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4561744703478657361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86670a4f0ccf61c4b9fb7950ce361906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prizePrice: 1000
+  prize:
+    name: HedgehogPrize
+    sprite: {fileID: 21300000, guid: b4c3b4e44e313f8449b7328ac052ba4e, type: 3}
+    prefab: {fileID: 4561744703478657361}

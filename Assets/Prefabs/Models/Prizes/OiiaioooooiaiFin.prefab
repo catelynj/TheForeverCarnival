@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3883816367081196040}
   - component: {fileID: 1854481093406588074}
   - component: {fileID: -388099030337230998}
+  - component: {fileID: 6114093379101009438}
   m_Layer: 0
   m_Name: OiiaioooooiaiFin
   m_TagString: Untagged
@@ -121,7 +122,7 @@ Animator:
   m_GameObject: {fileID: 2747572106200560808}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 518cf00a069640c43a2f94d92714b4c3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -132,3 +133,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6114093379101009438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2747572106200560808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86670a4f0ccf61c4b9fb7950ce361906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prizePrice: 2000
+  prize:
+    name: CatPrize
+    sprite: {fileID: 21300000, guid: a37f6c581ed8f2244b6df3b590ba2ee7, type: 3}
+    prefab: {fileID: 2747572106200560808}
