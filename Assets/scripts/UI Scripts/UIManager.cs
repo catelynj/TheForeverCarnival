@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
@@ -42,9 +43,9 @@ public class UIManager : MonoBehaviour
     private AudioSource pointSource;
 
     public Image[] inventoryImages;
-    public Sprite placeholderSprite;
     public int currentInventoryCount = 0;
     private GameObject currentPrizeModel;
+    //public RawImage inspectArea;
 
     [System.Serializable]
     public class Prize
@@ -69,6 +70,9 @@ public class UIManager : MonoBehaviour
         updateScoreCall = false;
         pointSource = GetComponent<AudioSource>();
         interactCanvas.SetActive(false);
+        //inspectArea.gameObject.SetActive(false);
+
+
 
         foreach (var prize in prizes)
         {
@@ -112,9 +116,9 @@ public class UIManager : MonoBehaviour
         }
 
         //Check for input to destroy the current prize model
-        if (currentPrizeModel != null && Input.GetKeyDown(KeyCode.Mouse0))
+        if (currentPrizeModel != null && Input.GetKeyDown(KeyCode.Escape))
         {
-            InputSystem.EnableDevice(Keyboard.current);
+            //inspectArea.gameObject.SetActive(false);
             ClearScreen(false);
             Destroy(currentPrizeModel);
             currentPrizeModel = null;
@@ -200,8 +204,8 @@ public class UIManager : MonoBehaviour
             hudCanvas.SetActive(false);
             settingsCanvas.SetActive(false);
             inventoryCanvas.SetActive(false);
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         else
         {
@@ -219,22 +223,23 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.globalScore = int.Parse(scoreText.text);
         updateScoreCall = false;
     }
-
+    public Sprite placeholder;
     public void UpdateInventoryCanvas(string prizeName)
     {
         if (prizeDictionary.TryGetValue(prizeName, out Prize prize))
         {
             for (int i = 0; i < inventoryImages.Length; i++)
             {
-                if (inventoryImages[i].sprite == placeholderSprite)
+                // Check if the slot is empty
+                if (inventoryImages[i].sprite == placeholder)
                 {
-                    //Update inventory with the prize sprite
+                    // Update inventory slot with the prize sprite
                     inventoryImages[i].sprite = prize.sprite;
-                    inventoryImages[i].enabled = true;
                     currentInventoryCount++;
+                    
                     prizeCount.text = currentInventoryCount.ToString();
 
-                    break;
+                    break; // Stop after updating the first available slot
                 }
             }
         }
@@ -248,22 +253,19 @@ public class UIManager : MonoBehaviour
     {
         if (prizeDictionary.TryGetValue(prizeName, out Prize prize) && GameManager.Instance.inventory.Contains(prizeName))
         {
-            if (GameManager.Instance.inventory.Count > 0)
+            if (GameManager.Instance.inventory.Count > 0 && currentPrizeModel == null)
             {
-                Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 1.3f));
-                spawnPosition.y -= 0.3f;
+                Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane + 2f));
+
+                spawnPosition.y = 1.3f;
                 currentPrizeModel = Instantiate(prize.prefab, spawnPosition, Quaternion.identity);
-
+                 
                 TrophyController trophyController = currentPrizeModel.GetComponent<TrophyController>();
-                Animator trophyAnim = currentPrizeModel.GetComponent<Animator>();
-
-                if (trophyController != null && trophyAnim != null)
+                
+                if (trophyController != null)
                 {
-                    trophyAnim.SetBool("IsInventory", true);
-                    trophyController.StartRotation();
-                    InputSystem.DisableDevice(Keyboard.current);
-                    DisplayMessage("Click to put trophy away");
                     ClearScreen(true);
+                    DisplayMessage("Click and Drag to Inspect Prize \n Press Escape to Leave Inspect");
                 }
                 else
                 {

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2015034072782312519}
   - component: {fileID: 4113413027371617019}
   - component: {fileID: 3708224898261916508}
-  - component: {fileID: 5412285410461796558}
   - component: {fileID: 6693321997348374371}
   m_Layer: 0
   m_Name: IKEA_rat
@@ -108,27 +107,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5197765369041800510, guid: b59fe39816bbccd4e872d549c48d85e1, type: 3}
---- !u!95 &5412285410461796558
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2828016555426321692}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 518cf00a069640c43a2f94d92714b4c3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6693321997348374371
 MonoBehaviour:
   m_ObjectHideFlags: 0

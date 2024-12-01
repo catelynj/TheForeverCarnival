@@ -116,7 +116,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2460308991316808918}
   - component: {fileID: 2968521866481766385}
-  - component: {fileID: 873834678929057241}
   - component: {fileID: 5114232700789786920}
   m_Layer: 0
   m_Name: GummyTrophy
@@ -158,27 +157,6 @@ MonoBehaviour:
     name: GummyPrize
     sprite: {fileID: 21300000, guid: 1e162fddf8a3d584ba50497b7d7320af, type: 3}
     prefab: {fileID: 2985628522377317996}
---- !u!95 &873834678929057241
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2985628522377317996}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 518cf00a069640c43a2f94d92714b4c3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!136 &5114232700789786920
 CapsuleCollider:
   m_ObjectHideFlags: 0

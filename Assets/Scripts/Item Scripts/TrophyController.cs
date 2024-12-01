@@ -1,19 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.Analytics.Internal;
 using UnityEngine;
+using UnityEngine.EventSystems;
+
+
 
 public class TrophyController : MonoBehaviour
 {
     public int prizePrice;
-
-    private Animator anim;
-
     public UIManager.Prize prize;
     string prizeName;
+    private Camera mainCamera;
+    private Vector3 previousMousePosition;
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
         if (prize != null)
         {
             prizeName = prize.name;
@@ -23,13 +25,12 @@ public class TrophyController : MonoBehaviour
         {
             Debug.LogError("Prize is not assigned!");
         }
-        
-
+        mainCamera = Camera.main;
     }
+
 
     void Update()
     {
-        // Add trophy to inventory
         if (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.globalScore >= prizePrice)
         {
             Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
@@ -52,13 +53,20 @@ public class TrophyController : MonoBehaviour
             }
         }
     }
-
-    public void StartRotation()
+    void OnMouseDown()
     {
-        Debug.Log("Rotation Start");
-        if (anim != null)
-        {
-            anim.SetBool("IsRotating", true); // Trigger rotation animation
-        }
+        // Save the initial mouse position when the dragging starts
+        previousMousePosition = Input.mousePosition;
+        
+    }
+
+    void OnMouseDrag()
+    {
+        Vector3 delta = Input.mousePosition - previousMousePosition;
+
+        transform.Rotate(Vector3.up, delta.x * 0.25f, Space.Self);
+        transform.Rotate(Vector3.right, delta.y * 0.25f, Space.Self);
+
+        previousMousePosition = Input.mousePosition;
     }
 }

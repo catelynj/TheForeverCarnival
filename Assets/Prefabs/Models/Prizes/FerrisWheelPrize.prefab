@@ -308,7 +308,6 @@ GameObject:
   - component: {fileID: 169369894336099219}
   - component: {fileID: 8827981361152492362}
   - component: {fileID: 1683922340200643326}
-  - component: {fileID: 3021593962694724122}
   m_Layer: 0
   m_Name: FerrisWheelPrize
   m_TagString: Untagged
@@ -409,27 +408,6 @@ MonoBehaviour:
     name: FerrisPrize
     sprite: {fileID: 21300000, guid: 1947f03a4c0199f44bb0cddb8cda4197, type: 3}
     prefab: {fileID: 1866912448731322067}
---- !u!95 &3021593962694724122
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866912448731322067}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 518cf00a069640c43a2f94d92714b4c3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2650218637955404340
 GameObject:
   m_ObjectHideFlags: 0

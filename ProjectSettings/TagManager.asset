@@ -3,7 +3,27 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ScoreNumber
+  - ballButton
+  - cupButton
+  - Trophy
+  - Cup
+  - Ball
+  - dartButton
+  - Unlock
+  - Interact
+  - CinemachineTarget
+  - ballDoor
+  - basketball
+  - Target
+  - Gun
+  - cardButton
+  - Dart
+  - Balloon
+  - clawButton
+  - clawParent
+  - Void
   layers:
   - Default
   - TransparentFX

@@ -327,7 +327,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3749141590502729239}
-  - component: {fileID: 7069460688220229339}
   - component: {fileID: 7415483173210397859}
   - component: {fileID: 7484438499768277923}
   m_Layer: 0
@@ -365,27 +364,6 @@ Transform:
   - {fileID: 6132621000882641235}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &7069460688220229339
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2289337214806704021}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 518cf00a069640c43a2f94d92714b4c3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &7415483173210397859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,7 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86670a4f0ccf61c4b9fb7950ce361906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prizePrice: 0
+  prizePrice: 1000
   prize:
     name: RobotPrize
     sprite: {fileID: 21300000, guid: 80b0ed861f24ef04a93095264a724fe1, type: 3}

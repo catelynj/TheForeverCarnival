@@ -121,6 +121,7 @@
     <Compile Include="Assets\Packages\HandTorch\Scripts\ToggleLight.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Packages\TextMeshPro_Assets\CurvedTextMeshPro\Scripts\TextProOnACurve.cs" />
+    <Compile Include="Assets\InspectObject.cs" />
     <Compile Include="Assets\Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\cupsRespawn.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\BalloonPopper.cs" />
