@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 169369894336099219}
   - component: {fileID: 8827981361152492362}
   - component: {fileID: 1683922340200643326}
+  - component: {fileID: 1616525961309547553}
   m_Layer: 0
   m_Name: FerrisWheelPrize
   m_TagString: Untagged
@@ -325,7 +326,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 51.976, y: 248.85, z: 669.6287}
-  m_LocalScale: {x: 1.08844, y: 1.08844, z: 1.08844}
+  m_LocalScale: {x: 0.046581354, y: 0.046581354, z: 0.046581354}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 847382722519956900}
@@ -408,6 +409,27 @@ MonoBehaviour:
     name: FerrisPrize
     sprite: {fileID: 21300000, guid: 1947f03a4c0199f44bb0cddb8cda4197, type: 3}
     prefab: {fileID: 1866912448731322067}
+--- !u!65 &1616525961309547553
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866912448731322067}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 19.31547, y: 16.710014, z: 8.373697}
+  m_Center: {x: -0.0000009536744, y: 8.355005, z: 0}
 --- !u!1 &2650218637955404340
 GameObject:
   m_ObjectHideFlags: 0

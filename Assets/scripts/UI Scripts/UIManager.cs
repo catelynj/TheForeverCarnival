@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance = null;
 
+    //singleton pattern
     private void Awake()
     {
         if (Instance == null)
@@ -32,7 +33,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] public GameObject inventoryCanvas = null;
     [SerializeField] private GameObject messageCanvas = null;
     public GameObject interactCanvas = null;
-    private float raycastDistance = 3.5f;
+    private float raycastDistance = 3.8f; //how far interact message pops up
 
     public Text messageText;
     public bool updateScoreCall = false;
@@ -43,9 +44,9 @@ public class UIManager : MonoBehaviour
     private AudioSource pointSource;
 
     public Image[] inventoryImages;
+    public Sprite placeholder;
     public int currentInventoryCount = 0;
     private GameObject currentPrizeModel;
-    //public RawImage inspectArea;
 
     [System.Serializable]
     public class Prize
@@ -55,25 +56,23 @@ public class UIManager : MonoBehaviour
         public GameObject prefab;
     }
 
-
     public List<Prize> prizes = new List<Prize>();
     public Dictionary<string, Prize> prizeDictionary = new Dictionary<string, Prize>();
-
    
     private void Start()
     {
         SetActiveHud(true);
         settingsOpen = false;
         inventoryOpen = false;
+
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
         updateScoreCall = false;
         pointSource = GetComponent<AudioSource>();
         interactCanvas.SetActive(false);
-        //inspectArea.gameObject.SetActive(false);
 
-
-
+        //prize object setup
         foreach (var prize in prizes)
         {
             if (!prizeDictionary.ContainsKey(prize.name))
@@ -115,10 +114,9 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        //Check for input to destroy the current prize model
+        //Check for input to close interact screen & return to inventory
         if (currentPrizeModel != null && Input.GetKeyDown(KeyCode.Escape))
         {
-            //inspectArea.gameObject.SetActive(false);
             ClearScreen(false);
             Destroy(currentPrizeModel);
             currentPrizeModel = null;
@@ -149,7 +147,6 @@ public class UIManager : MonoBehaviour
         hudCanvas.SetActive(isPlaying);
         settingsCanvas.SetActive(!isPlaying);
         inventoryCanvas.SetActive(!isPlaying);
-
         FirstPersonController.Instance.enabled = isPlaying;
     }
 
@@ -165,6 +162,7 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 0;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            //disable mouse and keyboard movement
             FirstPersonController.Instance.enabled = false;
         }
         else
@@ -187,6 +185,7 @@ public class UIManager : MonoBehaviour
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            //disable mouse and keyboard movement
             FirstPersonController.Instance.enabled = false;
         }
         else
@@ -199,6 +198,7 @@ public class UIManager : MonoBehaviour
 
     public void ClearScreen(bool clear)
     {
+        //set all huds to inactive for inspect function
         if (clear)
         {
             hudCanvas.SetActive(false);
@@ -223,24 +223,20 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.globalScore = int.Parse(scoreText.text);
         updateScoreCall = false;
     }
-    public Sprite placeholder;
     public void UpdateInventoryCanvas(string prizeName)
     {
+        //if prize name is in prize dictionary
         if (prizeDictionary.TryGetValue(prizeName, out Prize prize))
         {
-            for (int i = 0; i < inventoryImages.Length; i++)
-            {
-                // Check if the slot is empty
-                if (inventoryImages[i].sprite == placeholder)
-                {
-                    // Update inventory slot with the prize sprite
-                    inventoryImages[i].sprite = prize.sprite;
-                    currentInventoryCount++;
-                    
-                    prizeCount.text = currentInventoryCount.ToString();
+            int prizeIndex = prizes.IndexOf(prizes.Find(p => p.name == prizeName));
 
-                    break; // Stop after updating the first available slot
-                }
+            if (prizeIndex >= 0 && prizeIndex < inventoryImages.Length)
+            {
+                inventoryImages[prizeIndex].sprite = prize.sprite;
+                currentInventoryCount++;
+
+                //update UI to show prize count in the bottom left
+                prizeCount.text = currentInventoryCount.ToString();
             }
         }
         else
@@ -251,17 +247,28 @@ public class UIManager : MonoBehaviour
 
     public void OnInventoryClick(string prizeName)
     {
+        //check if prize is in dictionary and if player has already bought it
         if (prizeDictionary.TryGetValue(prizeName, out Prize prize) && GameManager.Instance.inventory.Contains(prizeName))
         {
             if (GameManager.Instance.inventory.Count > 0 && currentPrizeModel == null)
             {
                 Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane + 2f));
+                //spawn prize in front of player at eye-ish level -- some are too high, some are too far away 
+                if (prizeName == "RobotPrize" || prizeName == "PenguinPrize" || prizeName =="FerrisPrize" || prizeName == "CatPrize")
+                {
+                    spawnPosition.y = 1f;
+                }
+                else
+                    spawnPosition.y = 1.4f;
 
-                spawnPosition.y = 1.3f;
-                currentPrizeModel = Instantiate(prize.prefab, spawnPosition, Quaternion.identity);
-                 
-                TrophyController trophyController = currentPrizeModel.GetComponent<TrophyController>();
+                if (prizeName == "CatPrize" || prizeName == "GummyPrize")
+                {
+                    spawnPosition.z += 1f;
+                } 
                 
+                currentPrizeModel = Instantiate(prize.prefab, spawnPosition, Quaternion.identity);
+                TrophyController trophyController = currentPrizeModel.GetComponent<TrophyController>();
+
                 if (trophyController != null)
                 {
                     ClearScreen(true);

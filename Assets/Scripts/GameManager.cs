@@ -8,7 +8,6 @@ using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using static UIManager;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class GameManager : MonoBehaviour
 {
@@ -47,8 +46,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //globalScore = 0;
-        //pointSource = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player");
         backgroundSource = GetComponent<AudioSource>();
 
@@ -70,6 +67,7 @@ public class GameManager : MonoBehaviour
     }
     public bool CanAddToInventory(string prizeName)
     {
+        //check if inventory is full and if prize is already bought
         if (inventoryCapacity <= 0) return false;
         return inventory.Count < inventoryCapacity && !inventory.Contains(prizeName);
     }

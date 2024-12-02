@@ -1,18 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\coryc\\Desktop\\Carnival\\TheForeverCarnival\\",
+  "WorkspaceRootPath": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\coryc\\Desktop\\Carnival\\TheForeverCarnival\\assets\\scripts\\item scripts\\trophycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\trophycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\coryc\\desktop\\carnival\\theforevercarnival\\assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|c:\\users\\caitelin jones\\desktop\\theforevercarnival\\assets\\scripts\\clawgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clawgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\coryc\\Desktop\\Carnival\\TheForeverCarnival\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\assets\\scripts\\item scripts\\trophycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\item scripts\\trophycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\assets\\scripts\\bordercollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FB5EC6-E973-3799-EB14-13EBDFED601D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bordercollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TrophyController.cs",
-              "DocumentMoniker": "C:\\Users\\coryc\\Desktop\\Carnival\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\TrophyController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\TrophyController.cs",
-              "ToolTip": "C:\\Users\\coryc\\Desktop\\Carnival\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\TrophyController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\TrophyController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "clawGame.cs",
+              "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\clawGame.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\clawGame.cs",
+              "ToolTip": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\clawGame.cs",
+              "RelativeToolTip": "Assets\\Scripts\\clawGame.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAmwAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T20:57:13.431Z",
+              "WhenOpened": "2024-12-02T20:20:03.141Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BorderCollision.cs",
+              "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\BorderCollision.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BorderCollision.cs",
+              "ToolTip": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\BorderCollision.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BorderCollision.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T19:07:14.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T19:05:25.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TrophyController.cs",
+              "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\TrophyController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Item Scripts\\TrophyController.cs",
+              "ToolTip": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\Item Scripts\\TrophyController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Item Scripts\\TrophyController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T22:51:20.911Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\coryc\\Desktop\\Carnival\\TheForeverCarnival\\Assets\\Scripts\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
-              "ToolTip": "C:\\Users\\coryc\\Desktop\\Carnival\\TheForeverCarnival\\Assets\\Scripts\\GameManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T19:11:01.482Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "UIManager.cs",
-              "DocumentMoniker": "C:\\Users\\coryc\\Desktop\\Carnival\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
+              "DocumentMoniker": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI Scripts\\UIManager.cs",
-              "ToolTip": "C:\\Users\\coryc\\Desktop\\Carnival\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
+              "ToolTip": "C:\\Users\\Caitelin Jones\\Desktop\\TheForeverCarnival\\Assets\\Scripts\\UI Scripts\\UIManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI Scripts\\UIManager.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowHcAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAANMAAAAAAAAAAAAgwOUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T19:08:55.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T19:08:55.598Z"
             }
           ]
         }

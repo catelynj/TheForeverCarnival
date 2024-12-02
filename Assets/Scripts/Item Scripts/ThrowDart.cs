@@ -67,10 +67,8 @@ public class ThrowDart : MonoBehaviour
                 player.transform.position = new Vector3(hit.transform.position.x, 0, hit.transform.position.z + 1f);
                 player.GetComponent<FirstPersonController>().enabled = true;
             }
-
-            // Instantiate a clone only if there isn't one already
             clone = Instantiate(hit.collider.gameObject);
-           // audioSource.PlayOneShot(pickupSound);
+
             Rigidbody rb = clone.GetComponent<Rigidbody>();
             if (rb == null)
             {
@@ -79,7 +77,7 @@ public class ThrowDart : MonoBehaviour
 
             rb.useGravity = true;
             beingCarried = true;
-            canPickup = false;  // doesn't work btw
+            canPickup = false;
             rb.constraints = RigidbodyConstraints.None;
 
             rb.useGravity = true;
@@ -112,7 +110,7 @@ public class ThrowDart : MonoBehaviour
             {
                 rb.velocity = throwDirection * throwForce;
             }
-            StartCoroutine(DestroyAfterDelay(clone, 0.5f));
+            StartCoroutine(DestroyAfterDelay(clone, 0.2f));
             beingCarried = false;
         }
 
@@ -125,7 +123,7 @@ public class ThrowDart : MonoBehaviour
         // Destroy the object after the delay
         Destroy(obj);
         clone = null;
-        canPickup = true;  // Allow picking up a new object after the current one is destroyed
+        canPickup = true;
         // Unfreeze Player
         InputSystem.EnableDevice(Keyboard.current);
         keyboardActive = true;

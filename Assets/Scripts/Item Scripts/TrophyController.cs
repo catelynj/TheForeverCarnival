@@ -11,6 +11,7 @@ public class TrophyController : MonoBehaviour
     public int prizePrice;
     public UIManager.Prize prize;
     string prizeName;
+    
     private Camera mainCamera;
     private Vector3 previousMousePosition;
 
@@ -36,6 +37,7 @@ public class TrophyController : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
             RaycastHit hit;
 
+            //add prize to player inventory
             if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Trophy"))
             {
                 TrophyController trophy = hit.collider.GetComponent<TrophyController>();
@@ -43,6 +45,7 @@ public class TrophyController : MonoBehaviour
                 {
                     GameManager.Instance.globalScore -= prizePrice;
                     GameManager.Instance.AddToInventory(trophy.prizeName);
+                    //disable prize on wall
                     hit.collider.gameObject.SetActive(false);
                     UIManager.Instance.UpdateScore();
                 }
@@ -55,13 +58,12 @@ public class TrophyController : MonoBehaviour
     }
     void OnMouseDown()
     {
-        // Save the initial mouse position when the dragging starts
         previousMousePosition = Input.mousePosition;
-        
     }
 
     void OnMouseDrag()
     {
+        //inspect function
         Vector3 delta = Input.mousePosition - previousMousePosition;
 
         transform.Rotate(Vector3.up, delta.x * 0.25f, Space.Self);

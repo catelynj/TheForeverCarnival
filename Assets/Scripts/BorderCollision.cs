@@ -6,8 +6,8 @@ public class BorderCollision : MonoBehaviour
 {
     private bool isInsideCollider = false;
     private float interactionTimer = 0f;
-    private float interactionDuration = 8f; // Adjust the duration as needed
-    private string[] messages = { "You cannot leave.", "Do you think this is a game?", "Turn around.", "Seriously..." };
+    private float interactionDuration = 4f;
+    private string[] messages = { "You cannot leave.", "Do you think this is a game?", "Seriously...", "Turn around." };
     private int currentMessageIndex = 0;
 
     private void OnTriggerEnter(Collider other)
@@ -26,7 +26,7 @@ public class BorderCollision : MonoBehaviour
             isInsideCollider = false;
             UIManager.Instance.HideMessage();
             interactionTimer = 0f;
-            currentMessageIndex = 0; // Reset to the first message when exiting
+            currentMessageIndex = 0;
         }
     }
 
@@ -38,7 +38,6 @@ public class BorderCollision : MonoBehaviour
 
             if (interactionTimer >= interactionDuration)
             {
-                // Display the next message after the specified duration
                 DisplayNextMessage();
             }
         }
@@ -50,7 +49,7 @@ public class BorderCollision : MonoBehaviour
         {
             UIManager.Instance.DisplayMessage(messages[currentMessageIndex]);
             currentMessageIndex++;
-            interactionTimer = 0f; // Reset the timer for the next message
+            interactionTimer = 0f;
         }
     }
 }

@@ -31,9 +31,9 @@ public class BalloonPopper : MonoBehaviour
         if (popSource != null && popSound != null)
         {
             popSource.PlayOneShot(popSound);
-            Debug.Log("Pop");
+            //Debug.Log("Pop");
+            GameManager.Instance.IncrementScore(balloonScore);
+            Destroy(balloon);
         }
-        GameManager.Instance.IncrementScore(balloonScore);
-        Destroy(balloon);
     }
 }
