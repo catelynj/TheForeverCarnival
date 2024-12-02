@@ -10,6 +10,7 @@ public class bballPickup : MonoBehaviour
     public float cloneOffset = 2f;
     public float eyeLevelHeight = 1.5f;
     public AudioClip bounceSound;
+    public AudioClip pickupSound;
     private AudioSource audioSource;
     bool beingCarried = false;
     private bool canPickup = true;
@@ -21,8 +22,6 @@ public class bballPickup : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = bounceSound;
-
     }
 
     // Update is called once per frame
@@ -76,12 +75,13 @@ public class bballPickup : MonoBehaviour
             }
             beingCarried = false;
             canPickup = true;
+            audioSource.PlayOneShot(pickupSound);
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!collision.collider.isTrigger) // Makes sure that the ball only plays the bounce noise when it isnt a trigger
+        if (!collision.collider.isTrigger)
         {
             playBounceSound();
         }
@@ -91,7 +91,7 @@ public class bballPickup : MonoBehaviour
     {
         if (audioSource != null && bounceSound != null)
         {
-            audioSource.Play();
+            audioSource.PlayOneShot(bounceSound);
         }
     }
 

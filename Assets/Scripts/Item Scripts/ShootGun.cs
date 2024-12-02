@@ -9,7 +9,8 @@ using UnityEngine.Pool;
 public class ShootGun : MonoBehaviour
 {
     public AudioClip pickupSound;
-    private AudioSource pickupSource;
+    public AudioClip shootSound;
+    private AudioSource source;
     public Transform cam;
     public RectTransform reticle;
     public float shootForce = 10f;
@@ -36,7 +37,7 @@ public class ShootGun : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        pickupSource = GetComponent<AudioSource>();
+        source = GetComponent<AudioSource>();
 
         // sync physics for teleport
         player.transform.SetPositionAndRotation(player.transform.position, player.transform.rotation);
@@ -93,18 +94,14 @@ public class ShootGun : MonoBehaviour
             clone.transform.position = new Vector3(player.transform.position.x - 0.2f, player.transform.position.y + 1.6f, player.transform.position.z + 0.1f);
             clone.transform.Rotate(180f, 0f, 90f);
             clone.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-
-            // audioSource.PlayOneShot(pickupSound);
-
             beingCarried = true;
-            canPickup = false;  // doesn't work btw
-
+            canPickup = false;
             beingCarried = true;
 
             //pickup sound
-            if (pickupSound != null && pickupSource != null)
+            if (pickupSound != null && source != null)
             {
-                pickupSource.PlayOneShot(pickupSound);
+                source.PlayOneShot(pickupSound);
             }
         }
     }
@@ -122,7 +119,7 @@ public class ShootGun : MonoBehaviour
 
             if (bullet != null)
             {
-                
+                source.PlayOneShot(shootSound);
                 bulletclone = Instantiate(bullet);
                 bulletclone.transform.position = new Vector3(clone.transform.position.x + 0.2f, clone.transform.position.y + 0.2f, clone.transform.position.z);
                 bulletclone.transform.rotation = clone.transform.rotation;

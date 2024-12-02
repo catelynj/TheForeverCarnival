@@ -60,12 +60,12 @@
     <Analyzer Include="C:\Program Files\Unity 2022.3.24f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Packages\BOXOPHOBIC\Skybox Cubemap Extended\Core\Editor\SkyboxExtendedWindows.cs" />
-    <Compile Include="Assets\Packages\BOXOPHOBIC\Skybox Cubemap Extended\Core\Editor\SkyboxExtendedHub.cs" />
-    <Compile Include="Assets\Packages\BOXOPHOBIC\Skybox Cubemap Extended\Core\Editor\SkyboxExtendedShaderGUI.cs" />
+    <Compile Include="Assets\Packages\Skybox\Skybox Cubemap Extended\Core\Editor\SkyboxExtendedHub.cs" />
+    <Compile Include="Assets\Packages\Skybox\Skybox Cubemap Extended\Core\Editor\SkyboxExtendedShaderGUI.cs" />
+    <Compile Include="Assets\Packages\Skybox\Skybox Cubemap Extended\Core\Editor\SkyboxExtendedWindows.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Packages\BOXOPHOBIC\Skybox Cubemap Extended\Core\Editor\Boxophobic.SkyboxCubemapExtended.Editor.asmdef" />
+    <None Include="Assets\Packages\Skybox\Skybox Cubemap Extended\Core\Editor\Boxophobic.SkyboxCubemapExtended.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -16,8 +16,6 @@ public class GameManager : MonoBehaviour
     public int globalScore;
     public Vector3 playerLocation;
     private GameObject player;
-    private AudioSource backgroundSource;
-    public AudioClip backgroundSound;
     public int inventoryCapacity = 10;
     public List<string> inventory = new List<string>();
 
@@ -47,12 +45,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        backgroundSource = GetComponent<AudioSource>();
-
-        if (backgroundSource != null && backgroundSound != null)
-        {
-            backgroundSource.Play();
-        }
     }
 
     public void IncrementScore(int score)

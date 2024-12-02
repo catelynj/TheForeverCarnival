@@ -1,20 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 
 public class MuteAudio : MonoBehaviour
 {
-    public void MuteToggle(bool muted)
+    [SerializeField] private AudioMixer mixer;
+    [SerializeField] private AudioSource source;
+    private void Start()
     {
-        if (muted)
-        {
-            AudioListener.volume = 0;
-        }
-        else
-        {
-            AudioListener.volume = 1;
-        }
-
+        mixer.SetFloat("Volume", -20f);
+    }
+    public void OnChangeSlider(float value)
+    {
+        mixer.SetFloat("Volume", Mathf.Log10(value) * 20);
     }
 }

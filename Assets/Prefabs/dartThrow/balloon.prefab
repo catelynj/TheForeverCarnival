@@ -150,7 +150,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balloon: {fileID: 8483939980912991330}
-  popSound: {fileID: 8300000, guid: 55b7bfe24c251b04f9796630577ebde4, type: 3}
   balloonScore: 100
 --- !u!54 &9145967752665387918
 Rigidbody:
@@ -198,5 +197,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.18
+  m_Radius: 0.18661621
   m_Center: {x: 0, y: 0.1, z: 0}

@@ -70,7 +70,8 @@ public class ThrowBall : MonoBehaviour
             }
 
             //ball clone instantiation
-            clone = Instantiate(hit.collider.gameObject);
+            Vector3 spawnClone = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.nearClipPlane));
+            clone = Instantiate(hit.collider.gameObject, spawnClone, Quaternion.identity);
 
             Rigidbody rb = clone.GetComponent<Rigidbody>();
             if (rb == null)

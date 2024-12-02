@@ -9,7 +9,8 @@ using UnityEngine.InputSystem;
 public class ThrowDart : MonoBehaviour
 {
     public AudioClip pickupSound;
-    private AudioSource pickupSource;
+    public AudioClip popSound;
+    public AudioSource source;
     public Transform cam;
     public RectTransform reticle;
     public float throwForce = 10f;
@@ -24,7 +25,7 @@ public class ThrowDart : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        pickupSource = GetComponent<AudioSource>();
+        source = GetComponent<AudioSource>();
         
         // sync physics for teleport
         player.transform.SetPositionAndRotation(player.transform.position, player.transform.rotation);
@@ -82,12 +83,7 @@ public class ThrowDart : MonoBehaviour
 
             rb.useGravity = true;
             beingCarried = true;
-
-            //pickup sound
-            if (pickupSound != null && pickupSource != null)
-            {
-                pickupSource.PlayOneShot(pickupSound);
-            }
+            source.PlayOneShot(pickupSound);
         }
     }
 
@@ -110,7 +106,7 @@ public class ThrowDart : MonoBehaviour
             {
                 rb.velocity = throwDirection * throwForce;
             }
-            StartCoroutine(DestroyAfterDelay(clone, 0.2f));
+            StartCoroutine(DestroyAfterDelay(clone, 0.5f));
             beingCarried = false;
         }
 
@@ -127,6 +123,14 @@ public class ThrowDart : MonoBehaviour
         // Unfreeze Player
         InputSystem.EnableDevice(Keyboard.current);
         keyboardActive = true;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Balloon") && popSound != null && popSound != null)
+        {
+            source.PlayOneShot(popSound);
+        }
     }
 }
 
