@@ -1,4 +1,5 @@
 # The Forever Carnival 
+![Main Menu for The Forever Carnival](https://github.com/user-attachments/assets/a7a64074-0f0b-42f0-a8c5-0d7f576a6805)
 
 This is the second project from Farm Forever Games, a student-ran group at the Pennsylvania College of Technology learning the ins and outs of game design and programming.
 
