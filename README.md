@@ -1,4 +1,5 @@
 # The Forever Carnival 
+https://github.com/catelynj/TheForeverCarnival/blob/Main/TFC_Main.png?raw=true
 
 This is the second project from Farm Forever Games, a student-ran group at the Pennsylvania College of Technology learning the ins and outs of game design and programming.
 
