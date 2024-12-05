@@ -41,13 +41,16 @@ public class TrophyController : MonoBehaviour
             if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Trophy"))
             {
                 TrophyController trophy = hit.collider.GetComponent<TrophyController>();
-                if (trophy != null && GameManager.Instance.CanAddToInventory(trophy.prizeName))
+                if (GameManager.Instance.CanAddToInventory(trophy.prizeName))
                 {
                     GameManager.Instance.globalScore -= prizePrice;
+                    UIManager.Instance.updateScoreCall = true;
+                    UIManager.Instance.UpdateScore();
+                    //Debug.Log(prizePrice);
                     GameManager.Instance.AddToInventory(trophy.prizeName);
                     //disable prize on wall
                     hit.collider.gameObject.SetActive(false);
-                    UIManager.Instance.UpdateScore();
+                    
                 }
                 else
                 {
