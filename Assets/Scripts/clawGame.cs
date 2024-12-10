@@ -18,6 +18,11 @@ public class clawGame : MonoBehaviour
     private bool isStarted = false;
     private Vector3 movedirection;
 
+    // This is a bad way to stop the claw from moving out of bounds
+    private const float minX = 52.3f;
+    private const float maxX = 54.75f;
+    private const float minZ = -8.5f;
+    private const float maxZ = -7f;
 
     // Start is called before the first frame update
     void Start()
@@ -30,10 +35,6 @@ public class clawGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(clawParent.position.x > 24)
-        //{
-        //    clawParent.position.x = initialClawX; // need to stop the claw from moving out of bounds
-        //}
         if (Input.GetKeyDown(KeyCode.E) && !isStarted)
         {
             canClawGame();
@@ -49,8 +50,13 @@ public class clawGame : MonoBehaviour
             float verticalInput = Input.GetAxis("Vertical");
             Vector3 move = new Vector3(horizontalInput, 0, verticalInput) * speed * Time.deltaTime;
             clawParent.Translate(move, Space.World);
-            //movedirection = new Vector3(horizontalInput, 0, verticalInput);
-            //clawParent.transform.position += speed * Time.deltaTime * movedirection;
+
+            // Clamp position to bounds
+            Vector3 clampedPosition = clawParent.position;
+            clampedPosition.x = Mathf.Clamp(clampedPosition.x, minX, maxX);
+            clampedPosition.z = Mathf.Clamp(clampedPosition.z, minZ, maxZ);
+            clawParent.position = clampedPosition;
+            // This is a terrible way to do this^
         }
 
         if (Input.GetKeyDown(KeyCode.Space) & isStarted)
@@ -58,17 +64,8 @@ public class clawGame : MonoBehaviour
             //Lower claw
             if (!isArmLowered)
             {
-                //Vector3.Lerp(clawParent.transform.position, clawParent.transform.position + target.transform.position, 1f / downSpeed * Time.deltaTime);
-
                 StartCoroutine("DropClaw");
             }
-            //else
-            //{
-            //    isArmLowered = false;
-            //    //Vector3.Lerp(clawParent.transform.position, clawParent.transform.position + clawReturn.transform.position, 1f / downSpeed * Time.deltaTime);
-
-            //    StartCoroutine("RaiseClaw");
-            //}
 
         }
 
@@ -86,14 +83,6 @@ public class clawGame : MonoBehaviour
 
     void startClawGame()
     {
-        /*
-         * We want to:
-         * - Disable player movement - Done
-         * - Route W A S D to the claw's movement - Done
-         * - Have the claw lower when space bar is pressed, then raise after a given amount (like 1f)
-         * - on Input.GetKeyDown(KeyCode.E), claws release (not done) and the player exits the game (done)
-         * - Restore player movement - Done
-         */
 
         isStarted = true;
 
@@ -123,23 +112,6 @@ public class clawGame : MonoBehaviour
         }
         isArmLowered = false;
     }
-
-    //private IEnumerator LowerClaw()
-    //{
-        
-    //    Rigidbody clawBody = clawParent.GetComponent<Rigidbody>(); 
-        
-    //    Debug.Log("Claw lowered");
-    //    yield return null;
-    //}
-
-    //private IEnumerator RaiseClaw()
-    //{
-    //    Rigidbody clawBody = clawParent.GetComponent<Rigidbody>();
-
-    //    Debug.Log("Claw raised");
-    //    yield return null;
-    //}
 
     void exitClawGame()
     {
